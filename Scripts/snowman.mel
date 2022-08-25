@@ -14,6 +14,9 @@ move -relative -objectSpace -worldSpaceDistance 0 9.5 0;
 //create nose
 polyCone -radius 0.1 -height 1 -subdivisionsX 20 -subdivisionsY 3 -subdivisionsZ 0 -axis -1 0 0 -roundCap 0 -createUVs 3 -constructionHistory 1;
 move -relative -objectSpace -worldSpaceDistance -1.45 9.5 0;
+softSelect -softSelectDistance 0.103669 -softSelectUVDistance 0.5;
+select -replace pCone1.e[58];
+move -relative -0.0307 0.05 -0.048;
 
 //create eyes
 polySphere -radius .1 -subdivisionsX 20 -subdivisionsY 20 -axis 0 1 0 -createUVs 2 -constructionHistory 1;
@@ -48,9 +51,89 @@ move -relative -0.0150915 -0.014458 0.0108436 ;
 select -replace pSphere5.vtx[$pnt2] ;
 move -relative 0.0206378 0.0199413 0.00703592 ;
 
+
 //Smile
+//Same randomization from eyes
 // 1 -0.742 9.23 -0.586
+polySphere -name smile1 -radius .09 -subdivisionsX 20 -subdivisionsY 20 -axis 0 1 0 -createUVs 2 -constructionHistory 1;
+scale -relative 0.534462 1 1 ;
+move -relative -objectSpace -worldSpaceDistance -0.742 9.23 -0.586;
+
+softSelect -softSelectDistance 0.103669 -softSelectUVDistance 0.5;
+
+$pnt1 = rand(0, 382);
+$pnt2 = rand(0, 382);
+
+select -replace smile1.vtx[$pnt1] ;
+move -relative -0.0150915 -0.014458 0.0108436 ;
+select -replace smile1.vtx[$pnt2] ;
+move -relative 0.0206378 0.0199413 0.00703592 ;
+
 // 2 -0.83 9.071 -0.289
+polySphere -name smile2 -radius .09 -subdivisionsX 20 -subdivisionsY 20 -axis 0 1 0 -createUVs 2 -constructionHistory 1;
+scale -relative 0.534462 1 1 ;
+move -relative -objectSpace -worldSpaceDistance -0.83 9.071 -0.289;
+
+softSelect -softSelectDistance 0.103669 -softSelectUVDistance 0.5;
+
+$pnt1 = rand(0, 382);
+$pnt2 = rand(0, 382);
+
+select -replace smile2.vtx[$pnt1] ;
+move -relative -0.0150915 -0.014458 0.0108436 ;
+select -replace smile2.vtx[$pnt2] ;
+move -relative 0.0206378 0.0199413 0.00703592 ;
+
 // 3 -0.831 8.987 0.001
+polySphere -name smile3 -radius .09 -subdivisionsX 20 -subdivisionsY 20 -axis 0 1 0 -createUVs 2 -constructionHistory 1;
+scale -relative 0.534462 1 1 ;
+move -relative -objectSpace -worldSpaceDistance -0.831 8.987 0.001;
+
+softSelect -softSelectDistance 0.103669 -softSelectUVDistance 0.5;
+
+$pnt1 = rand(0, 382);
+$pnt2 = rand(0, 382);
+
+select -replace smile3.vtx[$pnt1] ;
+move -relative -0.0150915 -0.014458 0.0108436 ;
+select -replace smile3.vtx[$pnt2] ;
+move -relative 0.0206378 0.0199413 0.00703592 ;
+
 // 4 -0.83 9.071 0.283
+polySphere -name smile4 -radius .09 -subdivisionsX 20 -subdivisionsY 20 -axis 0 1 0 -createUVs 2 -constructionHistory 1;
+scale -relative 0.534462 1 1 ;
+move -relative -objectSpace -worldSpaceDistance -0.83 9.071 0.283;
+
+softSelect -softSelectDistance 0.103669 -softSelectUVDistance 0.5;
+
+$pnt1 = rand(0, 382);
+$pnt2 = rand(0, 382);
+
+select -replace smile4.vtx[$pnt1] ;
+move -relative -0.0150915 -0.014458 0.0108436 ;
+select -replace smile4.vtx[$pnt2] ;
+move -relative 0.0206378 0.0199413 0.00703592 ;
+
 // 5 -0.742 9.23 0.567
+polySphere -name smile5 -radius .09 -subdivisionsX 20 -subdivisionsY 20 -axis 0 1 0 -createUVs 2 -constructionHistory 1;
+scale -relative 0.534462 1 1 ;
+move -relative -objectSpace -worldSpaceDistance -0.742 9.23 0.567;
+
+softSelect -softSelectDistance 0.103669 -softSelectUVDistance 0.5;
+
+$pnt1 = rand(0, 382);
+$pnt2 = rand(0, 382);
+
+select -replace smile5.vtx[$pnt1] ;
+move -relative -0.0150915 -0.014458 0.0108436 ;
+select -replace smile5.vtx[$pnt2] ;
+move -relative 0.0206378 0.0199413 0.00703592 ;
+
+
+//hat
+polyCylinder -name hat -radius 1 -height 2 -subdivisionsX 20 -subdivisionsY 2 -subdivisionsZ 1 -axis 0 1 0 -roundCap 0 -createUVs 3 -constructionHistory 1;
+move -relative 0 11.2 0;
+select -replace hat.e[20:39];
+move -relative 0 -0.826 0;
+select -replace hat.f[0:19] ;
+polyExtrudeFacet -constructionHistory 1 -keepFacesTogether 1 -pvx -1.192092896e-07 -pvy 10.28700001 -pvz -1.788139343e-07 -divisions 1 -twist 0 -taper 1 -off 0 -thickness 1 -smoothingAngle 30 hat.f[0:19];
