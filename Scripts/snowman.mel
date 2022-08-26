@@ -11,6 +11,9 @@ move -relative -objectSpace -worldSpaceDistance 0 7 0;
 polySphere -radius 1 -subdivisionsX 20 -subdivisionsY 20 -axis 0 1 0 -createUVs 2 -constructionHistory 1;
 move -relative -objectSpace -worldSpaceDistance 0 9.5 0;
 
+//soft select
+softSelect -softSelectDistance 0.103669 -softSelectEnabled 1 -softSelectUVDistance 0.5;
+
 //create nose
 polyCone -radius 0.1 -height 1 -subdivisionsX 20 -subdivisionsY 3 -subdivisionsZ 0 -axis -1 0 0 -roundCap 0 -createUVs 3 -constructionHistory 1;
 move -relative -objectSpace -worldSpaceDistance -1.45 9.5 0;
@@ -22,9 +25,6 @@ move -relative -0.0307 0.05 -0.048;
 polySphere -radius .1 -subdivisionsX 20 -subdivisionsY 20 -axis 0 1 0 -createUVs 2 -constructionHistory 1;
 scale -relative 0.534462 1 1 ;
 move -relative -objectSpace -worldSpaceDistance -0.9 9.6 -0.4;
-
-//soft select
-softSelect -softSelectDistance 0.103669 -softSelectUVDistance 0.5;
 
 //random points from 0 - 382
 int $pnt1 = rand(0, 382);
@@ -40,8 +40,6 @@ move -relative 0.0206378 0.0199413 0.00703592 ;
 polySphere -radius .1 -subdivisionsX 20 -subdivisionsY 20 -axis 0 1 0 -createUVs 2 -constructionHistory 1;
 scale -relative 0.534462 1 1 ;
 move -relative -objectSpace -worldSpaceDistance -0.9 9.6 0.4;
-
-softSelect -softSelectDistance 0.103669 -softSelectUVDistance 0.5;
 
 $pnt1 = rand(0, 382);
 $pnt2 = rand(0, 382);
@@ -59,8 +57,6 @@ polySphere -name smile1 -radius .09 -subdivisionsX 20 -subdivisionsY 20 -axis 0 
 scale -relative 0.534462 1 1 ;
 move -relative -objectSpace -worldSpaceDistance -0.742 9.23 -0.586;
 
-softSelect -softSelectDistance 0.103669 -softSelectUVDistance 0.5;
-
 $pnt1 = rand(0, 382);
 $pnt2 = rand(0, 382);
 
@@ -73,8 +69,6 @@ move -relative 0.0206378 0.0199413 0.00703592 ;
 polySphere -name smile2 -radius .09 -subdivisionsX 20 -subdivisionsY 20 -axis 0 1 0 -createUVs 2 -constructionHistory 1;
 scale -relative 0.534462 1 1 ;
 move -relative -objectSpace -worldSpaceDistance -0.83 9.071 -0.289;
-
-softSelect -softSelectDistance 0.103669 -softSelectUVDistance 0.5;
 
 $pnt1 = rand(0, 382);
 $pnt2 = rand(0, 382);
@@ -89,8 +83,6 @@ polySphere -name smile3 -radius .09 -subdivisionsX 20 -subdivisionsY 20 -axis 0 
 scale -relative 0.534462 1 1 ;
 move -relative -objectSpace -worldSpaceDistance -0.831 8.987 0.001;
 
-softSelect -softSelectDistance 0.103669 -softSelectUVDistance 0.5;
-
 $pnt1 = rand(0, 382);
 $pnt2 = rand(0, 382);
 
@@ -104,8 +96,6 @@ polySphere -name smile4 -radius .09 -subdivisionsX 20 -subdivisionsY 20 -axis 0 
 scale -relative 0.534462 1 1 ;
 move -relative -objectSpace -worldSpaceDistance -0.83 9.071 0.283;
 
-softSelect -softSelectDistance 0.103669 -softSelectUVDistance 0.5;
-
 $pnt1 = rand(0, 382);
 $pnt2 = rand(0, 382);
 
@@ -118,8 +108,6 @@ move -relative 0.0206378 0.0199413 0.00703592 ;
 polySphere -name smile5 -radius .09 -subdivisionsX 20 -subdivisionsY 20 -axis 0 1 0 -createUVs 2 -constructionHistory 1;
 scale -relative 0.534462 1 1 ;
 move -relative -objectSpace -worldSpaceDistance -0.742 9.23 0.567;
-
-softSelect -softSelectDistance 0.103669 -softSelectUVDistance 0.5;
 
 $pnt1 = rand(0, 382);
 $pnt2 = rand(0, 382);
@@ -137,3 +125,10 @@ select -replace hat.e[20:39];
 move -relative 0 -0.826 0;
 select -replace hat.f[0:19] ;
 polyExtrudeFacet -constructionHistory 1 -keepFacesTogether 1 -pvx -1.192092896e-07 -pvy 10.28700001 -pvz -1.788139343e-07 -divisions 1 -twist 0 -taper 1 -off 0 -thickness 1 -smoothingAngle 30 hat.f[0:19];
+
+//tube so he can go swimming i guess
+polyTorus -radius 1 -sectionRadius 0.5 -twist 0 -subdivisionsX 20 -subdivisionsY 20 -axis 0 1 0 -createUVs 1 -constructionHistory 1;
+move -relative 0 5.6 0 ;
+scale -relative 1.682895 1.682895 1.682895 ;
+select -replace pTorus1.e[200:219];
+polyBevel3 -fraction 1 -offsetAsFraction 1 -autoFit 1 -depth 1 -mitering 0 -miterAlong 0 -chamfer 1 -segments 1 -worldSpace 1 -smoothingAngle 30 -subdivideNgons 1 -mergeVertices 1 -mergeVertexTolerance 0.0001 -miteringAngle 180 -angleTolerance 180 -ch 1 pTorus1.e[200:219];
