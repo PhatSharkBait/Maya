@@ -1,0 +1,36 @@
+//can make a pyramid (1) or a cube (0)
+//can use spheres (1) or cubes (0)
+
+//CHANGE THESE VALUES
+int $isPyramid = 1;
+int $useSpheres = 0;
+float $size = 1;
+int $rowsColumnsHeight = 5;
+
+//DON'T CHANGE THESE
+float $cubeSize = $size * 2;
+int $currentRowCol = $rowsColumnsHeight;
+//offset starting pos so the pyramid is centered
+float $posX = ((-.5 * $currentRowCol) * ($size * 2)) + $size;
+float $posZ = ((-.5 * $currentRowCol) * ($size * 2)) + $size;
+//offset height to Line up with grid
+float $posY = $size;
+for($h = 0; $h < $rowsColumnsHeight; $h++) {
+    for($r = 0; $r < $currentRowCol; $r++) {
+        for($c= 0; $c < $currentRowCol; $c++) {
+            if($useSpheres){
+                polySphere -radius $size -subdivisionsX 20 -subdivisionsY 20 -axis 0 1 0 -createUVs 2 -constructionHistory 1;
+            } else {
+                polyCube -width $cubeSize -height $cubeSize -depth $cubeSize -sx 1 -sy 1 -sz 1 -ax 0 1 0 -cuv 4 -ch 1;
+            }
+            move -relative -objectSpace -worldSpaceDistance ($posX + (($size * 2) * $c)) ($posY + (($size * 2) * $h)) ($posZ + (($size * 2) * $r));
+            //                                              offset + (diameter * column)
+        }
+    }
+    
+    if($isPyramid){
+        $currentRowCol --;
+        $posX = ((-.5 * $currentRowCol) * ($size * 2)) + $size;
+        $posZ = ((-.5 * $currentRowCol) * ($size * 2)) + $size;
+    }
+}
