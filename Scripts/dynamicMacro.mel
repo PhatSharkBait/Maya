@@ -3,9 +3,9 @@
 
 //CHANGE THESE VALUES
 int $isPyramid = 1;
-int $useSpheres = 0;
-float $size = 1;
-int $rowsColumnsHeight = 5;
+int $useSpheres = 1;
+float $size = 5;
+int $rowsColumnsHeight = 12;
 
 //DON'T CHANGE THESE
 float $cubeSize = $size * 2;
