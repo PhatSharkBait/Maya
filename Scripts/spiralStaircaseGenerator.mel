@@ -1,0 +1,53 @@
+{
+    //I had to relearn a lot of trigonometry to get the outside edge of the stairs looking how I wanted
+
+        proc GenerateStaircase(float $stepWidth, float $stepHeight, float $stepDepth,
+        float $innerRadius, float $stepHeightMultiplier, float $stepRotationMultiplier, int $numberOfSteps){
+        
+        //calculate how far to move the initial step object from the center
+        float $distanceFromCenter = $innerRadius + (0.5 * $stepWidth);
+
+        //calculate pi for use later
+        float $pi = `deg_to_rad 180`;
+
+        //default vertical distance between steps will be 0, can increase/decrease by changing stepHeightMultiplier from 1
+        float $distanceBetweenSteps = $stepHeight * $stepHeightMultiplier;
+
+        //calculate the degrees of rotation needed using the exact length of each step.
+        float $stepRotationRad = ((2*$pi)/((2*$innerRadius*$pi)/$stepDepth))*$stepRotationMultiplier;
+        //convert to degrees for smart duplication
+        float $stepRotationDeg = `rad_to_deg $stepRotationRad`;
+
+        //calculate the length that the outside edge of each step would need to be to maintain angle from the center of the staircase.
+        float $outerDepth = ($stepDepth + (2 * ($stepWidth * `tan ($stepRotationRad * .5)`)))/$stepDepth;
+
+
+
+
+        //create cube using user input for dimensions, move cube based on desired negative space in the middle of the staircase, move pivot to the center
+        polyCube -name step -width $stepWidth -height $stepHeight -depth $stepDepth -subdivisionsX 1 -subdivisionsY 1 -axis 0 1 0 -createUVs 4 -constructionHistory 1;
+        move -moveXY $distanceFromCenter ($stepHeight * 0.5);
+        move -absolute 0 0 0 -rotatePivotRelative -scalePivotRelative step.rotatePivot step.scalePivot;
+
+        //scale outside face of step using $outerDepth
+        select -replace step.f[4];
+        scale -absolute -componentSpace 1 $outerDepth 1;
+        select -replace step;
+
+        //establish pattern for future steps
+        duplicate -smartTransform;
+        move -relative 0 $distanceBetweenSteps 0;
+        rotate -rotateY $stepRotationDeg;
+
+        //duplicate remaining steps using established pattern
+        for($i = 3; $i <= $numberOfSteps; $i++){
+            duplicate -smartTransform;
+        }
+
+        //create center cylinder
+        polyCylinder -radius $innerRadius -height ($distanceBetweenSteps*$numberOfSteps) -subdivisionsX 20 -subdivisionsY 1 -subdivisionsZ 1 -axis 0 1 0 -roundCap 0 -createUVs 3 -constructionHistory 1;
+        move -moveY (($distanceBetweenSteps*$numberOfSteps)/2);
+    }
+
+    GenerateStaircase(2.5, .15, .5, 2, 1, 1, 75);
+}
