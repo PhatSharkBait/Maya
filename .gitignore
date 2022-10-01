@@ -351,3 +351,5 @@ MigrationBackup/
 images/tmp/
 
 sourceimages/ParcelTextures/
+
+renderData/iprImages/parcelMailbox_ipr.png
