@@ -1,0 +1,71 @@
+global proc CreateUI(){
+    string $mWindow = "duplicateRandom";
+
+    if(`window -exists $mWindow`)
+        deleteUI $mWindow;
+
+    $mWindow = `window -title "Duplicate Objects Disperse Randomly"
+                    -widthHeight 300 400
+                    -resizeToFitChildren 1
+                    $mWindow`;
+
+    string $mColumn = `columnLayout -parent $mWindow -adjustableColumn 1`;
+    string $amountOfDuplications = `rowLayout -numberOfColumns 2 -parent $mColumn -adjustableColumn 1`;
+    string $xRow = `rowLayout -numberOfColumns 3 -parent $mColumn -adjustableColumn 1`;
+    string $yRow = `rowLayout -numberOfColumns 3 -parent $mColumn -adjustableColumn 1`;
+    string $zRow = `rowLayout -numberOfColumns 3 -parent $mColumn -adjustableColumn 1`;
+
+    textField -editable 0 -parent $amountOfDuplications -text "Amount of duplications";
+    textField -editable 0 -parent $xRow -text "X min/max";
+    textField -editable 0 -parent $yRow -text "Y min/max";
+    textField -editable 0 -parent $zRow -text "Z min/max";
+
+    optionVar -stringValue "dupeAmount" `intField -parent $amountOfDuplications -value 1`;
+
+    optionVar -stringValue "xMin" `floatField -parent $xRow -value -10`;
+    optionVar -stringValue "xMax" `floatField -parent $xRow -value 10`;
+    optionVar -stringValue "yMin" `floatField -parent $yRow -value -10`;
+    optionVar -stringValue "yMax" `floatField -parent $yRow -value 10`;
+    optionVar -stringValue "zMin" `floatField -parent $zRow -value -10`;
+    optionVar -stringValue "zMax" `floatField -parent $zRow -value 10`;
+
+    button -parent $mColumn -label "Duplicate Selected" -command "DuplicateSelected";
+
+
+    showWindow $mWindow;
+}
+
+global proc DuplicateSelected(){
+    string $xMinField = `optionVar -q "xMin"`;
+    string $xMaxField = `optionVar -q "xMax"`;
+    string $yMinField = `optionVar -q "yMin"`;
+    string $yMaxField = `optionVar -q "yMax"`;
+    string $zMinField = `optionVar -q "zMin"`;
+    string $zMaxField = `optionVar -q "zMax"`;
+    string $amountOfDuplicationsField = `optionVar -q "dupeAmount"`;
+
+    float $xMin = `floatField -q -value $xMinField`;
+    float $xMax = `floatField -q -value $xMaxField`;
+    float $yMin = `floatField -q -value $yMinField`;
+    float $yMax = `floatField -q -value $yMaxField`;
+    float $zMin = `floatField -q -value $zMinField`;
+    float $zMax = `floatField -q -value $zMaxField`;
+    int $dupeAmount = `intField -q -value $amountOfDuplicationsField`;
+
+
+    string $objsToDuplicate[] = `ls -selection`;
+
+    for ($i = 0; $i < `size $objsToDuplicate`; $i++){
+        $obj = $objsToDuplicate[$i];
+        for($j = 0; $j < $dupeAmount; $j++){
+            float $xPos = `rand $xMin $xMax`;
+            float $yPos = `rand $yMin $yMax`;
+            float $zPos = `rand $zMin $zMax`;
+
+            move -absolute -worldSpace $xPos $yPos $zPos `duplicate $obj`;
+        }
+    }
+}
+
+
+CreateUI();
