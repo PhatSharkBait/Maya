@@ -1,117 +1,183 @@
-{
-    proc float Addition(float $values[]){
-        float $total = $values[0];
-        for($i = 1; $i < size($values); $i++){
-            $total += $values[$i];
-        }
-        return $total;
+global proc float Addition(float $values[]){
+    float $total = $values[0];
+    for($i = 1; $i < size($values); $i++){
+        $total += $values[$i];
     }
-
-    proc float Subtraction(float $values[]){
-        float $total = $values[0];
-        for($i = 1; $i < size($values); $i++){
-            $total -= $values[$i];
-        }
-        return $total;
-    }
-
-    proc float Multiplication(float $values[]){
-        float $total = $values[0];
-        for($i = 1; $i < size($values); $i++){
-            $total *= $values[$i];
-        }
-        return $total;
-    }
-
-    proc float Division(float $values[]){
-        float $total = $values[0];
-        for($i = 1; $i < size($values); $i++){
-            $total /= $values[$i];
-        }
-        return $total;
-    }
-
-    proc float Power(int $values[]){
-        int $total = $values[0];
-        for($i = 1; $i < size($values); $i++){
-            $total = pow($total, ($values[$i]));
-        }
-        return $total;        
-    }
-
-    proc float Mean(float $values[]){
-        float $total = $values[0];
-        for($i = 1; $i < size($values); $i++){
-            $total += $values[$i];
-        }
-        return ($total/size($values));        
-    }
-
-    proc float Median(float $values[]){
-        int $valuesLength = size($values);
-        $values = `sort $values`;
-        if($valuesLength % 2 == 0){
-            int $lower = ((size($values)/2) - .5);
-            return (($values[$lower] + $values[$lower + 1])*.5);
-        } else {
-            int $middleIndex = size($values)/2;
-            return $values[$middleIndex]; 
-        }       
-    }
-
-    proc Calculator(float $values[], int $operation){
-        string $prefixString;
-        if($operation == 1){
-                for($value in $values){
-                    $prefixString += ($value + " + ");
-                }
-                string $result = `substring $prefixString 1 (size($prefixString) -2)`;
-                print($result + " = " + Addition($values) + "\n");
-        } else if ($operation == 2){
-                for($value in $values){
-                    $prefixString += ($value + " - ");
-                }
-                string $result = `substring $prefixString 1 (size($prefixString) -2)`;
-                print($result + " = " + Subtraction($values) + "\n");
-        } else if ($operation == 3){
-                for($value in $values){
-                    $prefixString += ($value + " * ");
-                }
-                string $result = `substring $prefixString 1 (size($prefixString) -2)`;
-                print($result + " = " + Multiplication($values) + "\n");
-        } else if ($operation == 4){
-                for($value in $values){
-                    $prefixString += ($value + " / ");
-                }
-                string $result = `substring $prefixString 1 (size($prefixString) -2)`;
-                print($result + " = " + Division($values) + "\n");
-        } else if ($operation == 5){
-                for($value in $values){
-                    $prefixString += ($value + " ^ ");
-                }
-                string $result = `substring $prefixString 1 (size($prefixString) -2)`;
-                int $intValues[];
-                for($i = 0; $i < size($values); $i++){
-                    $intValues[$i] = $values[$i];
-                }
-                print($result + " = " + Power($intValues) + "\n");
-        } else if ($operation == 6){
-                $prefixString = "The average of ";
-                for($value in $values){
-                    $prefixString += ($value + ", ");
-                }
-                string $result = `substring $prefixString 1 (size($prefixString) -2)`;
-                print($result + " is " + Mean($values) + "\n");
-        } else if ($operation == 7){
-                $prefixString = "The median of ";
-                for($value in $values){
-                    $prefixString += ($value + ", ");
-                }
-                string $result = `substring $prefixString 1 (size($prefixString) -2)`;
-                print($result + " is " + Median($values) + "\n");
-        } else{
-            print("please select a valid operation number, any integer 1 - 7.");
-        }
-    }
-    Calculator({3, 3, 1, 2, 4, 3, 3}, 7);
+    return $total;
 }
+
+global proc float Subtraction(float $values[]){
+    float $total = $values[0];
+    for($i = 1; $i < size($values); $i++){
+        $total -= $values[$i];
+    }
+    return $total;
+}
+
+global proc float Multiplication(float $values[]){
+    float $total = $values[0];
+    for($i = 1; $i < size($values); $i++){
+        $total *= $values[$i];
+    }
+    return $total;
+}
+
+global proc float Division(float $values[]){
+    float $total = $values[0];
+    for($i = 1; $i < size($values); $i++){
+        $total /= $values[$i];
+    }
+    return $total;
+}
+
+global proc float Power(int $values[]){
+    int $total = $values[0];
+    for($i = 1; $i < size($values); $i++){
+        $total = pow($total, ($values[$i]));
+    }
+    return $total;        
+}
+
+global proc float Mean(float $values[]){
+    float $total = $values[0];
+    for($i = 1; $i < size($values); $i++){
+        $total += $values[$i];
+    }
+    return ($total/size($values));        
+}
+
+global proc float Median(float $values[]){
+    int $valuesLength = size($values);
+    $values = `sort $values`;
+    if($valuesLength % 2 == 0){
+        int $lower = ((size($values)/2) - .5);
+        return (($values[$lower] + $values[$lower + 1])*.5);
+    } else {
+        int $middleIndex = size($values)/2;
+        return $values[$middleIndex]; 
+    }       
+}
+
+global proc string Calculator(float $values[], string $operation){
+    string $prefixString;
+    if($operation == "Addition"){
+            for($value in $values){
+                $prefixString += ($value + " + ");
+            }
+            string $result = `substring $prefixString 1 (size($prefixString) -2)`;
+            return ($result + " = " + Addition($values));
+    } else if ($operation == "Subtraction"){
+            for($value in $values){
+                $prefixString += ($value + " - ");
+            }
+            string $result = `substring $prefixString 1 (size($prefixString) -2)`;
+            return ($result + " = " + Subtraction($values));
+    } else if ($operation == "Multiplication"){
+            for($value in $values){
+                $prefixString += ($value + " * ");
+            }
+            string $result = `substring $prefixString 1 (size($prefixString) -2)`;
+            return ($result + " = " + Multiplication($values));
+    } else if ($operation == "Division"){
+            for($value in $values){
+                $prefixString += ($value + " / ");
+            }
+            string $result = `substring $prefixString 1 (size($prefixString) -2)`;
+            return ($result + " = " + Division($values));
+    } else if ($operation == "Power"){
+            for($value in $values){
+                $prefixString += ($value + " ^ ");
+            }
+            string $result = `substring $prefixString 1 (size($prefixString) -2)`;
+            int $intValues[];
+            for($i = 0; $i < size($values); $i++){
+                $intValues[$i] = $values[$i];
+            }
+            return ($result + " = " + Power($intValues));
+    } else if ($operation == "Mean"){
+            $prefixString = "The average of ";
+            for($value in $values){
+                $prefixString += ($value + ", ");
+            }
+            string $result = `substring $prefixString 1 (size($prefixString) -2)`;
+            return ($result + " is " + Mean($values));
+    } else if ($operation == "Median"){
+            $prefixString = "The median of ";
+            for($value in $values){
+                $prefixString += ($value + ", ");
+            }
+            string $result = `substring $prefixString 1 (size($prefixString) -2)`;
+            return ($result + " is " + Median($values));
+    } else {
+        return ("please select a valid operation number, any integer 1 - 7.");
+    }
+}
+
+
+global proc NumberOfInputs(){
+    string $mWindow = "numInputsWindow";
+
+    if(`window -exists $mWindow`)
+        deleteUI $mWindow;
+
+    $mWindow = `window -title "How Many Inputs?"
+                    -widthHeight 300 400
+                    -resizeToFitChildren 1
+                    $mWindow`;
+
+    string $mColumn = `columnLayout -parent $mWindow -adjustableColumn 1`;
+    optionVar -stringValue "amountIntSlider" `intSlider -min 2 -max 4 -parent $mColumn -value 2`;
+    string $buttonCommand = "GoToCalc()";
+    button -parent $mColumn -label "Go to calculator" -command $buttonCommand;
+
+    showWindow $mWindow;
+}
+
+global proc CalculatorUI(){
+    string $mWindow = "calcWindow";
+
+    if(`window -exists $mWindow`)
+        deleteUI $mWindow;
+
+    $mWindow = `window -title "Calculator"
+                    -widthHeight 300 400
+                    -resizeToFitChildren 1
+                    $mWindow`;
+    
+    string $mColumn = `columnLayout -parent $mWindow -adjustableColumn 1`;
+    string $amountField = `optionVar -q "amountIntSlider"`;
+    int $amountFieldValue = `intSlider -q -value $amountField`;
+    optionVar -stringValue "floatFieldValues" `floatFieldGrp -numberOfFields $amountFieldValue`;
+    
+    optionVar -stringValue "operationCollection" `radioCollection -parent $mColumn`;
+    radioButton -collection `optionVar -q "operationCollection"` "Addition";
+    radioButton -collection `optionVar -q "operationCollection"` "Subtraction";
+    radioButton -collection `optionVar -q "operationCollection"` "Multiplication";
+    radioButton -collection `optionVar -q "operationCollection"` "Division";
+    radioButton -collection `optionVar -q "operationCollection"` "Power";
+    radioButton -collection `optionVar -q "operationCollection"` "Mean";
+    radioButton -collection `optionVar -q "operationCollection"` "Median";
+    button -parent $mColumn -label "calculate" -command "Calculate";
+    optionVar -stringValue "resultField" `textField -parent $mColumn -editable 0`;
+
+    showWindow $mWindow;
+
+}
+
+global proc GoToCalc(){
+    CalculatorUI();
+}
+
+global proc Calculate(){
+    string $outputField = `optionVar -q "resultField"`;
+    string $inputValues = `optionVar -q "floatFieldValues"`;
+    string $buttonCollection = `optionVar -q "operationCollection"`;
+
+    float $values[] = `floatFieldGrp -q -value $inputValues`;
+    string $operator = `radioCollection -q -select $buttonCollection`;
+    string $result = Calculator($values, $operator);
+    textField -e -text $result $outputField;
+
+}
+
+NumberOfInputs();
