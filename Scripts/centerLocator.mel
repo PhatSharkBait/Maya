@@ -1,0 +1,16 @@
+string $objs[] = `ls -selection`;
+float $centerPos[] = {0, 0, 0};
+float $x = 0;
+float $y = 0;
+float $z = 0;
+for($i = 0; $i < `size($objs)`; $i++){
+    float $objPos[] = `objectCenter $objs[$i]`;
+    $x += $objPos[0];
+    $y += $objPos[1];
+    $z += $objPos[2];
+}
+$centerPos[0] = ($x / `size($objs)`);
+$centerPos[1] = ($y / `size($objs)`);
+$centerPos[2] = ($z / `size($objs)`);
+
+move -worldSpace $centerPos `spaceLocator -p 0 0 0;`
