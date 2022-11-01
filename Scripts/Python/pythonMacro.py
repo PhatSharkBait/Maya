@@ -19,3 +19,4 @@ cmds.polyBevel3(fraction=1)
 
 cmds.move(-.75, 2, 1.5, cmds.polySphere(radius=0.5)[0], r=True)
 cmds.move(.75, 2, 1.5, cmds.polySphere(radius=0.5)[0], r=True)
+print( (8/4)/2 )
