@@ -1,30 +1,30 @@
-//Maya ASCII 2022 scene
+//Maya ASCII 2023 scene
 //Name: parcelMailbox.ma
-//Last modified: Tue, Nov 01, 2022 01:24:02 PM
+//Last modified: Fri, Nov 04, 2022 08:57:24 PM
 //Codeset: 1252
-requires maya "2022";
+requires maya "2023";
 requires -nodeType "hairPhysicalShader" "hairPhysicalShader" "1.0";
 requires -nodeType "ikSpringSolver" "ikSpringSolver" "1.0";
 requires -nodeType "displayPoints" "Type" "2.0a";
+requires -nodeType "ngst2SkinLayerData" -dataType "ngst2SkinLayerDataStorage" "ngSkinTools2" "2.0.39";
 requires "stereoCamera" "10.0";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiSkyDomeLight"
 		 -nodeType "aiAreaLight" -nodeType "aiLightBlocker" -nodeType "aiStandardSurface"
-		 "mtoa" "5.0.0.1";
-requires -nodeType "ngst2SkinLayerData" -dataType "ngst2SkinLayerDataStorage" "ngSkinTools2" "2.0.39";
+		 "mtoa" "5.2.0";
 requires "stereoCamera" "10.0";
 currentUnit -l foot -a degree -t film;
 fileInfo "application" "maya";
-fileInfo "product" "Maya 2022";
-fileInfo "version" "2022";
-fileInfo "cutIdentifier" "202110272215-ad32f8f1e6";
-fileInfo "osv" "Windows 10 Enterprise v2009 (Build: 19044)";
-fileInfo "UUID" "84F47411-4686-44CF-1EA1-C681979BB9A8";
+fileInfo "product" "Maya 2023";
+fileInfo "version" "2023";
+fileInfo "cutIdentifier" "202208031415-1dee56799d";
+fileInfo "osv" "Windows 10 Home v2009 (Build: 19044)";
+fileInfo "UUID" "C52A1B70-4C03-CAD9-7717-76928302775E";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "4EF50B36-4A36-38D7-5DE4-7EB2BD8757B0";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 4.1007690273330066 4.0368548652935656 12.541909217209286 ;
-	setAttr ".r" -type "double3" 2509.7999999986728 -1421.1999999999484 -2.0998766487942533e-16 ;
+	setAttr ".t" -type "double3" 12.547595861284982 5.0792731292954203 6.3537579197347354 ;
+	setAttr ".r" -type "double3" 2509.7999999911081 -2458.7999999995104 4.951526349192033e-15 ;
 	setAttr ".rp" -type "double3" -7.2033367896939295e-14 2.7974123455122052e-15 4.7742504030074972e-13 ;
 	setAttr ".rpt" -type "double3" 2.584501717784231e-13 2.1142010492413843e-14 -3.3761304945105162e-14 ;
 createNode camera -s -n "perspShape" -p "persp";
@@ -34,12 +34,12 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr ".ncp" 0.0032808398950131233;
 	setAttr ".fcp" 328.08398950131232;
 	setAttr ".fd" 0.16404199475065617;
-	setAttr ".coi" 13.027261475370722;
+	setAttr ".coi" 13.802162982100132;
 	setAttr ".ow" 0.32808398950131235;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 22.646067819575492 34.102149583202156 -8.2499037247699416 ;
+	setAttr ".tp" -type "double3" 7.9249110221862793 38.015464812517166 0 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "1F8FD30D-42E8-C5A4-626F-2D93DCD63791";
@@ -25174,7 +25174,7 @@ createNode joint -n "R_Leg_Hip_jnt_IK" -p "COG_jnt";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 13;
 	setAttr ".t" -type "double3" -0.018361027255450118 -0.17638250726049598 0.39812369872681802 ;
-	setAttr ".r" -type "double3" 0.001848071016397685 -0.00084097336995840306 -0.72697455271596878 ;
+	setAttr ".r" -type "double3" 0.0018556799916069418 -0.00082127549677694174 -1.481061187475109e-24 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "xzy";
@@ -25190,7 +25190,6 @@ createNode joint -n "R_Leg_Knee_jnt_IK" -p "R_Leg_Hip_jnt_IK";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 2;
 	setAttr ".t" -type "double3" 1.0683838310934197 -1.2799280445656545e-10 -8.8812691418694325e-06 ;
-	setAttr ".r" -type "double3" -2.0677880246496998e-06 2.5094923063964869e-06 0.13487954267054211 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "xzy";
@@ -25206,7 +25205,6 @@ createNode joint -n "R_Leg_Ankle1_jnt_IK" -p "R_Leg_Knee_jnt_IK";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 3;
 	setAttr ".t" -type "double3" 0.93467070506243655 7.8932486094058765e-11 1.434955056184397e-05 ;
-	setAttr ".r" -type "double3" -3.7026529683073995e-25 -2.9510676781136425e-06 -0.1176484502500901 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "xzy";
@@ -25246,7 +25244,7 @@ createNode orientConstraint -n "R_Leg_Ankle2_jnt_IK_orientConstraint1" -p "R_Leg
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -0.14629921344921704 0.0037235285828421988 0.69449470011109293 ;
+	setAttr ".lr" -type "double3" -0.0016444620619394811 0.0028226406111178689 -0.00034250682494748675 ;
 	setAttr ".rsrr" -type "double3" -0.0016444620619394811 0.0028226406111178689 -0.00034250682494748675 ;
 	setAttr -k on ".w0";
 createNode ikEffector -n "effector1" -p "R_Leg_Ankle1_jnt_IK";
@@ -25371,7 +25369,7 @@ createNode parentConstraint -n "R_Leg_middleToe2_jnt_parentConstraint1" -p "R_Le
 		2.8397793368214152e-05 ;
 	setAttr ".tg[0].tor" -type "double3" 0.00073065004711269494 -0.003202336422167551 
 		5.5129473268004505e-06 ;
-	setAttr ".lr" -type "double3" 2.5006991912501538e-10 6.5901279349348495e-11 5.132928292460859e-09 ;
+	setAttr ".lr" -type "double3" 2.5006962094801398e-10 6.5900422090469517e-11 5.13292513054224e-09 ;
 	setAttr ".rst" -type "double3" 0.29105871361221475 4.3709567898628207e-17 -2.3311769545935045e-16 ;
 	setAttr ".rsrr" -type "double3" -1.9878466759146975e-16 -8.4483483726374649e-16 
 		2.1742073017817006e-17 ;
@@ -25396,7 +25394,7 @@ createNode parentConstraint -n "R_Leg_middleToe1_jnt_parentConstraint1" -p "R_Le
 		1.2103987453096947e-05 ;
 	setAttr ".tg[0].tor" -type "double3" -0.00028881174852619283 -0.0032719107593035656 
 		-5.1324533264653056e-06 ;
-	setAttr ".lr" -type "double3" -2.4139577000251229e-10 1.322262671834635e-11 5.1337510808359117e-09 ;
+	setAttr ".lr" -type "double3" -2.4139569545826195e-10 1.3222625165341133e-11 5.1337515746915696e-09 ;
 	setAttr ".rst" -type "double3" 0.071477958744970302 4.3709567898628207e-17 -1.1655884772967523e-16 ;
 	setAttr ".rsrr" -type "double3" 9.9392333795734899e-17 2.3858042624015275e-15 -2.9507099095608798e-16 ;
 	setAttr -k on ".w0";
@@ -25453,7 +25451,7 @@ createNode parentConstraint -n "R_Leg_thumb2_jnt_parentConstraint1" -p "R_Leg_th
 		1.6709668974562237e-05 ;
 	setAttr ".tg[0].tor" -type "double3" 0.0016670407180750608 -0.0028297163050910296 
 		-5.0236271016398605e-05 ;
-	setAttr ".lr" -type "double3" -1.991624777356952e-09 -1.2543297615377601e-09 4.5688361871053314e-09 ;
+	setAttr ".lr" -type "double3" -1.9916156332622436e-09 -1.2543417880101498e-09 4.5688373798133384e-09 ;
 	setAttr ".rst" -type "double3" 0.11398717943626327 -1.4569855966209403e-17 -8.7419135797256413e-17 ;
 	setAttr ".rsrr" -type "double3" 1.7890620083232284e-15 2.981770013872047e-16 1.3914926731402886e-15 ;
 	setAttr -k on ".w0";
@@ -25477,7 +25475,7 @@ createNode parentConstraint -n "R_Leg_thumb1_jnt_parentConstraint1" -p "R_Leg_th
 		1.2552713166260108e-05 ;
 	setAttr ".tg[0].tor" -type "double3" 0.0011737015757531191 -0.0030667212439083012 
 		-8.0555284350152233e-05 ;
-	setAttr ".lr" -type "double3" -3.49436092859892e-09 -1.428939132360823e-09 3.4873645034384583e-09 ;
+	setAttr ".lr" -type "double3" -3.4943656994309424e-09 -1.4289399274994933e-09 3.4873601301757711e-09 ;
 	setAttr ".rst" -type "double3" 0.002952677581070371 0.015867561317879274 -0.15771340236883552 ;
 	setAttr ".rsrr" -type "double3" -3.1805546814635168e-15 -5.963540027744091e-16 9.5416640443905503e-15 ;
 	setAttr -k on ".w0";
@@ -25534,7 +25532,7 @@ createNode parentConstraint -n "R_Leg_pinkie2_jnt_parentConstraint1" -p "R_Leg_p
 		2.2023472954802098e-05 ;
 	setAttr ".tg[0].tor" -type "double3" 0.001515605346425654 -0.0029138898396221529 
 		3.1978768925886407e-05 ;
-	setAttr ".lr" -type "double3" 1.3080813531861332e-09 7.3435637801014346e-10 4.9156451154722977e-09 ;
+	setAttr ".lr" -type "double3" 1.3080861364421967e-09 7.3434844681250736e-10 4.915651476352653e-09 ;
 	setAttr ".rst" -type "double3" 0.1430634244798068 -1.4569855966209403e-17 5.8279423864837613e-17 ;
 	setAttr ".rsrr" -type "double3" -1.2424041724466862e-17 -3.1060104311167156e-18 
 		6.0664266232748366e-21 ;
@@ -25559,7 +25557,7 @@ createNode parentConstraint -n "R_Leg_pinkie1_jnt_parentConstraint1" -p "R_Leg_p
 		1.3963428269990375e-05 ;
 	setAttr ".tg[0].tor" -type "double3" -0.00060887491569393043 -0.0032275525954430276 
 		3.1864452169740071e-05 ;
-	setAttr ".lr" -type "double3" 1.4743789220527105e-09 -2.2963150086567251e-10 4.9180683467456391e-09 ;
+	setAttr ".lr" -type "double3" 1.4743779281293723e-09 -2.296409679854665e-10 4.9180673528223011e-09 ;
 	setAttr ".rst" -type "double3" 0.071484704721521186 -0.019513466730450398 0.12768688852681548 ;
 	setAttr -k on ".w0";
 createNode transform -n "R_Leg_Middle1_jnt_RK_ctrl_grp" -p "R_Leg_ball_jnt";
@@ -25821,7 +25819,7 @@ createNode parentConstraint -n "R_Leg_Ankle2_jnt_RK_parentConstraint1" -p "R_Leg
 		-5.896812370565087e-07 ;
 	setAttr ".tg[1].tor" -type "double3" -0.00082222922016404482 0.0014113215343461345 
 		-0.00017124185218300953 ;
-	setAttr ".lr" -type "double3" -0.14631616470896094 0.0037126458894454111 0.69449119777490098 ;
+	setAttr ".lr" -type "double3" -0.0016444620618687135 0.0028226406111627944 -0.00034250682493367011 ;
 	setAttr ".rst" -type "double3" 0.41136067853551428 -1.2760597478066259e-10 -1.4809163149785892e-06 ;
 	setAttr ".rsrr" -type "double3" 7.9513867036587919e-16 -1.987846675914698e-15 -1.3793457181406746e-32 ;
 	setAttr -k on ".w0";
@@ -25851,7 +25849,7 @@ createNode parentConstraint -n "R_Leg_Ankle1_jnt_RK_parentConstraint1" -p "R_Leg
 		1.0882658023497209e-06 ;
 	setAttr ".tg[1].tor" -type "double3" -0.0015815233824133317 0.00044271148434874095 
 		5.1394296849381828e-09 ;
-	setAttr ".lr" -type "double3" 5.70038107223777e-07 -2.5197099144179703e-07 -0.11764845542651006 ;
+	setAttr ".lr" -type "double3" 3.9712292432452065e-14 1.4186342376565863e-13 -5.139420143120719e-09 ;
 	setAttr ".rst" -type "double3" 0.93467070509463035 -1.6548185976955634e-10 7.1747752783576899e-06 ;
 	setAttr ".rsrr" -type "double3" -1.9624594622799476e-21 2.1703213743782058e-19 -5.139420143120719e-09 ;
 	setAttr -k on ".w0";
@@ -25881,7 +25879,7 @@ createNode parentConstraint -n "R_Leg_Knee_jnt_RK_parentConstraint1" -p "R_Leg_K
 		-7.6570863001582628e-06 ;
 	setAttr ".tg[1].tor" -type "double3" -0.0013209110320129502 -0.00097591173424222679 
 		3.9312824696207759e-09 ;
-	setAttr ".lr" -type "double3" 2.2593586184127356e-07 -6.0275514349988337e-07 0.13487953877696301 ;
+	setAttr ".lr" -type "double3" -6.6962400024008517e-14 9.0633032524944332e-14 -3.9312864471942886e-09 ;
 	setAttr ".rst" -type "double3" 1.0683838310743727 -3.7596301108786977e-10 -7.8067922464854994e-06 ;
 	setAttr ".rsrr" -type "double3" 1.7551634230978963e-14 -2.3756854627179066e-14 -4.9617670809006605e-09 ;
 	setAttr -k on ".w0";
@@ -25910,7 +25908,7 @@ createNode parentConstraint -n "R_Leg_Hip_jnt_RK_parentConstraint1" -p "R_Leg_Hi
 		3.7240551849631237e-14 ;
 	setAttr ".tg[1].tor" -type "double3" -0.0013790273248404324 0.0004682602898893763 
 		2.1467577038748964e-09 ;
-	setAttr ".lr" -type "double3" -1.2049579965726503e-05 -2.5773942531416513e-05 -0.72697455472032879 ;
+	setAttr ".lr" -type "double3" 1.7545076421802555e-14 5.1670230652822762e-14 -2.1467599121249628e-09 ;
 	setAttr ".rst" -type "double3" -0.018361027255390142 2.3433717356938741 0.39812369872685521 ;
 	setAttr ".rsrr" -type "double3" -3.4039933065396656e-14 -7.3724943034210146e-14 
 		-4.8542643330544937e-09 ;
@@ -26042,7 +26040,7 @@ createNode joint -n "L_Leg_Hip_jnt_IK" -p "COG_jnt";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 13;
 	setAttr ".t" -type "double3" -0.018361 -0.17638424295424746 -0.398124 ;
-	setAttr ".r" -type "double3" 9.7415018287623059e-05 -6.8140510267559388e-05 -0.72697539094776975 ;
+	setAttr ".r" -type "double3" 0.00010866262991833968 -4.8091066954636724e-05 2.5041685249684159e-08 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "xzy";
@@ -26058,7 +26056,6 @@ createNode joint -n "L_Leg_Knee_jnt_IK" -p "L_Leg_Hip_jnt_IK";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 2;
 	setAttr ".t" -type "double3" -1.0683780726609138 -2.5490781321267366e-06 9.6360802527718578e-06 ;
-	setAttr ".r" -type "double3" -2.0839537884703815e-06 2.6322130783654987e-06 0.13487950302559484 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "xzy";
@@ -26073,7 +26070,6 @@ createNode joint -n "L_Leg_Ankle1_jnt_IK" -p "L_Leg_Knee_jnt_IK";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 3;
 	setAttr ".t" -type "double3" -0.93467425940564997 -2.516640289571816e-06 -1.4462585070747617e-05 ;
-	setAttr ".r" -type "double3" -3.7026529683073995e-25 -2.8774043510322397e-06 -0.11764802544767877 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "xzy";
@@ -26112,7 +26108,7 @@ createNode orientConstraint -n "L_Leg_Ankle2_jnt_IK_orientConstraint1" -p "L_Leg
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -0.14537838999623337 0.0020580706361076448 0.69469134865680693 ;
+	setAttr ".lr" -type "double3" -0.00070584284023095874 0.0011706737513550826 -0.00014682061848977565 ;
 	setAttr ".o" -type "double3" -0.00092053657905990529 0.0016201798434885353 -0.00019190054602371594 ;
 	setAttr ".rsrr" -type "double3" -0.0016444620619394811 0.0028226406111178685 -0.00034250682494748675 ;
 	setAttr -k on ".w0";
@@ -26472,7 +26468,7 @@ createNode parentConstraint -n "L_Leg_middleToe2_jnt_parentConstraint1" -p "L_Le
 		5.8279423864837613e-17 ;
 	setAttr ".tg[0].tor" -type "double3" -7.9513867036587919e-16 -2.3854160110976384e-15 
 		-5.2926417746228847e-15 ;
-	setAttr ".lr" -type "double3" 6.9574633657014419e-16 1.7393658414253603e-15 3.1339645249967654e-15 ;
+	setAttr ".lr" -type "double3" 1.4908850069360232e-15 1.0311954631307492e-15 6.2958831438735811e-15 ;
 	setAttr ".rst" -type "double3" -0.29105845709842149 -9.0007634932328054e-07 5.623115011824888e-07 ;
 	setAttr ".rsrr" -type "double3" 5.9635400277440939e-16 1.7145177579764267e-15 6.3238372377536313e-15 ;
 	setAttr -k on ".w0";
@@ -26496,7 +26492,7 @@ createNode parentConstraint -n "L_Leg_middleToe1_jnt_parentConstraint1" -p "L_Le
 		3.4967654318902565e-16 ;
 	setAttr ".tg[0].tor" -type "double3" 4.9696166897867449e-17 7.9513867036587919e-16 
 		-7.143823991568446e-16 ;
-	setAttr ".lr" -type "double3" -1.8014860500476951e-16 6.4454777942413357e-34 4.0999337690740647e-16 ;
+	setAttr ".lr" -type "double3" 2.4848083448933725e-17 7.9416804210615518e-16 3.975693351829396e-16 ;
 	setAttr ".rst" -type "double3" -0.071477853075934017 8.5284082486380799e-07 -2.9639172061550423e-07 ;
 	setAttr ".rsrr" -type "double3" -6.2120208622334266e-18 7.9358566515032083e-16 6.9885234700126101e-16 ;
 	setAttr -k on ".w0";
@@ -26553,7 +26549,7 @@ createNode parentConstraint -n "L_Leg_thumb2_jnt_parentConstraint1" -p "L_Leg_th
 		2.9139711932418808e-16 ;
 	setAttr ".tg[0].tor" -type "double3" 4.7708320221952752e-15 -6.361109362927032e-15 
 		-2.1866313435061671e-14 ;
-	setAttr ".lr" -type "double3" -9.3428793767990803e-15 -3.379339349054986e-15 1.1529510720305249e-14 ;
+	setAttr ".lr" -type "double3" -7.3550327008843819e-15 3.5781240166464575e-15 1.7294266080457874e-14 ;
 	setAttr ".rst" -type "double3" -0.1139871970272093 4.4671642063494301e-08 2.6196053258939602e-08 ;
 	setAttr ".rsrr" -type "double3" -3.7769086842379252e-15 4.1744780194208675e-15 1.9878466759146981e-14 ;
 	setAttr -k on ".w0";
@@ -26576,7 +26572,7 @@ createNode parentConstraint -n "L_Leg_thumb1_jnt_parentConstraint1" -p "L_Leg_th
 	setAttr ".tg[0].tot" -type "double3" 5.8279423864837613e-17 -2.9139711932418806e-17 
 		3.2053683125660686e-16 ;
 	setAttr ".tg[0].tor" -type "double3" -6.3611093629270335e-15 0 -1.4312496066585827e-14 ;
-	setAttr ".lr" -type "double3" -1.5902773407317576e-15 6.3611093629270335e-15 1.4710065401768764e-14 ;
+	setAttr ".lr" -type "double3" -6.3611093629270335e-15 5.5659706925611559e-15 9.9392333795734919e-15 ;
 	setAttr ".rst" -type "double3" -0.0029526527044915923 -0.015867270910188917 0.15771317561919759 ;
 	setAttr ".rsrr" -type "double3" 3.1805546814635176e-15 1.1927080055488186e-15 1.232464939067113e-14 ;
 	setAttr -k on ".w0";
@@ -26632,7 +26628,7 @@ createNode parentConstraint -n "L_Leg_pinkie2_jnt_parentConstraint1" -p "L_Leg_p
 	setAttr ".tg[0].tot" -type "double3" 1.1655884772967523e-16 0 5.8279423864837613e-17 ;
 	setAttr ".tg[0].tor" -type "double3" 9.8709011500889252e-15 1.2424041724466862e-17 
 		2.6711362120566097e-14 ;
-	setAttr ".lr" -type "double3" -3.4911557245751875e-15 -1.5957128589862127e-15 -1.271912636488285e-14 ;
+	setAttr ".lr" -type "double3" -5.0876450861691777e-15 -7.9599282323443639e-15 -2.5437702201549642e-14 ;
 	setAttr ".rst" -type "double3" -0.14306338978920929 -6.8944663145657726e-08 -1.263909725202976e-07 ;
 	setAttr ".rsrr" -type "double3" -9.8833251918133898e-15 -1.7859559978923308e-17 
 		-2.5437468644124646e-14 ;
@@ -26657,7 +26653,7 @@ createNode parentConstraint -n "L_Leg_pinkie1_jnt_parentConstraint1" -p "L_Leg_p
 		2.9139711932418808e-16 ;
 	setAttr ".tg[0].tor" -type "double3" -1.987846675914698e-15 3.1805546814635168e-15 
 		-3.975693351829396e-16 ;
-	setAttr ".lr" -type "double3" 1.192708005548819e-15 -2.4848083448933703e-17 -2.6835930124848426e-15 ;
+	setAttr ".lr" -type "double3" 3.1805546814635176e-15 -1.242404172446686e-16 -1.4908850069360238e-15 ;
 	setAttr ".rst" -type "double3" -0.071484463920031507 0.019513531182854517 -0.12768661675086193 ;
 	setAttr ".rsrr" -type "double3" 1.5902773407317588e-15 -4.9696166897867443e-17 -1.0933156717530842e-15 ;
 	setAttr -k on ".w0";
@@ -26688,7 +26684,7 @@ createNode parentConstraint -n "L_Leg_Ankle2_jnt_RK_parentConstraint1" -p "L_Leg
 		9.7899930349702938e-07 ;
 	setAttr ".tg[1].tor" -type "double3" -0.00082308316578760799 0.00141132152669372 
 		-0.00017124194101060972 ;
-	setAttr ".lr" -type "double3" -0.14631571184775435 0.0036669226824542389 0.69449187073500662 ;
+	setAttr ".lr" -type "double3" -0.0016263833378923395 0.0027908512309740194 -0.00033874113530294988 ;
 	setAttr ".rst" -type "double3" -0.41136102126853319 2.4311126519604026e-07 1.3601970903357134e-06 ;
 	setAttr ".rsrr" -type "double3" -0.0016444620618695084 0.0028226406111621976 -0.00034250682493148338 ;
 	setAttr -k on ".w0";
@@ -26720,7 +26716,7 @@ createNode parentConstraint -n "L_Leg_Ankle1_jnt_RK_parentConstraint1" -p "L_Leg
 		-9.9999999794380926e-07 ;
 	setAttr ".tg[1].tor" -type "double3" -0.0015835822096285062 0.00044366091056821037 
 		5.1234569393280531e-09 ;
-	setAttr ".lr" -type "double3" 6.5646609312530149e-07 -8.7505337801005263e-08 -0.11764803060579872 ;
+	setAttr ".lr" -type "double3" 3.0076613031930582e-13 8.7491366059611594e-13 -5.123447397510409e-09 ;
 	setAttr ".rst" -type "double3" -0.93467425933202142 -2.5166416087848543e-06 -6.5424530523403412e-06 ;
 	setAttr ".rsrr" -type "double3" 1.9836193179195414e-14 7.0802907554920782e-14 -2.5617205182005231e-09 ;
 	setAttr -k on ".w0";
@@ -26752,7 +26748,7 @@ createNode parentConstraint -n "L_Leg_Knee_jnt_RK_parentConstraint1" -p "L_Leg_K
 		6.999999984149679e-06 ;
 	setAttr ".tg[1].tor" -type "double3" -0.0013221144003177079 -0.00097591186612688841 
 		3.951879660530681e-09 ;
-	setAttr ".lr" -type "double3" 2.0976640064823794e-07 -4.8286629219249277e-07 0.1348794991145276 ;
+	setAttr ".lr" -type "double3" -4.7792631421465762e-13 6.6771606048807678e-13 -3.9518773570123783e-09 ;
 	setAttr ".rst" -type "double3" -1.0683780725735725 -2.548793958392324e-06 7.9045027117511595e-06 ;
 	setAttr ".rsrr" -type "double3" 1.7376593557181042e-14 -2.3478102323845614e-14 -4.9720593558493453e-09 ;
 	setAttr -k on ".w0";
@@ -26781,7 +26777,7 @@ createNode parentConstraint -n "L_Leg_Hip_jnt_RK_parentConstraint1" -p "L_Leg_Hi
 	setAttr ".tg[1].tot" -type "double3" 0 -1.1655884772967523e-16 0 ;
 	setAttr ".tg[1].tor" -type "double3" -0.0013790273378594434 0.00046826028988937278 
 		2.1467478267289167e-09 ;
-	setAttr ".lr" -type "double3" -0.0017627055831177265 0.00074705891038178676 -0.72697541374889774 ;
+	setAttr ".lr" -type "double3" -0.0017470173616441268 0.00077318442997319139 -2.2856798841609759e-08 ;
 	setAttr ".rst" -type "double3" -0.01836099999999986 -0.17638424295424793 -0.39812399999999992 ;
 	setAttr ".rsrr" -type "double3" -3.4038768311485004e-14 -7.3725234222688004e-14 
 		-4.8542388886170419e-09 ;
@@ -27211,7 +27207,7 @@ createNode transform -n "Mailbox_ctrl" -p "Mailbox_ctrl_grp";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 22;
 	setAttr ".mntl" -type "double3" -0.032808398950131233 -1.1 -0.032808398950131233 ;
-	setAttr ".mxtl" -type "double3" 0.032808398950131233 0 0.032808398950131233 ;
+	setAttr ".mxtl" -type "double3" 0.032808398950131233 0.5 0.032808398950131233 ;
 	setAttr ".mtye" yes;
 	setAttr ".xtye" yes;
 createNode nurbsCurve -n "curveShape2" -p "Mailbox_ctrl";
@@ -27719,6 +27715,8 @@ createNode transform -n "R_Clavicle_ctrl" -p "R_Clavicle_ctrl_grp";
 	setAttr ".ovc" 13;
 	setAttr ".r" -type "double3" 0 0 0 ;
 	setAttr -av ".rz";
+	setAttr -av ".rx";
+	setAttr -av ".ry";
 	setAttr ".rp" -type "double3" 2.3311769545935045e-16 -2.3311769545935045e-16 -1.1655884772967523e-16 ;
 	setAttr ".sp" -type "double3" 2.3311769545935045e-16 -2.3311769545935045e-16 -1.1655884772967523e-16 ;
 createNode nurbsCurve -n "curveShape2" -p "R_Clavicle_ctrl";
@@ -27933,6 +27931,8 @@ createNode transform -n "L_Clavicle_ctrl" -p "L_Clavicle_ctrl_grp";
 	setAttr ".ovc" 6;
 	setAttr ".r" -type "double3" 0 0 0 ;
 	setAttr -av ".rz";
+	setAttr -av ".rx";
+	setAttr -av ".ry";
 	setAttr ".rp" -type "double3" 2.3311769545935045e-16 -2.3311769545935045e-16 -1.1655884772967523e-16 ;
 	setAttr ".sp" -type "double3" 2.3311769545935045e-16 -2.3311769545935045e-16 -1.1655884772967523e-16 ;
 createNode nurbsCurve -n "curveShape2" -p "L_Clavicle_ctrl";
@@ -28120,6 +28120,7 @@ createNode transform -n "L_Arm_IK_ctrl" -p "|Root_ctrl_grp|Root_ctrl|COG_ctrl_gr
 	rename -uid "52CC7584-44BE-59B1-FB18-82AEA18C3CC9";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 6;
+	setAttr ".t" -type "double3" 0 0 -3.2899022000998003e-16 ;
 createNode nurbsCurve -n "L_Arm_IK_ctrlShape" -p "L_Arm_IK_ctrl";
 	rename -uid "6BD48007-4143-0699-F33D-6794B15DB735";
 	setAttr -k off ".v";
@@ -28205,8 +28206,6 @@ createNode transform -n "L_IK_ctrl" -p "L_IK_ctrl_grp";
 	rename -uid "0CA8B148-4260-2BCB-DFD4-D49A1A6B5171";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 6;
-	setAttr ".t" -type "double3" -0.020730850531401706 -0.013578481624096484 -0.004316852497712474 ;
-	setAttr ".r" -type "double3" -7.9513867036587939e-16 4.3794226550966445e-32 6.3114131960291676e-15 ;
 	setAttr ".rp" -type "double3" 0 0 -5.8279423864837613e-17 ;
 	setAttr ".sp" -type "double3" 0 0 -5.8279423864837613e-17 ;
 createNode nurbsCurve -n "L_IK_ctrlShape" -p "L_IK_ctrl";
@@ -28314,7 +28313,6 @@ createNode transform -n "R_IK_ctrl" -p "R_IK_ctrl_grp";
 	rename -uid "EE7EEBEC-45D5-49A7-C811-B3ADC54C93DF";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 13;
-	setAttr ".t" -type "double3" -0.020730850531401938 -0.013578481624096484 -0.0043168524977124437 ;
 	setAttr ".r" -type "double3" -7.9513867036587939e-16 4.3794226550966445e-32 6.3114131960291676e-15 ;
 	setAttr ".rp" -type "double3" 0 0 -5.8279423864837613e-17 ;
 	setAttr ".sp" -type "double3" 0 0 -5.8279423864837613e-17 ;
@@ -29462,7 +29460,7 @@ createNode mesh -n "Legs_geoShapeOrig" -p "Legs_geo";
 		 0.17405462 0.005684562 0.045547225 0.13194567 0.043544948 0.038595848 0.1642056 0.038443651 0.0242365
 		 0.14188263 0.078011088 0.026654536 0.16451797 0.065269805 0.018712832 0.21698858 0.05704562 0.10939597
 		 0.22664741 0.031693496 0.099671245 0.22870201 0.045342974 0.082431145 0.1859623 0.046941444 0.036236003
-		 0.21181743 0.039473012 0.045421671 0.20249633 0.023097567 0.040661294 0.22154205 0.013545777 0.069517635
+		 0.21181743 0.039473012 0.045421671 0.20249633 0.023097567 0.040661294 0.22154205 0.013545779 0.069517635
 		 0.22700305 0.040000129 0.060471978 0.17308569 0.020756746 0.14022292 0.20599523 0.018930998 0.123148
 		 0.16081986 0.096457057 0.14747378 0.15513737 0.065518647 0.16043155 0.14281718 0.030565731 0.1555285
 		 0.12192056 0.010556405 0.12457703 0.10196138 0.018278508 0.083525077 0.095535219 0.051919572 0.052793819
@@ -48585,23 +48583,24 @@ createNode mesh -n "Arms_geoShapeOrig" -p "Arms_geo";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "CDE8BE9F-4F09-88DE-6222-1C8EFBE7126B";
+	rename -uid "9571CE9E-47CF-B137-EB74-0790674458F2";
 	setAttr -s 14 ".lnk";
 	setAttr -s 14 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "AF159052-4EDF-9BA4-3B27-C68056E791D5";
+	rename -uid "5CE049D5-4882-5043-2B64-78AC3D5B076A";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 0 ;
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "3F3F0622-41CC-9569-87C7-40BBB239A8F3";
+	rename -uid "E887F5F6-4EC2-2398-5246-A1985307D7C2";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "196AE00B-4D6C-5375-4BE7-AA83122050EA";
+	rename -uid "F0DADF88-4F99-AF67-350E-85A539052C92";
 	setAttr ".cdl" 1;
 	setAttr -s 8 ".dli[1:7]"  1 2 3 4 5 6 7;
 	setAttr -s 8 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "DF5385C6-48E2-B5D0-7F63-6F94C00CBF08";
+	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "B2A581F0-483A-0929-0591-009A54DCAAC6";
+	rename -uid "78861C25-4188-0AC3-6EF3-1DA9F309CDF3";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "DF09DE4E-4989-D89C-D11C-54B99BCC4524";
 	setAttr ".g" yes;
@@ -48614,45 +48613,45 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 612\n            -height 345\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
-		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n"
-		+ "            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n"
-		+ "            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 612\n            -height 345\n"
-		+ "            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n"
-		+ "            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n"
-		+ "            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n"
-		+ "            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 612\n            -height 345\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n"
-		+ "            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n"
-		+ "            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n"
-		+ "            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1231\n            -height 734\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n"
-		+ "            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n"
-		+ "            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n"
-		+ "            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n"
-		+ "                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n"
-		+ "                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showPlayRangeShades \"on\" \n                -lockPlayRangeShades \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n"
-		+ "                -keyMinScale 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -valueLinesToggle 1\n                -highlightAffectedCurves 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n"
-		+ "                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n"
-		+ "                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n"
-		+ "                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n"
-		+ "                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n"
-		+ "                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n"
-		+ "\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n"
-		+ "                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n"
-		+ "                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\tif (!$useSceneConfig) {\n\t\t\t\tpanel -e -l $label $panelName;\n\t\t\t}\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
-		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
-		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n"
-		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n"
+		+ "            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n"
+		+ "            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n"
+		+ "            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n"
+		+ "            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n"
+		+ "            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n"
+		+ "            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n"
+		+ "            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n"
+		+ "            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n"
+		+ "            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 2836\n            -height 1091\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n"
+		+ "\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n"
+		+ "            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n"
+		+ "            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n"
+		+ "            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n"
+		+ "            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n"
+		+ "                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n"
+		+ "                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showPlayRangeShades \"on\" \n                -lockPlayRangeShades \"off\" \n"
+		+ "                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -keyMinScale 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -valueLinesToggle 1\n                -highlightAffectedCurves 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n"
+		+ "                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n"
+		+ "                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayValues 0\n"
+		+ "                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n"
+		+ "            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n"
+		+ "                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n"
+		+ "                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n"
+		+ "                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\tif (!$useSceneConfig) {\n"
+		+ "\t\t\t\tpanel -e -l $label $panelName;\n\t\t\t}\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"|back\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n"
 		+ "                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n"
 		+ "                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n"
-		+ "                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n"
+		+ "                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n"
 		+ "\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1231\\n    -height 734\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1231\\n    -height 734\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 2836\\n    -height 1091\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 2836\\n    -height 1091\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 0.16404199475065617 -size 0.39370078740157477 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -48662,15 +48661,19 @@ createNode script -n "sceneConfigurationScriptNode";
 createNode displayLayer -n "bg";
 	rename -uid "D2404646-4E9B-1BF3-599F-92A15D082593";
 	setAttr ".dt" 2;
+	setAttr ".ufem" -type "stringArray" 0  ;
 	setAttr ".do" 1;
 createNode displayLayer -n "Box";
 	rename -uid "46CA7681-4CDB-FAA9-ABF1-EAA7969F80CB";
+	setAttr ".ufem" -type "stringArray" 0  ;
 	setAttr ".do" 2;
 createNode displayLayer -n "lip";
 	rename -uid "890D3F94-42D7-2DD6-4E7B-E5AFF7F425E4";
+	setAttr ".ufem" -type "stringArray" 0  ;
 	setAttr ".do" 3;
 createNode displayLayer -n "flap";
 	rename -uid "E97D9477-4EDE-AA38-B889-26BA3D58F80D";
+	setAttr ".ufem" -type "stringArray" 0  ;
 	setAttr ".do" 4;
 createNode aiOptions -s -n "defaultArnoldRenderOptions";
 	rename -uid "25E41C2A-4F83-2824-A58C-58878490012B";
@@ -48703,6 +48706,7 @@ createNode materialInfo -n "materialInfo1";
 createNode displayLayer -n "ShadowBoxLayer";
 	rename -uid "612F31C3-47E6-B788-45A7-F199C55D5E6C";
 	setAttr ".c" 16;
+	setAttr ".ufem" -type "stringArray" 0  ;
 	setAttr ".do" 5;
 createNode groupId -n "groupId112";
 	rename -uid "162AD607-40A5-07A6-C4BF-F786E52CE4C2";
@@ -48710,9 +48714,11 @@ createNode groupId -n "groupId112";
 createNode displayLayer -n "bottomPanel";
 	rename -uid "8B166DB5-4425-A9D2-DA83-6793310B22A9";
 	setAttr ".v" no;
+	setAttr ".ufem" -type "stringArray" 0  ;
 	setAttr ".do" 6;
 createNode displayLayer -n "LegBlockLyr";
 	rename -uid "226B30D7-47C4-6096-FC9C-C88563C56D13";
+	setAttr ".ufem" -type "stringArray" 0  ;
 	setAttr ".do" 7;
 createNode phong -n "DetailedLeg_ncl1_2";
 	rename -uid "C4A79C4C-4896-C37F-FD2B-858ED13FBA71";
@@ -48839,6 +48845,7 @@ createNode place2dTexture -n "place2dTexture10";
 createNode bump2d -n "bump2d3";
 	rename -uid "336B6D25-401C-10DA-BE1E-3C845F564EF8";
 	setAttr ".bi" 1;
+	setAttr ".vc1" -type "float3" 0 1.9999999e-05 0 ;
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode file -n "file8";
 	rename -uid "CD5C397A-4DFC-F934-7743-E5AD38713B24";
@@ -57677,7 +57684,11 @@ createNode reverse -n "reverse4";
 	rename -uid "1F681ED0-4CC0-B6D8-8C74-38B9746FC53A";
 createNode ngst2SkinLayerData -n "ngSkinToolsData_skinCluster2";
 	rename -uid "E5636857-462D-D4CC-E75E-45B3ABF28D75";
-	setAttr ".ld" -type "ngst2SkinLayerDataStorage"   14 3661 {"tJYEXCgEAAABAAAADAAAAEJhc2Ugd2VpZ2h0cwEUCQEE8D8JCAQAAAEsEAgAAAAKEREVHBEkfggAXgEAPjgAngEAPjgAXhAAngEAEUARAREQ/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggAvggAPgEAccA+AQD+GAB+GAD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQARAR7oEP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAN4IAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAEYBAAAL4hMJXsQLPgEAXigAPhgAngEAPjgAXhAAEQERIP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAN4BAHHAEQgRAREQEQgRAREQEQgRAREQEQgRAREQEQgRAREQXggAPgEAXigA/hgA/hgA/hgA/hgA/hgA/hgA/hgA/hgA/hgA/hgA/hgA/hgA/hgAERj+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQBeAQD+oA7+AQA+AQD+kAA+QAARAV4YAH4BAD44AH4QAD4BAH4wAL4gAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAEYBAA60Qv4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BANYBAA==","PvwQ/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAfgEAPnAD/hAA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAEQH+iAs+QAD+AQA+AQARYD4BABEYfggAvgEAPlAA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAhgEAAA3+4wv+4wv+4wv+4wv+4wv+4wv+4wv+4wv+4wv+4wv+4wv+4wv+4wv+4wv+4wv+4wv+4wv+4wv+4wv+4wv+4wv+4wv+4wv+4wv+4wv+4wv+4wv+4wv+4wv+4wv+4wv+4wv+4wv+4wv+4wvi4ws+7BReEAD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQBeAQA+cANeAQARKF4BAH4gAD4BABEwXggA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA3gEAXtAC/hgA/hgA/hgA/hgA/hgA/hgA/hgA/hgA/hgA/hgA/hgA/hgA/hgAXhgAPgEAcWgRAREQ/ggA/ggAfggA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAvgEA/tAE3tAE/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/jgG3jgG/ngA/ngA/ngA/ngA/ngA/ngA/ngA/ngA/ngAhngAAA7+mwj+mwj+mwj+mwj+mwj+mwj+mwj+mwj+mwj+mwj+mwj+mwj+mwj+mwj+mwj+mwj+mwj+mwj+mwj+mwj+mwj+mwj+mwj+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQCCAQD+hAv+hAv+hAt+hAveAQDeGAH+AQD+AQCeAQCe4AD+AQD+AQD+AQD+AQD+AQARAV5wAT4BAD4oAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAA==","/gEA/gEA/gEA/gEA/gEA/gEA/gEA0ZARAT4QAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAIYBAAAP/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN7uMNEuMNHvQXvggA3gEAvmgA/jAA3jAAngEA/qAA3qAA/ngA/ngAvngA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/vAM/vAMvvAM/rAA/rAA/rAA/rAA/rAA/rAA/rAA/rAAvrAA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA5gEAABH+uwX+uwX+uwX+uwX+uwX+uwX+uwX+uwX+uwX+uwX+uwX+uwX+uwX+uwX+uwX+uwX+uwX+uwX+uwX+uwX+uwX+uwXmuwX+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQC6AQA+VBS+AQARQF4BABEgfggA/gEA/gEA/gEAfuAA/iAAPiAA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAXgEAsWj+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQ==","AO4BAAkBABL+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw5CAw4eHBv+CAD+CABeCAD+AQC+AQD+CAH+CAFeCAH+mAD+mAD+mAD+mAA+mAD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQCWAQAAAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAGIBAATwP4mb/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggAXggA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAwgEABJqZAQFsuT8BAAAAeAwAAABjbG9zZXN0UG9pbnQVAAAAAg0ECAMAAAUECAQAAAUECAUAAAUECAYAAAUECAcAAAUECAgAAAUECAkAAAUECAoAAAUECAsAAAUEAWQBBAgNAAAFBAgOAAAFBAgPAAAFBAgQAAAFBAgRAAAFBAgSAAAFBAgTAAAFBAgUAAAFBAGcLBUAAAAWAAAAFgAAAA=="};
+	setAttr ".ld" -type "ngst2SkinLayerDataStorage" 14 3661 {
+"tJYEXCgEAAABAAAADAAAAEJhc2Ugd2VpZ2h0cwEUCQEE8D8JCAQAAAEsEAgAAAAKEREVHBEkfggAXgEAPjgAngEAPjgAXhAAngEAEUARAREQ/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggAvggAPgEAccA+AQD+GAB+GAD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQARAR7oEP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAN4IAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAEYBAAAL4hMJXsQLPgEAXigAPhgAngEAPjgAXhAAEQERIP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAN4BAHHAEQgRAREQEQgRAREQEQgRAREQEQgRAREQEQgRAREQXggAPgEAXigA/hgA/hgA/hgA/hgA/hgA/hgA/hgA/hgA/hgA/hgA/hgA/hgA/hgAERj+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQBeAQD+oA7+AQA+AQD+kAA+QAARAV4YAH4BAD44AH4QAD4BAH4wAL4gAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAEYBAA60Qv4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BANYBAA==",
+"PvwQ/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAfgEAPnAD/hAA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAEQH+iAs+QAD+AQA+AQARYD4BABEYfggAvgEAPlAA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAhgEAAA3+4wv+4wv+4wv+4wv+4wv+4wv+4wv+4wv+4wv+4wv+4wv+4wv+4wv+4wv+4wv+4wv+4wv+4wv+4wv+4wv+4wv+4wv+4wv+4wv+4wv+4wv+4wv+4wv+4wv+4wv+4wv+4wv+4wv+4wv+4wvi4ws+7BReEAD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQBeAQA+cANeAQARKF4BAH4gAD4BABEwXggA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA3gEAXtAC/hgA/hgA/hgA/hgA/hgA/hgA/hgA/hgA/hgA/hgA/hgA/hgA/hgAXhgAPgEAcWgRAREQ/ggA/ggAfggA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAvgEA/tAE3tAE/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/jgG3jgG/ngA/ngA/ngA/ngA/ngA/ngA/ngA/ngA/ngAhngAAA7+mwj+mwj+mwj+mwj+mwj+mwj+mwj+mwj+mwj+mwj+mwj+mwj+mwj+mwj+mwj+mwj+mwj+mwj+mwj+mwj+mwj+mwj+mwj+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQCCAQD+hAv+hAv+hAt+hAveAQDeGAH+AQD+AQCeAQCe4AD+AQD+AQD+AQD+AQD+AQARAV5wAT4BAD4oAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAA==",
+"/gEA/gEA/gEA/gEA/gEA/gEA/gEA0ZARAT4QAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAIYBAAAP/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN7uMNEuMNHvQXvggA3gEAvmgA/jAA3jAAngEA/qAA3qAA/ngA/ngAvngA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/vAM/vAMvvAM/rAA/rAA/rAA/rAA/rAA/rAA/rAA/rAAvrAA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA5gEAABH+uwX+uwX+uwX+uwX+uwX+uwX+uwX+uwX+uwX+uwX+uwX+uwX+uwX+uwX+uwX+uwX+uwX+uwX+uwX+uwX+uwX+uwXmuwX+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQC6AQA+VBS+AQARQF4BABEgfggA/gEA/gEA/gEAfuAA/iAAPiAA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAXgEAsWj+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQ==",
+"AO4BAAkBABL+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw7+Aw5CAw4eHBv+CAD+CABeCAD+AQC+AQD+CAH+CAFeCAH+mAD+mAD+mAD+mAA+mAD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQCWAQAAAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAGIBAATwP4mb/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggAXggA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAwgEABJqZAQFsuT8BAAAAeAwAAABjbG9zZXN0UG9pbnQVAAAAAg0ECAMAAAUECAQAAAUECAUAAAUECAYAAAUECAcAAAUECAgAAAUECAkAAAUECAoAAAUECAsAAAUEAWQBBAgNAAAFBAgOAAAFBAgPAAAFBAgQAAAFBAgRAAAFBAgSAAAFBAgTAAAFBAgUAAAFBAGcLBUAAAAWAAAAFgAAAA=="};
 	setAttr ".imo" -type "string" "{}";
 createNode reverse -n "reverse5";
 	rename -uid "5B9EE9AB-48B8-B61A-B2C4-3AAEBE0B869F";
@@ -57771,52 +57782,98 @@ createNode nodeGraphEditorInfo -n "MayaNodeEditorSavedTabsInfo";
 	setAttr ".tgi[0].ni[19].nvs" 18306;
 createNode ngst2SkinLayerData -n "ngSkinToolsData_skinCluster7";
 	rename -uid "1B51ACDC-402A-88B5-E632-CE8036691C54";
-	setAttr ".ld" -type "ngst2SkinLayerDataStorage"   14 181 {"8QEIKAQAUgEABJqZAQFsuT8BAAAAeAwAAABjbG9zZXN0UG9pbnQXAAAAAg0EPAcAAAAbAAAACgAAAB4AAAABHAEECBgAAAUECBkAAAUECBoAAAUEASwBNAgcAAAFBAgdAAAFBAE8AUQIHwAABQQIIAAABQQIIQAABQQIIgAABQQIIwAABQQIJAAABQQIJQAABQQIJgAABQQIJwAABQQIKAAABQQ8KQAAACkAAAAqAAAAKgAAAA=="};
+	setAttr ".ld" -type "ngst2SkinLayerDataStorage" 14 181 {
+"8QEIKAQAUgEABJqZAQFsuT8BAAAAeAwAAABjbG9zZXN0UG9pbnQXAAAAAg0EPAcAAAAbAAAACgAAAB4AAAABHAEECBgAAAUECBkAAAUECBoAAAUEASwBNAgcAAAFBAgdAAAFBAE8AUQIHwAABQQIIAAABQQIIQAABQQIIgAABQQIIwAABQQIJAAABQQIJQAABQQIJgAABQQIJwAABQQIKAAABQQ8KQAAACkAAAAqAAAAKgAAAA=="};
 	setAttr ".imo" -type "string" "{}";
 createNode ngst2SkinLayerData -n "ngSkinToolsData_skinCluster5";
 	rename -uid "C50F3F56-4792-189E-08A6-D699670708D4";
-	setAttr ".ld" -type "ngst2SkinLayerDataStorage"   14 212 {"oQIIoQUAUgEABJqZAQFcuT8BAAAAeAwAAABjbG9zZXN0UG9pbnQdHTMBIQEECAcAAAUECAoAAAUECBIAAAUECCsAAAUECCwAAAUECC0AAAUECC4AAAUECC8AAAUECDAAAAUECDEAAAUECDIAAAUECDMAAAUECDQAAAUECDUAAAUECDYAAAUECDcAAAUECDgAAAUECDkAAAUECDoAAAUECDsAAAUEQDwAAABUAAAAPQAAAFUAAAA+DQQIPwAABQQIQAAABQQBJCw8AAAAVQAAAD0AAAA="};
+	setAttr ".ld" -type "ngst2SkinLayerDataStorage" 14 212 {
+"oQIIoQUAUgEABJqZAQFcuT8BAAAAeAwAAABjbG9zZXN0UG9pbnQdHTMBIQEECAcAAAUECAoAAAUECBIAAAUECCsAAAUECCwAAAUECC0AAAUECC4AAAUECC8AAAUECDAAAAUECDEAAAUECDIAAAUECDMAAAUECDQAAAUECDUAAAUECDYAAAUECDcAAAUECDgAAAUECDkAAAUECDoAAAUECDsAAAUEQDwAAABUAAAAPQAAAFUAAAA+DQQIPwAABQQIQAAABQQBJCw8AAAAVQAAAD0AAAA="};
 	setAttr ".imo" -type "string" "{}";
 createNode ngst2SkinLayerData -n "ngSkinToolsData_skinCluster6";
 	rename -uid "AB362119-49BE-CC7D-4D5F-3EBC06F341A0";
-	setAttr ".ld" -type "ngst2SkinLayerDataStorage"   14 210 {"oQIIoQUAUgEABJqZAQFcuT8BAAAAegwAAABjbG9zZXN0UG9pbnQdHTMBIQEECBgAAAUECB4AAAUECCYAAAUEQDwAAABUAAAAPQAAAFUAAABDDQQIRAAABQQIRQAABQQIRgAABQQIRwAABQQISAAABQQISQAABQQISgAABQQISwAABQQITAAABQQITQAABQQITgAABQQITwAABQQIUAAABQQIUQAABQQIUgAABQQIUwAABQQBlAGcAZQBnAhWAAAFBDxXAAAAVwAAAFgAAABYAAAA"};
+	setAttr ".ld" -type "ngst2SkinLayerDataStorage" 14 210 {
+"oQIIoQUAUgEABJqZAQFcuT8BAAAAegwAAABjbG9zZXN0UG9pbnQdHTMBIQEECBgAAAUECB4AAAUECCYAAAUEQDwAAABUAAAAPQAAAFUAAABDDQQIRAAABQQIRQAABQQIRgAABQQIRwAABQQISAAABQQISQAABQQISgAABQQISwAABQQITAAABQQITQAABQQITgAABQQITwAABQQIUAAABQQIUQAABQQIUgAABQQIUwAABQQBlAGcAZQBnAhWAAAFBDxXAAAAVwAAAFgAAABYAAAA"};
 	setAttr ".imo" -type "string" "{}";
 createNode ngst2SkinLayerData -n "ngSkinToolsData_skinCluster8";
 	rename -uid "FCB31034-4269-098B-958F-74927E85709D";
-	setAttr ".ld" -type "ngst2SkinLayerDataStorage"   14 36366 {"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"};
+	setAttr ".ld" -type "ngst2SkinLayerDataStorage" 14 36366 {
+"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"};
 	setAttr ".imo" -type "string" "{}";
 createNode skinCluster -n "skinCluster5";
 	rename -uid "9B2443AF-40B5-0EA8-28A6-B98AF6DDDC0D";
 	setAttr -s 2128 ".wl";
-	setAttr ".wl[0:448].w"
+	setAttr ".wl[0:400].w"
+		1 10 1
+		2 10 0.81445818033565165 11 0.18554181966434835
+		2 10 0.86151564579573614 11 0.13848435420426386
+		1 10 1
+		2 10 0.80615797061198857 11 0.19384202938801137
+		1 10 1
+		2 10 0.5187350666146 11 0.4812649333854
+		2 10 0.49261184058750151 11 0.50738815941249849
+		2 10 0.51105390456158206 11 0.48894609543841794
+		2 10 0.99620567105463642 11 0.0037943289453635561
+		1 10 1
+		2 10 0.51611712478893257 11 0.48388287521106749
+		2 10 0.2984014331341644 11 0.70159856686583555
+		2 10 0.23395982193467879 11 0.76604017806532121
+		2 10 0.23887125369522733 11 0.76112874630477267
+		2 10 0.2528377326034148 11 0.7471622673965852
 		1 10 1
 		1 10 1
 		1 10 1
 		1 10 1
-		1 10 1
-		1 10 1
+		2 10 0.99978217054028018 11 0.00021782945971973204
+		2 10 0.51343472341998586 11 0.48656527658001414
+		2 10 0.10478124959301199 11 0.89521875040698795
 		1 11 1
 		1 11 1
-		1 11 1
+		2 10 0.017694847146061177 11 0.98230515285393893
 		1 10 1
+		2 10 0.5094449379543905 11 0.49055506204560956
 		1 10 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
 		1 10 1
 		1 10 1
 		1 10 1
 		1 10 1
 		1 10 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
 		1 10 1
-		1 11 1
 		1 10 1
 		1 10 1
 		1 10 1
@@ -57929,17 +57986,7 @@ createNode skinCluster -n "skinCluster5";
 		1 10 1
 		1 10 1
 		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 11 1
-		1 11 1
-		1 10 1
-		1 11 1
+		2 10 0.37619944669004957 11 0.62380055330995043
 		1 11 1
 		1 10 1
 		1 11 1
@@ -57953,133 +58000,144 @@ createNode skinCluster -n "skinCluster5";
 		1 10 1
 		1 11 1
 		1 11 1
-		2 11 0.82469601667964487 12 0.17530398332035516
-		2 11 0.87453975899636027 12 0.12546024100363973
+		1 10 1
+		2 10 0.38995708853134248 11 0.61004291146865752
+		1 11 1
+		1 11 1
+		1 11 1
+		3 11 0.48750860948035596 12 0.51249103128596007 20 3.5923368395229652e-07
+		3 11 0.5775880056124213 12 0.42241183121613085 20 1.6317144775258163e-07
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		3 11 0.98257671327932428 12 0.017423213326474882 20 7.3394200748840454e-08
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		3 11 0.50291097791768724 12 0.49708897426728521 20 4.7815027539426653e-08
 		1 12 1
-		1 12 1
-		2 11 0.78715819120407104 12 0.21284180879592896
-		2 11 0.69130287494352838 12 0.30869712505647168
-		1 11 1
-		1 11 1
-		2 11 0.99588885961985307 12 0.004111140380146986
-		2 11 0.99330069716020086 12 0.006699302839799145
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		2 11 0.99966415098555916 12 0.00033584901444077886
-		2 11 0.97833899456994988 12 0.021661005430050072
-		2 11 0.96199406626811723 12 0.038005933731882775
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		2 11 0.99638641878138656 12 0.0036135812186133096
-		2 11 0.98428882451732047 12 0.015711175482679585
-		2 11 0.96393891343337845 12 0.036061086566621506
-		1 11 1
-		1 11 1
-		1 11 1
-		2 11 0.99082827752610347 12 0.0091717224738965229
-		2 11 0.84661471843719482 12 0.15338528156280518
-		1 11 1
-		2 11 0.99941144849605623 12 0.00058855150394371628
-		2 11 0.99152731987789955 12 0.0084726801221004511
-		2 11 0.98525108099753422 12 0.014748919002465855
-		2 11 0.95514309406280518 12 0.044856905937194824
-		1 11 1
-		1 11 1
-		1 11 1
-		2 11 0.99126880807093076 12 0.0087311919290692062
-		2 11 0.83445972204208374 12 0.16554027795791626
-		1 11 1
-		2 11 0.99989476093957641 12 0.00010523906042346281
-		2 11 0.99421893254009541 12 0.0057810674599046404
-		2 11 0.98528631743683626 12 0.014713682563163695
-		2 11 0.94506777036985579 12 0.054932229630144158
-		1 11 1
-		1 11 1
-		1 11 1
-		2 11 0.99070173594234667 12 0.0092982640576532716
-		2 11 0.81850013677775457 12 0.18149986322224548
-		1 11 1
-		1 11 1
-		2 11 0.99999178652696352 12 8.2134730365224578e-06
-		2 11 0.98832684663280213 12 0.01167315336719793
-		2 11 0.96914296620232632 12 0.030857033797673628
-		1 11 1
-		1 11 1
-		1 11 1
-		2 11 0.99570480233683101 12 0.0042951976631690463
-		2 11 0.87868458032608032 12 0.12131541967391968
-		1 11 1
-		1 11 1
-		1 11 1
-		2 11 0.98952793706384323 12 0.010472062936156754
-		2 11 0.96091612341067467 12 0.039083876589325293
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		2 11 0.87982640028517245 12 0.12017359971482755
-		1 11 1
-		1 11 1
-		1 11 1
-		2 11 0.98465447150685681 12 0.015345528493143194
-		2 11 0.96269939895422163 12 0.037300601045778377
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		2 11 0.91460180282592773 12 0.085398197174072266
-		1 11 1
-		1 11 1
-		1 11 1
-		2 11 0.98372574859244555 12 0.016274251407554403
-		2 11 0.94893810305183823 12 0.051061896948161815
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		2 11 0.83881555737829872 12 0.16118444262170131
-		1 11 1
-		1 11 1
-		1 11 1
-		2 11 0.99523685833308084 12 0.0047631416669191443
-		2 11 0.96382664916048455 12 0.036173350839515395
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		2 11 0.85274033467858534 12 0.14725966532141468
-		2 11 0.73186945915222168 12 0.26813054084777832
-		2 11 0.73011773824691772 12 0.26988226175308228
-		2 11 0.61877888441085815 12 0.38122111558914185
-		2 11 0.68969669013311541 12 0.31030330986688465
-		2 11 0.70712673664093018 12 0.29287326335906982
-		2 11 0.7092545243875541 12 0.29074547561244596
-		2 11 0.73476564884185791 12 0.26523435115814209
-		2 11 0.75010989978745735 12 0.24989010021254271
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
+		3 11 0.35356468108384242 12 0.64642387895705733 20 1.1439959100228565e-05
+		3 11 0.50055126301569242 12 0.49937934606097212 20 6.939092333549347e-05
+		3 11 0.58016789932929658 12 0.41964144218722621 20 0.00019065848347715264
+		3 11 0.62973588904089084 12 0.37020955130521177 20 5.4559653897343577e-05
+		3 11 0.069839063246094749 12 0.93016052198478505 20 4.1476912023727387e-07
+		3 11 0.03024709428040508 12 0.96975285373645537 20 5.1983139512578862e-08
 		1 12 1
 		1 12 1
 		1 12 1
-		1 12 1
+		4 11 0.10946073638823317 12 0.5093002687707423 13 0.0051580814201497398 
+		20 0.3760809134208748
+		4 11 0.16622557988426714 12 0.39408647426833998 13 0.032365604752814699 
+		20 0.40732234109457821
+		4 11 0.10734412553954685 12 0.39987187384986311 13 0.1508761264775452 
+		20 0.3419078741330448
+		4 11 0.0030066631723870535 12 0.98662018741482627 13 0.0089613962887222665 
+		20 0.0014117531240643863
+		1 14 1
+		1 14 1
+		6 11 3.7845032684933217e-09 12 2.2380488455578135e-05 13 0.045932571013852425 
+		14 0.88845894165423689 17 0.065527437232674748 20 5.8665826277035245e-05
 		1 14 1
 		1 14 1
 		1 14 1
@@ -58098,16 +58156,16 @@ createNode skinCluster -n "skinCluster5";
 		1 14 1
 		1 14 1
 		1 14 1
+		6 11 1.1274182094145448e-08 12 6.6645737467989667e-05 13 0.096367162319416652 
+		14 0.68251440011020936 17 0.22087731458332108 20 0.00017446597540287178
+		6 11 6.9337646914657939e-06 12 0.0001889435179408179 13 0.072919521605611826 
+		14 0.78854481569013524 17 0.13822922840398907 20 0.00011055701763163764
 		1 14 1
 		1 14 1
 		1 14 1
 		1 14 1
-		1 14 1
-		1 14 1
-		1 14 1
-		1 14 1
-		1 14 1
-		1 14 1
+		6 11 3.4059802566827644e-08 12 0.00020401495852783781 13 0.098095828178487041 
+		14 0.82152498918962136 17 0.079617724937653775 20 0.0005574086759074393
 		1 15 1
 		1 15 1
 		1 15 1
@@ -58119,37 +58177,37 @@ createNode skinCluster -n "skinCluster5";
 		1 14 1
 		1 14 1
 		1 14 1
+		2 14 0.77481325414417757 15 0.22518674585582241
+		2 14 0.75739438152859051 15 0.24260561847140955
+		2 14 0.80164974927902222 15 0.19835025072097778
+		2 14 0.41662659744182812 15 0.58337340255817194
+		1 15 1
+		1 15 1
+		1 15 1
+		2 14 0.37659592209981479 15 0.62340407790018526
+		2 14 0.46605308050391797 15 0.53394691949608197
+		2 14 0.47681120176248543 15 0.52318879823751463
+		2 14 0.017899069639400158 15 0.98210093036059998
+		1 15 1
+		1 15 1
+		1 15 1
+		2 14 0.15724261170855094 15 0.84275738829144908
+		2 14 0.20977455450404842 15 0.79022544549595164
+		2 14 0.18363320827484131 15 0.81636679172515869
+		1 15 1
+		1 15 1
+		1 15 1
+		1 15 1
+		1 15 1
+		1 15 1
+		1 15 1
 		1 14 1
 		1 14 1
 		1 14 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
 		1 14 1
-		1 14 1
-		1 14 1
-		1 14 1
-		1 14 1
-		1 15 1
-		1 15 1
+		2 14 0.7497878819830488 15 0.2502121180169512
+		2 14 0.46655809879302979 15 0.53344190120697021
+		2 14 0.19094084555263247 15 0.80905915444736753
 		1 15 1
 		1 15 1
 		1 15 1
@@ -58187,76 +58245,91 @@ createNode skinCluster -n "skinCluster5";
 		1 15 1
 		1 17 1
 		1 17 1
-		1 13 1
-		1 13 1
-		1 14 1
-		1 14 1
-		1 14 1
-		1 13 1
+		6 11 1.3114519350214033e-08 12 7.6436219981404482e-05 13 0.14861518260044077 
+		14 0.35596719660690196 17 0.4951505699471459 20 0.00019060151101059049
+		6 11 1.5142950469708426e-06 12 6.1755898505477574e-05 13 0.14981833208549414 
+		14 0.3664007213358863 17 0.48364222399101903 20 7.5452394048005185e-05
+		5 11 8.2964141382294351e-06 12 3.6061496931124572e-05 13 0.050659603336679085 
+		14 0.93986390103005224 17 0.00014899481598745873;
+	setAttr ".wl[400:678].w"
+		1 20 0.0092831429062119001
+		3 13 0.25837935003782936 14 0.73763289884007432 20 0.0039877511220963637
+		6 11 0.00077269197100067997 12 0.0039785265138331267 13 0.122440108767416 
+		14 0.80802541983967435 17 0.0096533482579835867 20 0.0551299046500923
+		6 11 4.4446376387477108e-08 12 0.00025739025526294606 13 0.17798396601478755 
+		14 0.34328421287778815 17 0.47784723909304033 20 0.00062714731274455821
 		1 17 1
-		1 14 1
-		1 14 1
-		1 13 1
-		1 17 1
-		1 17 1
-		1 17 1
-		1 17 1
-		1 17 1
-		1 13 1
-		1 13 1
-		1 13 1
-		1 13 1
-		1 18 1
-		1 18 1
-		1 18 1
-		1 18 1
-		1 18 1
-		1 18 1
-		1 18 1
-		1 18 1
-		1 18 1
-		1 18 1
-		1 18 1
-		1 18 1
-		1 18 1
-		1 18 1
-		1 18 1
-		1 18 1
-		1 18 1
-		1 18 1
-		1 18 1
-		1 18 1
+		6 11 0.00079804105633316446 12 0.0048110614143536201 13 0.1176120422427516 
+		14 0.833815394080474 17 0.027282042459130441 20 0.015681418746957273
+		6 11 7.6272792444947285e-05 12 0.0018997920729563447 13 0.069169139847897465 
+		14 0.84785972181814784 17 0.080242185039650277 20 0.00075288842890307197
+		6 11 9.3108593902008641e-06 12 0.00024028550636582833 13 0.14911712945135017 
+		14 0.38008648766427033 17 0.47043380895399084 20 0.00011297756463258569
 		1 17 1
 		1 17 1
 		1 17 1
 		1 17 1
+		6 11 1.340755986187724e-10 12 1.6052156363359697e-09 13 2.8518181971467889e-06 
+		14 6.1970422206681253e-11 17 0.99999714473862444 20 1.641916834183973e-09
+		6 11 0.00093873504704791049 12 0.023354178324168098 13 0.36855214840177164 
+		14 0.26182912921452361 17 0.33613070588872901 20 0.0091951031237598249
+		6 11 0.00023934815644248116 12 0.0060306424526026785 13 0.48942655528627793 
+		14 8.6889515294029859e-05 17 0.50186795205131396 20 0.0023486125380688927
+		6 11 0.0042008060781607978 12 0.029916071599713597 13 0.27502224950674614 
+		14 0.51037981169887991 17 0.090068440766020635 20 0.090412620350478839
+		6 11 0.0023250881473438076 12 0.01383188675150749 13 0.24701268342427735 
+		14 0.54075541562042606 17 0.024569895214561838 20 0.17150503084188343
+		1 18 1
+		1 18 1
+		1 18 1
+		1 18 1
+		1 18 1
+		1 18 1
+		1 18 1
+		1 18 1
+		1 18 1
+		1 18 1
+		1 18 1
+		1 18 1
+		1 18 1
+		1 18 1
+		1 18 1
+		1 18 1
+		1 18 1
+		1 18 1
+		1 18 1
+		1 18 1
 		1 17 1
 		1 17 1
 		1 17 1
+		2 13 0.068481632290081057 17 0.93151836770991892
+		1 17 1
+		6 11 1.246350336340027e-07 12 6.987774372233145e-05 13 0.13586371941162992 
+		14 1.1821102965434595e-06 17 0.86406391685370254 20 1.1792456150194761e-06
+		2 17 0.99059740695700838 18 0.0094025930429915902
 		1 17 1
 		1 17 1
 		1 17 1
-		1 17 1
-		1 17 1;
-	setAttr ".wl[449:912].w"
-		1 17 1
-		1 17 1
+		2 17 0.79973911047370572 18 0.20026088952629434
+		2 17 0.77389174505261671 18 0.22610825494738332
+		2 17 0.90884841708884445 18 0.091151582911155521
+		2 17 0.8826799388536769 18 0.11732006114632301
+		2 17 0.47764679656307679 18 0.52235320343692326
+		1 18 1
+		2 17 0.45532281829944793 18 0.54467718170055202
 		1 18 1
 		1 18 1
+		2 17 0.38233850107559553 18 0.61766149892440447
+		2 17 0.46080559492111206 18 0.53919440507888794
+		2 17 0.46756607294082642 18 0.53243392705917358
+		2 17 0.10922593529378982 18 0.89077406470621023
+		1 18 1
+		2 17 0.0095325981580102227 18 0.99046740184198978
 		1 18 1
 		1 18 1
-		1 18 1
-		1 18 1
-		1 18 1
-		1 18 1
-		1 18 1
-		1 18 1
-		1 18 1
-		1 18 1
-		1 18 1
-		1 18 1
-		1 18 1
-		1 18 1
+		2 17 0.01809727887680285 18 0.9819027211231971
+		2 17 0.10570826811467803 18 0.89429173188532196
+		2 17 0.084606024164140939 18 0.91539397583585902
 		1 18 1
 		1 18 1
 		1 18 1
@@ -58298,39 +58371,50 @@ createNode skinCluster -n "skinCluster5";
 		1 12 1
 		1 12 1
 		1 12 1
-		1 13 1
+		5 11 0.030556835665968129 12 0.14037006657322554 13 0.5686542222721005 
+		14 0.0017800270752186727 20 0.25863884841348711
+		1 12 1
+		4 11 0.04249462540720101 12 0.11048022801682651 13 0.008402088766572292 
+		20 0.83862305780940027
+		1 12 1
+		1 12 1
+		1 20 1
+		4 11 0.0020724605715805255 12 0.0094774490513130378 13 0.00012516789668718287 
+		20 0.98832492248041925
 		1 12 1
 		1 20 1
 		1 12 1
 		1 12 1
 		1 20 1
-		1 20 1
-		1 12 1
-		1 20 1
-		1 12 1
-		1 12 1
-		1 20 1
-		1 20 1
+		2 20 0.87088619123532662 21 0.12911380876467332
+		2 20 0.50452292019402034 21 0.49547707980597971
 		1 21 1
-		1 21 1
-		1 20 1
-		1 21 1
-		1 21 1
-		1 20 1
-		1 21 1
-		1 20 1
+		2 20 0.7849493728532827 21 0.21505062714671735
+		2 20 0.45518967242179348 21 0.54481032757820647
+		2 20 0.27927873370882073 21 0.72072126629117927
+		2 20 0.7317508837058877 21 0.2682491162941123
+		2 20 0.4864388108253479 21 0.5135611891746521
+		2 20 0.79902439118885416 21 0.2009756088111459
 		1 20 1
 		1 21 1
 		1 21 1
 		1 20 1
-		1 20 1
+		2 20 0.81682482907698073 21 0.18317517092301933
+		2 20 0.47909226888968165 21 0.52090773111031841
+		2 20 0.75718630488494498 21 0.24281369511505507
+		2 20 0.41312683342041073 21 0.58687316657958921
+		2 20 0.35652341790846259 21 0.64347658209153746
+		2 20 0.95665914987468348 21 0.043340850125316542
+		2 20 0.20552536315028228 21 0.79447463684971775
+		2 20 0.20350726832427776 21 0.79649273167572221
+		2 20 0.17016279697418213 21 0.82983720302581787
 		1 21 1
-		1 20 1
 		1 21 1
 		1 21 1
-		1 20 1
+		2 20 0.21325844625074017 21 0.7867415537492598
 		1 21 1
 		1 21 1
+		2 20 0.16141725548608635 21 0.83858274451391368
 		1 21 1
 		1 21 1
 		1 21 1
@@ -58385,104 +58469,115 @@ createNode skinCluster -n "skinCluster5";
 		1 21 1
 		1 21 1
 		1 21 1
-		1 21 1
-		1 21 1
-		1 21 1
-		1 21 1
-		1 21 1
-		1 21 1
-		1 21 1
-		1 21 1
-		1 20 1
-		1 20 1
-		1 20 1
-		1 20 1
 		1 20 1
 		1 20 1
 		1 20 1
 		1 20 1
 		1 20 1
 		1 20 1
-		1 13 1
-		1 17 1
-		1 14 1
-		1 13 1
-		1 14 1
-		1 13 1
-		1 13 1
-		1 13 1
-		1 13 1
-		1 20 1
-		1 13 1
 		1 20 1
 		1 20 1
 		1 20 1
 		1 20 1
+		6 11 1.0626492967897641e-07 12 0.00061038126078469897 13 0.27652392352093486 
+		14 0.27018389653689967 17 0.45123899898047948 20 0.0014426934359716875
+		6 11 1.0590951556355095e-07 12 0.00056043603595831465 13 0.17965513440114703 
+		14 0.058236298235295976 17 0.76065385573111066 20 0.00089416968697251565
+		6 11 1.9268390972197554e-07 12 0.0011620606314657676 13 0.31420108097506988 
+		14 0.50547855161858068 17 0.17591456745058312 20 0.003243546640390805
+		6 11 6.5721252651594275e-07 12 0.0039831501279686638 13 0.47536064478419215 
+		14 0.21664701855573443 17 0.29802858522827957 20 0.0059799440912986753
+		6 11 3.651459687103705e-08 12 0.00021943920649708241 13 0.26338512484113835 
+		14 0.71058186009344071 17 0.017150937155328252 20 0.0086626021889987387
+		6 11 0.00013158130557916535 12 0.067604902902790129 13 0.3253798951103839 
+		14 0.0011194932155002444 17 0.60451463011042494 20 0.0012494973553215619
+		6 11 2.7338146284991815e-05 12 0.01532737524052501 13 0.42430942858497256 
+		14 0.00025929067975547523 17 0.5598179050204003 20 0.00025866232806172177
+		6 11 1.1939196916647829e-05 12 0.062975470262687905 13 0.38695290169220831 
+		14 0.00012549131569247429 17 0.54982224628729548 20 0.0001119512451991845
+		6 11 3.7649650113055618e-06 12 0.022484693487059452 13 0.54571000822885252 
+		14 4.0486767205196764e-05 17 0.43172580236717611 20 3.5244184695470713e-05
+		1 20 1
+		6 11 1.0147430384994903e-07 12 0.00060601319876496106 13 0.49303182245579924 
+		14 0.41947536608514652 17 0.04847271963244832 20 0.03841397715353724
+		1 20 1
+		5 11 0.0053586554806462202 12 0.022089991756833006 13 0.30438661628095687 
+		14 1.8406493072772178e-07 20 0.6681645524166332
+		1 20 1
+		1 20 1
 		1 13 1
-		1 13 1
-		1 13 1
-		1 13 1
-		1 13 1
-		1 13 1
+		6 11 3.4351574729620749e-06 12 0.29290561442488056 13 0.63706002561783959 
+		14 4.0119811119034535e-05 17 0.069958593351640397 20 3.2211637047434817e-05
+		6 11 4.8396806854143308e-05 12 0.5172179122724313 13 0.36009558682969317 
+		14 0.00046315041723863894 17 0.12174040967552216 20 0.00043454399826060619
+		6 11 0.00015165964942663566 12 0.47192341507687491 13 0.43472784908180073 
+		14 0.0011897382484751082 17 0.090686223481405176 20 0.0013211144620173649
+		6 11 0.0015101427939747736 12 0.53012298821771209 13 0.34737836845499803 
+		14 0.0052108363476049838 17 0.1035379753435956 20 0.012239688842114538
+		5 11 0.0064127582692719079 12 0.27942530379548391 13 0.66438462867601733 
+		14 0.00043492469023540458 20 0.049342384568991385
 		1 20 1
 		1 13 1
 		1 13 1
 		1 12 1
 		1 12 1
-		2 11 0.71158613895136535 12 0.2884138610486347
-		2 11 0.68492267474762569 12 0.31507732525237425
-		2 11 0.63866239786148071 12 0.36133760213851929
-		2 11 0.59669065475463867 12 0.40330934524536133
-		2 11 0.59586678159633932 12 0.40413321840366068
-		2 11 0.66368424892425537 12 0.33631575107574463
-		2 11 0.72876310348510742 12 0.27123689651489258
-		2 11 0.82127792866942184 12 0.17872207133057819
+		1 11 1
+		1 11 1
+		1 11 1
+		3 11 0.74871305888607376 12 0.2512854479916149 20 1.4931223112563394e-06
+		2 11 0.79467294232031871 12 0.20532705767968126
+		1 11 1
+		2 11 0.95853165629807879 12 0.041468343701921172
+		2 11 0.99245631974584814 12 0.007543680254151852
+		3 11 0.2343629232674109 12 0.76563568479867339 20 1.3919339155681154e-06
+		3 11 0.26021695062848238 12 0.73978277361951439 20 2.7575200316278102e-07
+		3 11 0.2081745741372692 12 0.79182536453023722 20 6.1332493670172678e-08
 		1 12 1
 		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		2 11 0.93329260647387935 12 0.066707393526120623
-		2 11 0.90261203050613403 12 0.097387969493865967
-		2 11 0.92251002788543701 12 0.077489972114562988
-		2 11 0.89259439706802368 12 0.10740560293197632
-		2 11 0.89839438576114805 12 0.10160561423885194
-		2 11 0.93362489144876271 12 0.066375108551237239
-		2 11 0.92752938771598492 12 0.072470612284015024
-		2 11 0.95209811344560025 12 0.047901886554399753
-		2 11 0.91088452669634001 12 0.089115473303659959
-		2 11 0.90166158155844789 12 0.098338418441552056
-		1 12 1
-		2 11 0.88072866201400757 12 0.11927133798599243
-		2 11 0.84375752275820859 12 0.15624247724179144
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		2 11 0.81153712238260733 12 0.18846287761739261
-		2 11 0.7384982705116272 12 0.2615017294883728
-		2 11 0.76966667175292969 12 0.23033332824707031
-		2 11 0.82380616664886475 12 0.17619383335113525
-		2 11 0.75331185003185719 12 0.24668814996814281
-		2 11 0.80375849002959598 12 0.19624150997040407
-		1 12 1
-		1 12 1
-		2 11 0.85580152273178101 12 0.14419847726821899
-		2 11 0.76414608955383301 12 0.23585391044616699
-		2 11 0.77154944027812955 12 0.22845055972187042
-		2 11 0.78266849466170352 12 0.21733150533829645
-		2 11 0.73538500070571899 12 0.26461499929428101
-		2 11 0.8102242229845491 12 0.18977577701545095
-		2 11 0.82979381084442139 12 0.17020618915557861
-		2 11 0.81436316945607712 12 0.18563683054392291
-		2 11 0.77533903048452824 12 0.22466096951547174
-		2 11 0.81795204904604035 12 0.18204795095395968
+		3 11 0.21694700618147308 12 0.78293323649452862 20 0.00011975732399823273
+		3 11 0.2523019893997922 12 0.74709718949822146 20 0.00060082110198629796
+		4 11 0.35350029804649974 12 0.56414239232642371 13 0.0087471769867217154 
+		20 0.073610132640354847
+		4 11 0.27504452746792774 12 0.60905224023520288 13 0.036076929189265361 
+		20 0.079826303107603941
+		3 11 0.22738910830705136 12 0.7726044345972416 20 6.4570957070934406e-06
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		3 11 0.5156812191969804 12 0.48431820805963166 20 5.7274338785176139e-07
+		2 11 0.7178005576133728 12 0.2821994423866272
+		2 11 0.72737785361343188 12 0.27262214638656812
+		3 11 0.54805471533278494 12 0.45194295669467899 20 2.3279725362364614e-06
+		3 11 0.40098042320627947 12 0.59901751618403654 20 2.0606096840259622e-06
+		3 11 0.39388745813445519 12 0.6061068466088908 20 5.6952566540059343e-06
+		3 11 0.53537860733052711 12 0.46461835300884952 20 3.0396606232869933e-06
+		3 11 0.39772482837941431 12 0.60225978711125383 20 1.5384509331958622e-05
+		2 11 0.73034797491717185 12 0.2696520250828281
+		2 11 0.94040205902003293 12 0.059597940979967012
+		2 11 0.89679830651273174 12 0.10320169348726829
+		2 11 0.84948954434724022 12 0.15051045565275981;
+	setAttr ".wl[679:1087].w"
+		2 11 0.83851390114509472 12 0.16148609885490531
+		2 11 0.73551382210768335 12 0.26448617789231671
+		3 11 0.56021931228324984 12 0.43976577052415278 20 1.4917192597461233e-05
+		3 11 0.45125840525420191 12 0.54870610808534692 20 3.5486660451235977e-05
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
 		1 10 1
 		1 10 1
 		1 10 1
@@ -58564,20 +58659,34 @@ createNode skinCluster -n "skinCluster5";
 		1 10 1
 		1 10 1
 		1 12 1
-		1 13 1
-		1 13 1
-		1 13 1
-		1 13 1
-		1 13 1
-		1 13 1
-		1 13 1
-		1 13 1
-		1 13 1
-		1 13 1
-		1 13 1
-		1 13 1
-		1 13 1
-		1 13 1
+		6 11 1.8592797261522062e-08 12 0.00011103776715557733 13 0.50676562107848244 
+		14 0.38344846466550692 17 0.0088814928392191433 20 0.1007933650568386
+		6 11 0.00016706659864681282 12 0.00071263349702026658 13 0.35356105110180019 
+		14 0.46996210004022237 17 0.0019162436182107866 20 0.17368090514409959
+		6 11 0.00048236984921778546 12 0.0020074550770558465 13 0.34455138061839891 
+		14 0.18734906405538371 17 0.0015206399670311811 20 0.46408909043291258
+		6 11 1.226028101958554e-08 12 7.3219447134407386e-05 13 0.51739741338051959 
+		14 0.16696009351711733 17 0.0058565476140467407 20 0.30971271378090098
+		6 11 0.0044203933400646664 12 0.024778460305731404 13 0.3163130421812767 
+		14 0.27817867423817305 17 0.020701666337417737 20 0.35560776359733653
+		6 11 3.6175831424202989e-08 12 0.00021604516148382658 13 0.74985923648229325 
+		14 0.16878566655798527 17 0.017280638739974243 20 0.063858376882431969
+		6 11 1.4558440173150349e-07 12 0.0011173326625448566 13 0.96656315480509969 
+		14 0.01381496596653164 17 0.016828293837765431 20 0.0016761071436567695
+		6 11 4.4406795019808453e-06 12 0.035625198800334629 13 0.77927819866813985 
+		14 4.9638633543801711e-05 17 0.18500111445375267 20 4.1408764727153639e-05
+		6 11 1.8173235188268993e-05 12 0.16395763714633324 13 0.55538145629270363 
+		14 0.00020566160663887463 17 0.28026788415588538 20 0.00016918756325054574
+		6 11 7.0982556556593407e-05 12 0.20669150962451213 13 0.48605330232699778 
+		14 0.0008184483982013386 17 0.30570686765675098 20 0.00065888943698123013
+		6 11 0.00026557434301707154 12 0.20487306149761175 13 0.48536591779032429 
+		14 0.0033126800485956346 17 0.3037033991060008 20 0.0024793672144503899
+		6 11 0.0013190529528420438 12 0.23018920126654949 13 0.46681749264250993 
+		14 0.015880037923634158 17 0.27373595466909878 20 0.012058260545365535
+		6 11 0.0041836800373029727 12 0.10865831196761268 13 0.61520800222796213 
+		14 0.083145637676264816 17 0.14721319847175768 20 0.041591169619099699
+		6 11 0.011475460924453874 12 0.074663298427964528 13 0.4304365039925046 
+		14 0.24135529179187379 17 0.06290911313823741 20 0.17916033172496593
 		1 15 1
 		1 15 1
 		1 15 1
@@ -58702,8 +58811,7 @@ createNode skinCluster -n "skinCluster5";
 		1 18 1
 		1 18 1
 		1 18 1
-		1 18 1;
-	setAttr ".wl[913:1361].w"
+		1 18 1
 		1 18 1
 		1 18 1
 		1 18 1
@@ -58856,151 +58964,159 @@ createNode skinCluster -n "skinCluster5";
 		1 21 1
 		1 21 1
 		1 30 1
+		2 30 0.81445818033565165 31 0.18554181966434835
+		2 30 0.86151564579573614 31 0.13848435420426386
+		1 30 1
+		2 30 0.80615797061198857 31 0.19384202938801137
+		1 30 1
+		2 30 0.5187350666146 31 0.4812649333854
+		2 30 0.49261184058750151 31 0.50738815941249849
+		2 30 0.51105390456158206 31 0.48894609543841794
+		2 30 0.99620567105463642 31 0.0037943289453635561
+		1 30 1
+		2 30 0.51611712478893257 31 0.48388287521106749
+		2 30 0.2984014331341644 31 0.70159856686583555
+		2 30 0.23395982193467879 31 0.76604017806532121
+		2 30 0.23887125369522733 31 0.76112874630477267
+		2 30 0.2528377326034148 31 0.7471622673965852
 		1 30 1
 		1 30 1
 		1 30 1
 		1 30 1
+		2 30 0.99978217054028018 31 0.00021782945971973204
+		2 30 0.51343472341998586 31 0.48656527658001414
+		2 30 0.10478124959301199 31 0.89521875040698795
+		1 30 4.7503939856656165e-08;
+	setAttr ".wl[1087:1472].w"
+		1 31 0.99999995249606011
+		2 30 1.0982092448061311e-08 31 0.99999998901790754
+		2 30 0.017694847146061177 31 0.98230515285393893
+		1 30 1
+		2 30 0.5094449379543905 31 0.49055506204560956
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		2 30 0.37619944669004957 31 0.62380055330995043
+		1 31 1
 		1 30 1
 		1 31 1
 		1 31 1
-		1 31 1
-		1 30 1
-		1 30 1
-		1 31 1
-		1 31 1
-		1 31 1
-		1 31 1
-		1 31 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 31 1
-		1 31 1
-		1 31 1
-		1 31 1
-		1 31 1
-		1 30 1
-		1 31 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
 		1 30 1
 		1 31 1
 		1 31 1
@@ -59011,149 +59127,143 @@ createNode skinCluster -n "skinCluster5";
 		1 31 1
 		1 31 1
 		1 30 1
+		2 30 0.38995708853134248 31 0.61004291146865752
 		1 31 1
 		1 31 1
-		1 30 1
+		1 31 1
+		3 31 0.48750860948035596 32 0.51249103128596007 40 3.5923368395229652e-07
+		3 31 0.5775880056124213 32 0.42241183121613085 40 1.6317144775258163e-07
 		1 31 1
 		1 31 1
-		1 30 1
 		1 31 1
 		1 31 1
-		2 31 0.82469601667964487 32 0.17530398332035516
-		2 31 0.87453975899636027 32 0.12546024100363973
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		3 31 0.98257671327932428 32 0.017423213326474882 40 7.3394200748840454e-08
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		3 31 0.50291097791768724 32 0.49708897426728521 40 4.7815027539426653e-08
+		1 32 1
+		3 31 0.35356468108384242 32 0.64642387895705733 40 1.1439959100228565e-05
+		3 31 0.50055126301569242 32 0.49937934606097212 40 6.939092333549347e-05
+		3 31 0.58016789932929658 32 0.41964144218722621 40 0.00019065848347715264
+		3 31 0.62973588904089084 32 0.37020955130521177 40 5.4559653897343577e-05
+		3 31 0.069839063246094749 32 0.93016052198478505 40 4.1476912023727387e-07
+		3 31 0.03024709428040508 32 0.96975285373645537 40 5.1983139512578862e-08
 		1 32 1
 		1 32 1
-		2 31 0.78715803584927424 32 0.21284196415072573
-		2 31 0.69130287494352838 32 0.30869712505647168
-		1 31 1
-		1 31 1
-		2 31 0.99588885961985307 32 0.004111140380146986
-		2 31 0.99330069716020086 32 0.006699302839799145
-		1 31 1
-		1 31 1
-		1 31 1
-		1 31 1
-		1 31 1
-		1 31 1
-		1 31 1
-		2 31 0.99966415098555916 32 0.00033584901444077886
-		2 31 0.97833895501058743 32 0.021661044989412567
-		2 31 0.96199406626811723 32 0.038005933731882775
-		1 31 1
-		1 31 1
-		1 31 1
-		1 31 1
-		1 31 1
-		1 31 1
-		2 31 0.99638641878138656 32 0.0036135812186133096
-		2 31 0.98428882451732047 32 0.015711175482679585
-		2 31 0.96393891343337845 32 0.036061086566621506
-		1 31 1
-		1 31 1
-		1 31 1
-		2 31 0.99082827752610347 32 0.0091717224738965229
-		2 31 0.84661471843719482 32 0.15338528156280518
-		1 31 1
-		2 31 0.99941144849605623 32 0.00058855150394371628
-		2 31 0.99152731987789955 32 0.0084726801221004511
-		2 31 0.98525108099753422 32 0.014748919002465855
-		2 31 0.95514309406280518 32 0.044856905937194824
-		1 31 1
-		1 31 1
-		1 31 1
-		2 31 0.99126880807093076 32 0.0087311919290692062
-		2 31 0.83445972204208374 32 0.16554027795791626
-		1 31 1
-		2 31 0.99989476093957641 32 0.00010523906042346281
-		2 31 0.99421893254009541 32 0.0057810674599046404
-		2 31 0.98528631743683626 32 0.014713682563163695
-		2 31 0.94506777036985579 32 0.054932229630144158
-		1 31 1
-		1 31 1
-		1 31 1
-		2 31 0.99070173594234667 32 0.0092982640576532716
-		2 31 0.81850013677775457 32 0.18149986322224548
-		1 31 1
-		1 31 1
-		2 31 0.99999178652696352 32 8.2134730365224578e-06
-		2 31 0.98832684663280213 32 0.01167315336719793
-		2 31 0.96914296620232632 32 0.030857033797673628
-		1 31 1
-		1 31 1
-		1 31 1
-		2 31 0.99570480233683101 32 0.0042951976631690463
-		2 31 0.87868458032608032 32 0.12131541967391968
-		1 31 1
-		1 31 1
-		1 31 1
-		2 31 0.9895279324559948 32 0.010472067544005245
-		2 31 0.96091612341067467 32 0.039083876589325293
-		1 31 1
-		1 31 1
-		1 31 1
-		1 31 1
-		2 31 0.87982640028517245 32 0.12017359971482755
-		1 31 1
-		1 31 1
-		1 31 1
-		2 31 0.98465447150685681 32 0.015345528493143194
-		2 31 0.96269939895422163 32 0.037300601045778377
-		1 31 1
-		1 31 1
-		1 31 1
-		1 31 1
-		2 31 0.91460180282592773 32 0.085398197174072266
-		1 31 1
-		1 31 1
-		1 31 1
-		2 31 0.98372574859244555 32 0.016274251407554403
-		2 31 0.94893810305183823 32 0.051061896948161815
-		1 31 1
-		1 31 1
-		1 31 1
-		1 31 1
-		2 31 0.83881555737829872 32 0.16118444262170131
-		1 31 1
-		1 31 1
-		1 31 1
-		2 31 0.99523685833308084 32 0.0047631416669191443
-		2 31 0.96382664916048455 32 0.036173350839515395
-		1 31 1
-		1 31 1
-		1 31 1
-		1 31 1
-		2 31 0.85274033467858534 32 0.14725966532141468
-		2 31 0.73186945915222168 32 0.26813054084777832
-		2 31 0.73011773824691772 32 0.26988226175308228
-		2 31 0.61877888441085815 32 0.38122111558914185
-		2 31 0.68969669013311541 32 0.31030330986688465
-		2 31 0.70712673664093018 32 0.29287326335906982
-		2 31 0.7092545243875541 32 0.29074547561244596
-		2 31 0.73476564884185791 32 0.26523435115814209
-		2 31 0.75010985136032104 32 0.24989014863967896
 		1 32 1
-		1 32 1
-		1 32 1
-		1 32 1
-		1 32 1
-		1 32 1
-		1 32 1
-		1 32 1
-		1 32 1
-		1 32 1
-		1 32 1
-		1 32 1
-		1 32 1
-		1 32 1
-		1 32 1
+		4 31 0.10946073638823317 32 0.5093002687707423 33 0.0051580814201497398 
+		40 0.3760809134208748
+		4 31 0.16622557988426714 32 0.39408647426833998 33 0.032365604752814699 
+		40 0.40732234109457821
+		4 31 0.10734412553954685 32 0.39987187384986311 33 0.1508761264775452 
+		40 0.3419078741330448
+		4 31 0.0030066631723870535 32 0.98662018741482627 33 0.0089613962887222665 
+		40 0.0014117531240643863
 		1 34 1
 		1 34 1
-		1 34 1
-		1 34 1
-		1 34 1
-		1 34 1
-		1 34 1;
-	setAttr ".wl[1362:1821].w"
+		6 31 3.7845032684933217e-09 32 2.2380488455578135e-05 33 0.045932571013852425 
+		34 0.88845894165423689 37 0.065527437232674748 40 5.8665826277035245e-05
 		1 34 1
 		1 34 1
 		1 34 1
@@ -59172,9 +59282,16 @@ createNode skinCluster -n "skinCluster5";
 		1 34 1
 		1 34 1
 		1 34 1
+		6 31 1.1274182094145448e-08 32 6.6645737467989667e-05 33 0.096367162319416652 
+		34 0.68251440011020936 37 0.22087731458332108 40 0.00017446597540287178
+		6 31 6.9337646914657939e-06 32 0.0001889435179408179 33 0.072919521605611826 
+		34 0.78854481569013524 37 0.13822922840398907 40 0.00011055701763163764
 		1 34 1
 		1 34 1
 		1 34 1
+		1 34 1
+		6 31 3.4059802566827644e-08 32 0.00020401495852783781 33 0.098095828178487041 
+		34 0.82152498918962136 37 0.079617724937653775 40 0.0005574086759074393
 		1 35 1
 		1 35 1
 		1 35 1
@@ -59185,38 +59302,38 @@ createNode skinCluster -n "skinCluster5";
 		1 34 1
 		1 34 1
 		1 34 1
-		2 34 0.99999895267107075 35 1.0473289292255747e-06
+		2 34 0.99999914134254853 35 8.586574514627674e-07
+		2 34 0.77481325414417757 35 0.22518674585582241
+		2 34 0.75739438152859051 35 0.24260561847140955
+		2 34 0.80164977304712948 35 0.19835022695287047
+		2 34 0.41662659744182812 35 0.58337340255817194
+		1 35 1
+		1 35 1
+		1 35 1
+		2 34 0.37659592209981479 35 0.62340407790018526
+		2 34 0.46605308050391797 35 0.53394691949608197
+		2 34 0.47681120176248543 35 0.52318879823751463
+		2 34 0.017899069639400158 35 0.98210093036059998
+		1 35 1
+		1 35 1
+		1 35 1
+		2 34 0.15724240477744347 35 0.84275759522255655
+		2 34 0.20977455450404842 35 0.79022544549595164
+		2 34 0.18363320827484131 35 0.81636679172515869
+		1 35 1
+		1 35 1
+		1 35 1
+		1 35 1
+		1 35 1
+		1 35 1
+		1 35 1
 		1 34 1
 		1 34 1
-		2 34 0.99999897719698638 35 1.0228030135475644e-06
-		1 35 1
-		1 35 1
-		1 35 1
-		1 35 1
-		1 35 1
-		1 35 1
-		1 35 1
-		1 35 1
-		1 35 1
-		1 35 1
-		1 35 1
-		1 35 1
-		1 35 1
-		1 35 1
-		1 35 1
-		1 35 1
-		1 35 1
-		1 35 1
-		1 35 1
-		1 35 1
-		1 35 1
 		1 34 1
 		1 34 1
-		1 34 1
-		1 34 1
-		1 34 1
-		1 35 1
-		1 35 1
+		2 34 0.7497878819830488 35 0.2502121180169512
+		2 34 0.46655809879302979 35 0.53344190120697021
+		2 34 0.19094084555263247 35 0.80905915444736753
 		1 35 1
 		1 35 1
 		1 35 1
@@ -59254,75 +59371,90 @@ createNode skinCluster -n "skinCluster5";
 		1 35 1
 		1 37 1
 		1 37 1
-		2 33 0.99999973846514123 37 2.615348588302973e-07
-		1 33 1
-		1 34 1
-		1 34 1
-		1 34 1
-		1 33 1
+		6 31 1.3114519350214033e-08 32 7.6436219981404482e-05 33 0.14861518260044077 
+		34 0.35596719660690196 37 0.4951505699471459 40 0.00019060151101059049
+		6 31 1.5142950469708426e-06 32 6.1755898505477574e-05 33 0.14981833208549414 
+		34 0.3664007213358863 37 0.48364222399101903 40 7.5452394048005185e-05
+		6 31 8.2964141382294351e-06 32 3.6061496931124572e-05 33 0.050659603336679085 
+		34 0.93986390103005224 37 0.00014899481598745873 40 0.0092831429062119001
+		3 33 0.25837935003782936 34 0.73763289884007432 40 0.0039877511220963637
+		6 31 0.00077269197100067997 32 0.0039785265138331267 33 0.122440108767416 
+		34 0.80802541983967435 37 0.0096533482579835867 40 0.0551299046500923
+		6 31 4.4446376387477108e-08 32 0.00025739025526294606 33 0.17798396601478755 
+		34 0.34328421287778815 37 0.47784723909304033 40 0.00062714731274455821
 		1 37 1
-		1 34 1
-		1 34 1
-		1 33 1
-		1 37 1
-		1 37 1
-		1 37 1
-		1 37 1
-		1 37 1
-		1 33 1
-		1 33 1
-		1 33 1
-		1 33 1
-		1 38 1
-		1 38 1
-		1 38 1
-		1 38 1
-		1 38 1
-		1 38 1
-		1 38 1
-		1 38 1
-		1 38 1
-		1 38 1
-		1 38 1
-		1 38 1
-		1 38 1
-		1 38 1
-		1 38 1
-		1 38 1
-		1 38 1
-		1 38 1
-		1 38 1
-		1 38 1
+		6 31 0.00079804105633316446 32 0.0048110614143536201 33 0.1176120422427516 
+		34 0.833815394080474 37 0.027282042459130441 40 0.015681418746957273
+		6 31 7.6272792444947285e-05 32 0.0018997920729563447 33 0.069169139847897465 
+		34 0.84785972181814784 37 0.080242185039650277 40 0.00075288842890307197
+		6 31 9.3108593902008641e-06 32 0.00024028550636582833 33 0.14911712945135017 
+		34 0.38008648766427033 37 0.47043380895399084 40 0.00011297756463258569
+		1 37 1;
+	setAttr ".wl[1473:1769].w"
 		1 37 1
 		1 37 1
 		1 37 1
+		6 31 1.340755986187724e-10 32 1.6052156363359697e-09 33 2.8518181971467889e-06 
+		34 6.1970422206681253e-11 37 0.99999714473862444 40 1.641916834183973e-09
+		6 31 0.00093873504704791049 32 0.023354178324168098 33 0.36855214840177164 
+		34 0.26182912921452361 37 0.33613070588872901 40 0.0091951031237598249
+		6 31 0.00023934815644248116 32 0.0060306424526026785 33 0.48942655528627793 
+		34 8.6889515294029859e-05 37 0.50186795205131396 40 0.0023486125380688927
+		6 31 0.0042008060781607978 32 0.029916071599713597 33 0.27502224950674614 
+		34 0.51037981169887991 37 0.090068440766020635 40 0.090412620350478839
+		6 31 0.0023250881473438076 32 0.01383188675150749 33 0.24701268342427735 
+		34 0.54075541562042606 37 0.024569895214561838 40 0.17150503084188343
+		1 38 1
+		1 38 1
+		1 38 1
+		1 38 1
+		1 38 1
+		1 38 1
+		1 38 1
+		1 38 1
+		1 38 1
+		1 38 1
+		1 38 1
+		1 38 1
+		1 38 1
+		1 38 1
+		1 38 1
+		1 38 1
+		1 38 1
+		1 38 1
+		1 38 1
+		1 38 1
 		1 37 1
 		1 37 1
-		2 33 1.3901223489784338e-06 37 0.99999860987765099
+		1 37 1
+		2 33 0.068481632290081057 37 0.93151836770991892
+		1 37 1
+		6 31 1.2464004379243549e-07 32 6.9910117526258107e-05 33 0.13586439743640782 
+		34 1.3267115802557927e-06 37 0.8640630595850608 40 1.1815093809833015e-06
+		2 37 0.99059740695700838 38 0.0094025930429915902
 		1 37 1
 		1 37 1
 		1 37 1
-		1 37 1
-		1 37 1
-		1 37 1
-		1 37 1
-		1 37 1
+		2 37 0.79973911047370572 38 0.20026088952629434
+		2 37 0.77389174505261671 38 0.22610825494738332
+		2 37 0.90884841708884445 38 0.091151582911155521
+		2 37 0.8826799388536769 38 0.11732006114632301
+		2 37 0.47764679656307679 38 0.52235320343692326
+		1 38 1
+		2 37 0.45532281829944793 38 0.54467718170055202
 		1 38 1
 		1 38 1
+		2 37 0.38233850107559553 38 0.61766149892440447
+		2 37 0.46080559492111206 38 0.53919440507888794
+		2 37 0.46756607294082642 38 0.53243392705917358
+		2 37 0.10922593529378982 38 0.89077406470621023
 		1 38 1
+		2 37 0.0095325981580102227 38 0.99046740184198978
 		1 38 1
-		1 38 1
-		1 38 1
-		1 38 1
-		1 38 1
-		1 38 1
-		1 38 1
-		1 38 1
-		1 38 1
-		1 38 1
-		1 38 1
-		1 38 1
-		1 38 1
+		2 37 2.1837402520121499e-08 38 0.99999997816259745
+		2 37 0.01809727887680285 38 0.9819027211231971
+		2 37 0.10570826811467803 38 0.89429173188532196
+		2 37 0.084606024164140939 38 0.91539397583585902
 		1 38 1
 		1 38 1
 		1 38 1
@@ -59364,243 +59496,212 @@ createNode skinCluster -n "skinCluster5";
 		1 32 1
 		1 32 1
 		1 32 1
+		5 31 0.030556835665968129 32 0.14037006657322554 33 0.5686542222721005 
+		34 0.0017800270752186727 40 0.25863884841348711
+		1 32 1
+		4 31 0.04249462540720101 32 0.11048022801682651 33 0.008402088766572292 
+		40 0.83862305780940027
+		1 32 1
+		1 32 1
+		1 40 1
+		4 31 0.0020724605715805255 32 0.0094774490513130378 33 0.00012516789668718287 
+		40 0.98832492248041925
+		1 32 1
+		1 40 1
+		1 32 1
+		1 32 1
+		1 40 1
+		2 40 0.87088619123532662 41 0.12911380876467332
+		2 40 0.50452292019402034 41 0.49547707980597971
+		1 41 1
+		2 40 0.7849493728532827 41 0.21505062714671735
+		2 40 0.45518967242179348 41 0.54481032757820647
+		2 40 0.27927873370882073 41 0.72072126629117927
+		2 40 0.7317508837058877 41 0.2682491162941123
+		2 40 0.4864388108253479 41 0.5135611891746521
+		2 40 0.79902439118885416 41 0.2009756088111459
+		1 40 1
+		1 41 1
+		1 41 1
+		1 40 1
+		2 40 0.81682482907698073 41 0.18317517092301933
+		2 40 0.47909226888968165 41 0.52090773111031841
+		2 40 0.75718630488494498 41 0.24281369511505507
+		2 40 0.41312683342041073 41 0.58687316657958921
+		2 40 0.35652341790846259 41 0.64347658209153746
+		2 40 0.95665914987468348 41 0.043340850125316542
+		2 40 0.20552536315028228 41 0.79447463684971775
+		2 40 0.20350726832427776 41 0.79649273167572221
+		2 40 0.17016279697418213 41 0.82983720302581787
+		1 41 1
+		1 41 1
+		1 41 1
+		2 40 0.21325844625074017 41 0.7867415537492598
+		1 41 1
+		1 41 1
+		2 40 0.16141725548608635 41 0.83858274451391368
+		1 41 1
+		1 41 1
+		1 41 1
+		1 41 1
+		1 41 1
+		1 41 1
+		1 41 1
+		1 41 1
+		1 41 1
+		1 41 1
+		1 41 1
+		1 41 1
+		1 41 1
+		1 41 1
+		1 41 1
+		1 41 1
+		1 41 1
+		1 41 1
+		1 41 1
+		1 41 1
+		1 41 1
+		1 41 1
+		1 41 1
+		1 41 1
+		1 41 1
+		1 41 1
+		1 41 1
+		1 41 1
+		1 41 1
+		1 41 1
+		1 41 1
+		1 41 1
+		1 41 1
+		1 41 1
+		1 41 1
+		1 41 1
+		1 41 1
+		1 41 1
+		1 41 1
+		1 41 1
+		1 41 1
+		1 41 1
+		1 41 1
+		1 41 1
+		1 41 1
+		1 41 1
+		1 41 1
+		1 41 1
+		1 41 1
+		1 41 1
+		1 41 1
+		1 41 1
+		1 41 1
+		1 41 1
+		1 40 1
+		1 40 1
+		1 40 1
+		1 40 1
+		1 40 1
+		1 40 1
+		1 40 1
+		1 40 1
+		1 40 1
+		1 40 1
+		6 31 1.0626492967897641e-07 32 0.00061038126078469897 33 0.27652392352093486 
+		34 0.27018389653689967 37 0.45123899898047948 40 0.0014426934359716875
+		6 31 1.0590951556355095e-07 32 0.00056043603595831465 33 0.17965513440114703 
+		34 0.058236298235295976 37 0.76065385573111066 40 0.00089416968697251565
+		6 31 1.9268390972197554e-07 32 0.0011620606314657676 33 0.31420108097506988 
+		34 0.50547855161858068 37 0.17591456745058312 40 0.003243546640390805
+		6 31 6.5721252651594275e-07 32 0.0039831501279686638 33 0.47536064478419215 
+		34 0.21664701855573443 37 0.29802858522827957 40 0.0059799440912986753
+		6 31 3.651459687103705e-08 32 0.00021943920649708241 33 0.26338512484113835 
+		34 0.71058186009344071 37 0.017150937155328252 40 0.0086626021889987387
+		6 31 0.00013158130557916535 32 0.067604902902790129 33 0.3253798951103839 
+		34 0.0011194932155002444 37 0.60451463011042494 40 0.0012494973553215619
+		6 31 2.7338146284991815e-05 32 0.01532737524052501 33 0.42430942858497256 
+		34 0.00025929067975547523 37 0.5598179050204003 40 0.00025866232806172177
+		6 31 1.1939196916647829e-05 32 0.062975470262687905 33 0.38695290169220831 
+		34 0.00012549131569247429 37 0.54982224628729548 40 0.0001119512451991845
+		6 31 3.7649650113055618e-06 32 0.022484693487059452 33 0.54571000822885252 
+		34 4.0486767205196764e-05 37 0.43172580236717611 40 3.5244184695470713e-05
+		1 40 1
+		6 31 1.0147430384994903e-07 32 0.00060601319876496106 33 0.49303182245579924 
+		34 0.41947536608514652 37 0.04847271963244832 40 0.03841397715353724
+		1 40 1
+		5 31 0.0053586554806462202 32 0.022089991756833006 33 0.30438661628095687 
+		34 1.8406493072772178e-07 40 0.6681645524166332
+		1 40 1
+		1 40 1
+		1 33 1
+		6 31 3.4351574729620749e-06 32 0.29290561442488056 33 0.63706002561783959 
+		34 4.0119811119034535e-05 37 0.069958593351640397 40 3.2211637047434817e-05
+		6 31 4.8396806854143308e-05 32 0.5172179122724313 33 0.36009558682969317 
+		34 0.00046315041723863894 37 0.12174040967552216 40 0.00043454399826060619
+		6 31 0.00015165964942663566 32 0.47192341507687491 33 0.43472784908180073 
+		34 0.0011897382484751082 37 0.090686223481405176 40 0.0013211144620173649
+		6 31 0.0015101427939747736 32 0.53012298821771209 33 0.34737836845499803 
+		34 0.0052108363476049838 37 0.1035379753435956 40 0.012239688842114538
+		5 31 0.0064127582692719079 32 0.27942530379548391 33 0.66438462867601733 
+		34 0.00043492469023540458 40 0.049342384568991385
+		1 40 1
+		1 33 1
 		1 33 1
 		1 32 1
-		1 40 1
+		1 32 1
+		1 31 1
+		1 31 1
+		1 31 1
+		3 31 0.74871305888607376 32 0.2512854479916149 40 1.4931223112563394e-06
+		2 31 0.79467294232031871 32 0.20532705767968126
+		3 31 0.99999981947748107 32 1.8044573458765337e-07 40 7.6784361096218162e-11
+		2 31 0.95853165629807879 32 0.041468343701921172
+		2 31 0.99245631974584814 32 0.007543680254151852
+		3 31 0.2343629232674109 32 0.76563568479867339 40 1.3919339155681154e-06
+		3 31 0.26021695062848238 32 0.73978277361951439 40 2.7575200316278102e-07
+		3 31 0.2081745741372692 32 0.79182536453023722 40 6.1332493670172678e-08
 		1 32 1
 		1 32 1
-		1 40 1
-		1 40 1
-		1 32 1
-		1 40 1
-		1 32 1
-		1 32 1
-		1 40 1
-		1 40 1
-		1 41 1
-		1 41 1
-		1 40 1
-		1 41 1
-		1 41 1
-		1 40 1
-		1 41 1
-		1 40 1
-		1 40 1
-		1 41 1
-		1 41 1
-		1 40 1
-		1 40 1
-		1 41 1
-		1 40 1
-		1 41 1
-		1 41 1
-		1 40 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 41 1
-		1 40 1
-		1 40 1
-		1 40 1
-		1 40 1
-		1 40 1
-		1 40 1
-		1 40 1
-		1 40 1
-		1 40 1
-		1 40 1
-		1 33 1
-		1 37 1
-		1 34 1
-		1 33 1
-		1 34 1
-		1 33 1
-		1 33 1
-		1 33 1
-		1 33 1
-		1 40 1
-		1 33 1
-		1 40 1
-		1 40 1
-		1 40 1
-		1 40 1
-		1 33 1
-		1 33 1
-		1 33 1
-		1 33 1
-		1 33 1
-		1 33 1
-		1 40 1
-		1 33 1
-		1 33 1
-		1 32 1
-		1 32 1
-		2 31 0.71158613895136535 32 0.2884138610486347
-		2 31 0.68492267474762569 32 0.31507732525237425
-		2 31 0.63866239786148071 32 0.36133760213851929
-		2 31 0.59669065475463867 32 0.40330934524536133
-		2 31 0.59586678159633932 32 0.40413321840366068
-		2 31 0.66368387151706598 32 0.33631612848293396
-		2 31 0.72876310348510742 32 0.27123689651489258
-		2 31 0.82127792866942184 32 0.17872207133057819
-		1 32 1
-		1 32 1
-		1 32 1
-		1 32 1
-		1 32 1
-		1 32 1
-		1 32 1
-		1 32 1
-		1 32 1
-		1 32 1
-		2 31 0.93329260647387935 32 0.066707393526120623
-		2 31 0.90261203050613403 32 0.097387969493865967
-		2 31 0.92251002788543701 32 0.077489972114562988
-		2 31 0.89259439706802368 32 0.10740560293197632
-		2 31 0.89839438576114805 32 0.10160561423885194
-		2 31 0.93362489144876271 32 0.066375108551237239
-		2 31 0.92752938771598492 32 0.072470612284015024
-		2 31 0.95209811344560025 32 0.047901886554399753
-		2 31 0.91088452669634001 32 0.089115473303659959
-		2 31 0.90166158155844789 32 0.098338418441552056
-		1 32 1
-		2 31 0.88072857616160583 32 0.11927142383839417
-		2 31 0.84375752275820859 32 0.15624247724179144
-		1 32 1
-		1 32 1
-		1 32 1
-		1 32 1
-		1 32 1
-		2 31 0.81153712238260733 32 0.18846287761739261
-		2 31 0.7384982705116272 32 0.2615017294883728
-		2 31 0.76966667175292969 32 0.23033332824707031
-		2 31 0.82380616664886475 32 0.17619383335113525
-		2 31 0.75331185003185719 32 0.24668814996814281
-		2 31 0.80375849002959598 32 0.19624150997040407
-		1 32 1
-		1 32 1
-		2 31 0.85580152273178101 32 0.14419847726821899
-		2 31 0.76414608955383301 32 0.23585391044616699
-		2 31 0.77154944027812955 32 0.22845055972187042
-		2 31 0.78266849466170352 32 0.21733150533829645
-		2 31 0.73538500070571899 32 0.26461499929428101
-		2 31 0.8102242229845491 32 0.18977577701545095
-		2 31 0.82979381084442139 32 0.17020618915557861
-		2 31 0.81436316945607712 32 0.18563683054392291
-		2 31 0.77533903048452824 32 0.22466096951547174
-		2 31 0.81795204904604035 32 0.18204795095395968
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
+		3 31 0.21694677945969154 32 0.78293346334904634 40 0.00011975719126214841
+		3 31 0.2523019893997922 32 0.74709718949822146 40 0.00060082110198629796
+		4 31 0.35350029804649974 32 0.56414239232642371 33 0.0087471769867217154 
+		40 0.073610132640354847
+		4 31 0.27504452746792774 32 0.60905224023520288 33 0.036076929189265361 
+		40 0.079826303107603941
+		3 31 0.22738910830705136 32 0.7726044345972416 40 6.4570957070934406e-06
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		3 31 0.5156812191969804 32 0.48431820805963166 40 5.7274338785176139e-07
+		2 31 0.71780073642730713 32 0.28219926357269287
+		2 31 0.72737785361343188 32 0.27262214638656812
+		3 31 0.54805471533278494 32 0.45194295669467899 40 2.3279725362364614e-06
+		3 31 0.40098038145417414 32 0.59901755793711275 40 2.0606087131221845e-06
+		3 31 0.39388745813445519 32 0.6061068466088908 40 5.6952566540059343e-06
+		3 31 0.53537860733052711 32 0.46461835300884952 40 3.0396606232869933e-06
+		3 31 0.39772482837941431 32 0.60225978711125383 40 1.5384509331958622e-05
+		2 31 0.73034797491717185 32 0.2696520250828281
+		2 31 0.94040205902003293 32 0.059597940979967012
+		2 31 0.89679830651273174 32 0.10320169348726829
+		2 31 0.84948954434724022 32 0.15051045565275981
+		2 31 0.83851390114509472 32 0.16148609885490531
+		2 31 0.73551382210768335 32 0.26448617789231671
+		3 31 0.56021931228324984 32 0.43976577052415278 40 1.4917192597461233e-05
+		3 31 0.45125840525420191 32 0.54870610808534692 40 3.5486660451235977e-05
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
+		1 31 1
 		1 30 1
 		1 30 1
 		1 30 1
@@ -59614,7 +59715,59 @@ createNode skinCluster -n "skinCluster5";
 		1 30 1
 		1 30 1
 		1 30 1;
-	setAttr ".wl[1822:2127].w"
+	setAttr ".wl[1770:2127].w"
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
 		1 30 1
 		1 30 1
 		1 30 1
@@ -59631,20 +59784,34 @@ createNode skinCluster -n "skinCluster5";
 		1 30 1
 		1 30 1
 		1 32 1
-		1 33 1
-		1 33 1
-		1 33 1
-		1 33 1
-		1 33 1
-		1 33 1
-		1 33 1
-		1 33 1
-		1 33 1
-		1 33 1
-		1 33 1
-		1 33 1
-		1 33 1
-		1 33 1
+		6 31 1.8592797261522062e-08 32 0.00011103776715557733 33 0.50676562107848244 
+		34 0.38344846466550692 37 0.0088814928392191433 40 0.1007933650568386
+		6 31 0.00016706659864681282 32 0.00071263349702026658 33 0.35356105110180019 
+		34 0.46996210004022237 37 0.0019162436182107866 40 0.17368090514409959
+		6 31 0.00048236984921778546 32 0.0020074550770558465 33 0.34455138061839891 
+		34 0.18734906405538371 37 0.0015206399670311811 40 0.46408909043291258
+		6 31 1.226028101958554e-08 32 7.3219447134407386e-05 33 0.51739741338051959 
+		34 0.16696009351711733 37 0.0058565476140467407 40 0.30971271378090098
+		6 31 0.0044203933400646664 32 0.024778460305731404 33 0.3163130421812767 
+		34 0.27817867423817305 37 0.020701666337417737 40 0.35560776359733653
+		6 31 3.6175831424202989e-08 32 0.00021604516148382658 33 0.74985923648229325 
+		34 0.16878566655798527 37 0.017280638739974243 40 0.063858376882431969
+		6 31 1.4558440173150349e-07 32 0.0011173326625448566 33 0.96656315480509969 
+		34 0.01381496596653164 37 0.016828293837765431 40 0.0016761071436567695
+		6 31 4.4406795019808453e-06 32 0.035625198800334629 33 0.77927819866813985 
+		34 4.9638633543801711e-05 37 0.18500111445375267 40 4.1408764727153639e-05
+		6 31 1.8173235188268993e-05 32 0.16395763714633324 33 0.55538145629270363 
+		34 0.00020566160663887463 37 0.28026788415588538 40 0.00016918756325054574
+		6 31 7.0982556556593407e-05 32 0.20669150962451213 33 0.48605330232699778 
+		34 0.0008184483982013386 37 0.30570686765675098 40 0.00065888943698123013
+		6 31 0.00026557434301707154 32 0.20487306149761175 33 0.48536591779032429 
+		34 0.0033126800485956346 37 0.3037033991060008 40 0.0024793672144503899
+		6 31 0.0013190529528420438 32 0.23018920126654949 33 0.46681749264250993 
+		34 0.015880037923634158 37 0.27373595466909878 40 0.012058260545365535
+		6 31 0.0041836800373029727 32 0.10865831196761268 33 0.61520800222796213 
+		34 0.083145637676264816 37 0.14721319847175768 40 0.041591169619099699
+		6 31 0.011475460924453874 32 0.074663298427964528 33 0.4304365039925046 
+		34 0.24135529179187379 37 0.06290911313823741 40 0.17916033172496593
 		1 35 1
 		1 35 1
 		1 35 1
@@ -60200,12 +60367,33 @@ createNode groupParts -n "skinCluster5GroupParts";
 	setAttr ".ic" -type "componentList" 1 "f[0:2171]";
 createNode ngst2SkinLayerData -n "ngSkinToolsData_skinCluster9";
 	rename -uid "16263A19-4A4C-20B5-7940-C7B018586AF6";
-	setAttr ".ld" -type "ngst2SkinLayerDataStorage"   14 19753 {"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/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAXgEA/qAO/gEAPgEA/pAAPg==","QAARAV4YAH4BAD44AH4QAD4BAH4wAL4gAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAEYBAAAf/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs/tMs4tMsXnxOPgEAXigAPhgAngEAPjgAXhAAEQERIP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAA==","/gEA/gEA/gEA/gEA3gEAccARCBEBERARCBEBERARCBEBERARCBEBERARCBEBERBeCAA+AQBeKAD+GAD+GAD+GAD+GAD+GAD+GAD+GAD+GAD+GAD+GAD+GAD+GAD+GAARGP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAF4BAJKgDgxA///vGjf9PjAA/gEAPgEAPmAA/hAAEQE+SACeAQA+OAB+EAA+AQB+MAC+IAD+AQD+AQD+AQD+AQB6AQAAAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAMYBAAAM/nMK/nMK/nMK/nMK/nMK/nMK/nMK/nMK/nMK/nMK/nMK/nMK/nMK/nMK/nMK/nMK/nMK/nMK/nMK/nMK4nMKBPA/qTsRCP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAH4BAHFo/ggAvggA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAngEAfhgHEQERKBEBERARCD4BAD4YABEQEQj+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQC+AQBxuBEI/gEAEUj+CAARCP4BAD4BABGYPgEAERh+CAC+AQA+UAD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQA+AQBR4P4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAA==","/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAGQEAIP5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKv5LKuJLKh7MUBEI/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAfgEAcWj+CAC+CAD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQCeAQB+GAcFAQwg9f/vGnxuEQE+OAA+AQARIBEBERARCP4BAP4BAP4BAP4BAP4B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mwj+mwhmmwj+AQD+AQANAf4cEn4cEv5gAP5gAN4BAN64AP4BAP4BAJ4BAJ7gAP4BAP4BAP4BAP4BAP4BABEBXnABPgEAPigA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/g==","AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQDRkBEBPhAA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAhgEAACL+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iy/+Iw==","L/4jL/4jL/4jL/4jL/4jL/4jL/4jL/4jL/4jL/4jL/4jL/4jL/4jL/4jL/4jL/4jL/4jL/4jL/4jL/4jL/4jL/4jL/4jL/4jL/4jL/4jL/4jL/4jL4IjLx6UWf4IAP4IAP4IAF4IAN4BAFIQAQzg/f/vGpiCMiAAAMAZGP4BAP4BAJ4BADLAAAQAAGIQAP4BAP4BAP4BAP4BAP4BABEBJXAEQPdCQAI+AQAFKD2Q/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA0ZARAT4QAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAIYBAAAP/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN/uMN7uMNEuMNHvQXvggA3gEAvmgA/jAA3jAAngEA/qAA3qAA/ngA/ngAvngA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/vAM/vAMvvAM/rAA/rAA/rAA/rAA/rAA/rAA/rAA/rAAvrAA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/g==","AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQDmAQAAI/77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jv77Jr77JgAA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAPgEABPA/6VK+CABSAQAQYD6SsT5KGgAIYOcoERi+aAD+MADeMACeAQD+oADeoAD+eAD+eAC+eAD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+8Az+8Ay+8Az+sAD+sAD+sAD+sAD+sAD+sAD+sAD+sAC+sAD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQ==","AP4BAP4BAP4BAP4BAP4BAP4BAOYBAAAR/rsF/rsF/rsF/rsF/rsF/rsF/rsF/rsF/rsF/rsF/rsF/rsF/rsF/rsF/rsF/rsF/rsF/rsF/rsF/rsF/rsF/rsF5rsF/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAugEAPlQUvgEAEUBeAQARIH4IAP4BAP4BAP4BAH7gAP4gAD4gAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAF4BALFo/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA7gEACQEAJf5DL/5DL/5DL/5DL/5DL/5DL/5DL/5DL/5DL/5DL/5DL/5DL/5DL/5DL/5DL/5DL/5DL/5DL/5DL/5DL/5DL/5DL/5DL/5DL/5DL/5DL/5DL/5DL/5DL/5DL/5DL/5DL/5DL/5DL/5DL/5DL/5DL/5DL/5DL/5DL/5DL/5DL/5DL/5DL/5DL/5DL/5DL/5DL/5DL/5DL/5DL/5DL/5DL/5DL/5DL/5DL/5DL/5DL/5DL/5DLw==","/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMv/kMvokMvHvRcBQgMwCqNoU4wh2oBAAU4agEAESB+CAD+AQD+AQD+AQB+4AAJIAj9/+9O4IgEwPxWGAAEAAANOEYIAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAF4BAKlo/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAAQEAEv4FDv4FDv4FDv4FDv4FDv4FDv4FDv4FDv4FDv4FDv4FDv4FDv4FDv4FDv4FDv4FDv4FDv4FDv4FDv4FDv4FDv4FDv4FDv4FDv4FDv4FDv4FDv4FDv4FDv4FDv4FDv4FDv4FDv4FDv4FDv4FDv4FDv4FDv4FDv4FDv4FDv4FDv4FDv4FDv4FDv4FDv4FDv4FDv4FDv4FDv4FDv4FDkIFDh4cG/4IAP4IAF4IAP4BAL4BAP4IAf4IAV4IAf6YAP6YAP6YAP6YAD6YAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP7QDP7QDP7QDP7QDD7QDA==","/hAB/hAB/hAB/hAB/hAB/hAB/hABPhAB/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAZgEAACb+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyT+GyR+GyQAAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAL4BAATwPw==","FnIU/ggA/ggAXggA8gEAECCvhro+tkIA/ggB/ggBXggB/pgA/pgA/pgA/pgAPpgA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/tAM/tAM/tAM/tAMPtAM/hAB/hAB/hAB/hAB/hAB/hAB/hABPhAB/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAZgEAABT+2wL+2wL+2wL+2wL+2wL+2wL+2wL+2wL+2wL+2wL+2wJm2wL+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQB6AQAepBQ+AQARGBEIEQE+EAARAREYEQg+AQCeGAARKBEIPgEAERgRCBEBPhAAEQFeGAD+AQD+AQD+AQD+AQD+AQD+AQD+AQC+AQBRCP4IABEI/gEAEQERkBEBERBeCAC+AQARSP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAA==","/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAhgEAACj+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy7+oy6Goy7+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQBaAQBe5F8RGBEIEQE+EAARAREYEQg+AQCeGAARKBEIPgEAERgRCBEBPhAAEQFeGAD+AQD+AQD+AQD+AQD+AQD+AQD+AQC+AQBRCP4IABEI/gEAEQERkBEBERBeCAC+AQARSP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAIYBAAAV/mMN/mMN/mMN/mMN/mMN/mMN/mMN/mMN/mMN/mMN/mMN/mMN/mMN/mMN/mMN/mMN/mMN/mMN/mMN/mMN/mMN/mMN/mMN/mMN/g==","Yw3+Yw3+Yw3+Yw3+Yw3+Yw3+Yw3+Yw3+Yw3+Yw3+Yw3+Yw3+Yw3+Yw3+Yw3+Yw3+Yw3+Yw3+Yw3+Yw3+Yw3+Yw3+Yw3+Yw3+Yw3+Yw3+Yw3+Yw3+Yw2GYw3+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQC6AQAevB0RCBEBERARCBEBPhAAEQERGBEIPgEAPhgAERARCBEBERD+CAD+CAD+CAD+CAD+CAD+CAD+CADeCAD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQARAf6ADf6ADf6ADf6ADf6ADf6ADf6ADd6ADf74Af74Af74AZ74Af4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAOYBAAAp/jsh/jsh/jsh/jsh/jsh/jsh/jsh/jsh/jsh/jsh/jsh/jsh/jsh/jsh/jsh/jsh/jsh/jsh/jsh/jsh/jsh/jsh/jsh/jsh/jsh/jsh/jsh/jsh/jsh/jsh/jsh/jsh/jsh/jsh/jsh/jsh/jsh/jsh/jsh/jsh/jsh/jsh/jsh/jsh/jsh/jsh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AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQ==","AP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BADIBAAAg/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4q/k4qlk4qfsRjBMBn/sRjtsRjBCBQ/sRj/sRj/sRj/sRj/sRj/sRjFsRjBCBh/sRj/sRj/sRj/sRj/sRjdsRjAID+xGP+xGP+xGP+xGP+xGP+xGP+xGP+xGP+xGP+xGP+xGP+xGP+xGP+xGP+xGP+xGP+xGP+xGP+xGP+xGP+xGP+xGP+xGP+xGP+xGP+xGP+xGP+xGP+xGP+xGP+xGP+xGP+xGP+xGP+xGP+xGP+xGP+xGP+xGP+xGP+xGP+xGP+xGP+xGP+xGP+xGMaxGMEADP2xGMA4P7EY/rEYwSAklbEYwRAr/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EYw==","/sRj/sRj/sRj/sRj/sRj/sRjhsRjDkOFAHoOLIU0Y2xvc2VzdFBvaW50KQAWRIUOSIXwRgMAAAAXAAAABAAAABgAAAAFAAAAGQAAAAYAAAAaAAAABwAAABsAAAAIAAAAHAAAAAkAAAAdAAAACgAAAB4AAAALAAAAHwAAEpCFDhBDDsWF8EkhAAAADgAAACIAAAAPAAAAIwAAABAAAAAkAAAAEQAAACUAAAASAAAAJgAAABMAAAAnAAAAFAAAACgAAAAVAAAAKQAAABYAAAAqAAmcAaQBnAGkAZwBpAGcAaQAGw2kABwNpAAdDaQAHg2kAZwACw5Bfxo0hgGcAaQBnAGkAZwBpAGcAaQBnAGkACYNpAAnDaQAKA2kITwsFQAAACoAAAAWAAAA"};
+	setAttr ".ld" -type "ngst2SkinLayerDataStorage" 14 21263 {
+"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/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/g==",
+"AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQBuAQAAH/7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKf7dKTbdKf7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7EY/7E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AP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAHIBAAAi/t4p/t4p/t4p/t4p/t4p/t4p/t4p/t4p/t4p/t4p/t4p/t4p/t4p/t4p/t4p/t4p/t4p/t4p/t4p/t4p/t4p/t4p/t4p/t4p/t4p/t4p/g==",
+"3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3in+3ily3in+AQD+AQABATLMYf7EY/7EY/7EY/7EY37EYwxA/v/vDnRVPsRjAID+xGN6xGME4IT+xGP+xGP+xGP+xGP+xGP+xGP+xGP+xGP+xGP+xGP+xGP+xGM6xGMILkK2cgxe/gEA/gEA/gEA/gEA/gEA/gEA/gEAugEA/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRj/sRjcsRjAA/+TRP+TRP+TRP+TRP+TRP+TRP+TRO6TRP+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQBGAQAyJCKqyIV2AQAI69LMDkwhCECzDRKk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AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+eA7+eA5+eA7+oAD+oAD+oAD+oAD+oAD+oAD+oA==",
+"AP6gAP6gAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAGYBAAAm/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hsk/hskfhskAAD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+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"};
 	setAttr ".imo" -type "string" "{\"_InfluenceMappingConfig__mirror_axis\": 0, \"dg_destination_attribute\": \"oppositeInfluence\", \"use_name_matching\": true, \"use_distance_matching\": true, \"use_label_matching\": false, \"use_dg_link_matching\": false}";
 createNode skinCluster -n "skinCluster6";
 	rename -uid "73CFC999-41EE-8C08-2810-528C4C227C91";
 	setAttr -s 2882 ".wl";
-	setAttr ".wl[0:499].w"
+	setAttr ".wl[0:453].w"
 		1 51 1
 		1 51 1
 		1 51 1
@@ -60308,49 +60496,49 @@ createNode skinCluster -n "skinCluster6";
 		1 51 1
 		1 52 1
 		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
+		2 51 0.012644270368915935 52 0.98735572963108409
+		2 51 0.15897300329403563 52 0.84102699670596437
+		2 51 0.06239120321791463 52 0.93760879678208531
+		2 51 0.08282054294921104 52 0.91717945705078907
+		2 51 0.36555322808894486 52 0.63444677191105525
+		2 51 0.24204408757214099 52 0.75795591242785887
+		2 51 0.35135237039982664 52 0.6486476296001733
+		2 51 0.29443469616732582 52 0.70556530383267413
+		2 51 0.40374978215030799 52 0.59625021784969212
+		2 51 0.7192054875065349 52 0.2807945124934651
+		2 51 0.76446471155570006 52 0.2355352884443
 		1 51 1
 		1 51 1
 		1 51 1
 		1 51 1
+		2 51 0.84215258419542371 52 0.15784741580457623
 		1 51 1
 		1 51 1
 		1 51 1
 		1 51 1
+		2 51 0.81499069779895128 52 0.18500930220104866
+		2 51 0.82041773233558013 52 0.1795822676644199
 		1 51 1
 		1 51 1
-		1 51 1
-		1 51 1
-		1 51 1
-		1 51 1
-		1 51 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
 		1 52 1
 		1 52 1
 		1 52 1
 		1 52 1
 		1 52 1
+		1 52 1
+		2 51 0.27550673487047944 52 0.7244932651295205
+		1 52 1
+		1 52 1
+		1 52 1
+		1 51 1
+		2 51 0.9834711134648767 52 0.016528886535123334
+		2 51 0.86739444923525788 52 0.13260555076474215
 		1 51 1
 		1 51 1
 		1 51 1
 		1 51 1
-		1 51 1
-		1 51 1
-		1 51 1
-		1 51 1
-		1 51 1
+		2 51 0.86604211758473526 52 0.13395788241526471
+		2 51 0.83692857380080532 52 0.1630714261991946
 		1 51 1
 		1 51 1
 		1 51 1
@@ -60358,7 +60546,7 @@ createNode skinCluster -n "skinCluster6";
 		1 51 1
 		1 51 1
 		1 52 1
-		1 52 1
+		2 51 0.00089439123479324043 52 0.99910560876520682
 		1 52 1
 		1 52 1
 		1 52 1
@@ -60400,75 +60588,27 @@ createNode skinCluster -n "skinCluster6";
 		1 53 1
 		1 53 1
 		1 53 1
-		1 53 1
-		1 53 1
-		1 53 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 53 1
-		1 53 1
-		1 53 1
+		2 52 0.19422891157183314 53 0.8057710884281668
+		2 52 0.0095525227136843711 53 0.99044747728631555
 		1 53 1
 		1 52 1
-		1 53 1
 		1 52 1
-		1 53 1
-		1 53 1
 		1 52 1
-		1 53 1
-		1 53 1
-		1 53 1
-		1 53 1
-		1 53 1
-		1 53 1
-		1 53 1
-		1 53 1
-		1 53 1
-		1 53 1
-		1 53 1
-		1 53 1
-		1 53 1
-		1 53 1
-		1 51 1
-		1 51 1
-		1 51 1
-		1 51 1
-		1 51 1
-		1 51 1
-		1 51 1
-		1 51 1
-		1 51 1
-		1 51 1
-		1 51 1
-		1 51 1
-		1 51 1
+		1 52 1
+		1 52 1
+		1 52 1
+		1 52 1
+		1 52 1
+		1 52 1
+		1 52 1
+		1 52 1
+		1 52 1
+		1 52 1
+		1 52 1
+		1 52 1
+		1 52 1
+		1 52 1
+		1 52 1
 		1 52 1
 		1 52 1
 		1 52 1
@@ -60483,31 +60623,23 @@ createNode skinCluster -n "skinCluster6";
 		1 53 1
 		1 53 1
 		1 53 1
-		1 51 1
-		1 51 1
-		1 51 1
-		1 51 1
-		1 51 1
-		1 51 1
-		1 51 1
-		1 51 1
-		1 51 1
-		1 51 1
-		1 51 1
-		1 51 1
-		1 51 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
+		1 53 1
 		1 52 1
 		1 53 1
+		1 52 1
+		1 53 1
+		1 53 1
+		1 52 1
+		1 53 1
+		1 53 1
+		1 53 1
+		1 53 1
+		1 53 1
+		1 53 1
+		1 53 1
+		1 53 1
+		1 53 1
+		3 53 0.99844838209406561 54 5.6726764012281654e-05 55 0.0014948911419219951
 		1 53 1
 		1 53 1
 		1 53 1
@@ -60524,9 +60656,36 @@ createNode skinCluster -n "skinCluster6";
 		1 51 1
 		1 51 1
 		1 51 1
+		2 51 0.71773487655742862 52 0.28226512344257138
+		2 51 0.38903547866276877 52 0.61096452133723134
+		2 51 0.15011819901656356 52 0.84988180098343635
+		1 52 1
+		1 52 1
+		1 52 1
+		1 52 1
+		1 52 1
+		1 52 1
+		1 52 1
+		1 52 1
+		1 52 1
+		1 53 1
+		1 53 1
+		1 53 1
 		1 51 1
-		1 52 1
-		1 52 1
+		1 51 1
+		1 51 1
+		1 51 1
+		1 51 1
+		1 51 1
+		1 51 1
+		1 51 1
+		1 51 1
+		1 51 1
+		1 51 1
+		1 51 1
+		2 51 0.7434741474315345 52 0.2565258525684655
+		2 51 0.38884735817630145 52 0.61115264182369866
+		2 51 0.1881587672464568 52 0.81184123275354325
 		1 52 1
 		1 52 1
 		1 52 1
@@ -60540,6 +60699,7 @@ createNode skinCluster -n "skinCluster6";
 		1 53 1
 		1 53 1
 		1 53 1
+		3 53 0.98866141786219497 54 0.00068903505528588715 55 0.010649547082519025
 		1 51 1
 		1 51 1
 		1 51 1
@@ -60552,7 +60712,7 @@ createNode skinCluster -n "skinCluster6";
 		1 51 1
 		1 51 1
 		1 51 1
-		1 51 1
+		2 51 0.94014866246325568 52 0.059851337536744181
 		1 52 1
 		1 52 1
 		1 52 1
@@ -60564,7 +60724,7 @@ createNode skinCluster -n "skinCluster6";
 		1 52 1
 		1 52 1
 		1 52 1
-		1 53 1
+		2 52 0.341085414322776 53 0.65891458567722394
 		1 53 1
 		1 53 1
 		1 53 1
@@ -60582,6 +60742,7 @@ createNode skinCluster -n "skinCluster6";
 		1 51 1
 		1 51 1
 		1 52 1
+		2 51 0.011410538323578946 52 0.98858946167642103
 		1 52 1
 		1 52 1
 		1 52 1
@@ -60591,10 +60752,37 @@ createNode skinCluster -n "skinCluster6";
 		1 52 1
 		1 52 1
 		1 52 1
-		1 52 1
+		2 52 0.27748018503189087 53 0.72251981496810913
 		1 53 1
 		1 53 1
 		1 53 1
+		1 51 1
+		1 51 1
+		1 51 1
+		1 51 1
+		1 51 1
+		1 51 1
+		1 51 1
+		1 51 1
+		1 51 1
+		1 51 1
+		1 51 1
+		1 51 1
+		2 51 0.84003989132058232 52 0.15996010867941771
+		2 51 0.012905708099209377 52 0.98709429190079057
+		1 52 1
+		1 52 1
+		1 52 1
+		1 52 1
+		1 52 1
+		1 52 1
+		1 52 1
+		1 52 1
+		1 52 1
+		1 52 1
+		2 52 0.047368676882048752 53 0.95263132311795129
+		1 53 1
+		1 53 1
 		1 53 1
 		1 51 1
 		1 51 1
@@ -60608,8 +60796,8 @@ createNode skinCluster -n "skinCluster6";
 		1 51 1
 		1 51 1
 		1 51 1
-		1 51 1
-		1 52 1
+		2 51 0.81707677689294156 52 0.18292322310705852
+		2 51 0.30336784416898915 52 0.6966321558310109
 		1 52 1
 		1 52 1
 		1 52 1
@@ -60634,7 +60822,7 @@ createNode skinCluster -n "skinCluster6";
 		1 59 1
 		1 59 1
 		1 59 1
-		1 59 1
+		3 54 0.091206339263727093 55 0.066112039503096354 59 0.84268162123317658
 		1 60 1
 		1 60 1
 		1 60 1
@@ -60657,21 +60845,864 @@ createNode skinCluster -n "skinCluster6";
 		1 60 1
 		1 55 1
 		1 55 1
+		2 59 0.78034136353905903 60 0.21965863646094094
+		2 59 0.76906968309089074 60 0.23093031690910931
+		2 59 0.8296743631362915 60 0.1703256368637085;
+	setAttr ".wl[454:852].w"
+		2 59 0.17886122213139799 60 0.82113877786860201
+		2 59 0.1421058473620235 60 0.85789415263797653
+		2 59 0.20652762719531939 60 0.79347237280468064
+		2 59 0.54579216787721729 60 0.45420783212278271
+		2 59 0.50284016166212098 60 0.49715983833787897
+		2 59 0.51270555224832493 60 0.48729444775167507
+		1 60 1
+		1 60 1
+		1 60 1
+		1 59 1
+		1 59 1
+		2 59 0.93620060099067992 60 0.063799399009320093
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		2 59 0.23522352032696486 60 0.76477647967303519
+		2 59 0.20223310003726633 60 0.79776689996273364
+		1 60 1
+		1 60 1
+		1 60 1
+		2 59 0.13001322746276855 60 0.86998677253723145
+		2 59 0.00038356819532784438 60 0.99961643180467208
+		2 59 0.51980970977035545 60 0.48019029022964449
+		2 59 0.52118797663414407 60 0.47881202336585593
+		2 59 0.55865565291974861 60 0.44134434708025139
+		1 59 1
+		1 59 1
+		2 59 0.60962607293206672 60 0.39037392706793328
+		2 59 0.48925633760522791 60 0.51074366239477209
+		2 59 0.75532994070633985 60 0.2446700592936602
+		2 59 0.75553385946356411 60 0.24446614053643587
+		2 59 0.82189810276031494 60 0.17810189723968506
+		1 59 1
+		1 59 1
+		2 59 0.84886911961826328 60 0.15113088038173675
+		2 59 0.79198027837247076 60 0.2080197216275293
+		2 59 0.93336979746981552 60 0.066630202530184507
+		2 59 0.91135569463720234 60 0.088644305362797646
 		1 59 1
 		1 59 1
 		1 59 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
 		1 59 1
 		1 59 1
 		1 59 1
+		1 59 1
+		1 62 1
+		1 62 1
+		1 62 1
+		1 62 1
+		1 62 1
+		1 62 1
+		1 62 1
+		1 62 1
+		1 62 1
+		1 62 1
+		1 62 1
+		1 62 1
+		1 62 1
+		1 62 1
+		2 62 0.9984937068439681 63 0.0015062931560318711
+		2 62 0.86233186721801758 63 0.13766813278198242
+		1 62 1
+		1 62 1
+		1 62 1
+		2 62 0.92929392631613772 63 0.070706073683862308
+		1 62 1
+		1 62 1
+		1 62 1
+		1 63 1
+		1 63 1
+		1 63 1
+		2 62 0.0034257521587743368 63 0.99657424784122561
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		2 62 0.46451201823425403 63 0.53548798176574597
+		2 62 0.41634933401195212 63 0.58365066598804793
+		2 62 0.34584750806376385 63 0.65415249193623615
+		2 62 0.0423029839563559 63 0.9576970160436441
+		1 63 1
+		1 63 1
+		2 62 0.34858983755111694 63 0.65141016244888306
+		2 62 0.45028665365497195 63 0.54971334634502811
+		2 62 0.47929328680038452 63 0.52070671319961548
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		2 62 0.48187383901320929 63 0.51812616098679076
+		1 62 1
+		1 62 1
+		1 62 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 62 1
+		1 62 1
+		1 62 1
+		1 56 1
+		1 62 1
+		1 62 1
+		1 62 1
+		1 62 1
+		1 55 1
+		1 56 1
+		1 56 1
+		1 62 1
+		1 62 1
+		1 56 1
+		1 56 1
+		1 62 1
+		1 62 1
+		1 56 1
+		1 56 1
+		1 62 1
+		1 62 1
+		1 56 1
+		1 62 1
+		1 62 1
+		1 62 1
+		1 56 1
+		1 55 1
+		1 55 1
+		1 55 1
+		1 56 1
+		1 56 1
+		1 56 1
+		1 56 1
+		1 56 1
+		1 56 1
+		1 56 1
+		1 56 1
+		1 56 1
+		1 56 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 56 1
+		1 56 1
+		1 56 1
+		1 56 1
+		1 56 1
+		1 56 1
+		2 56 0.073133434099459424 57 0.92686656590054051
+		2 56 0.14365539382861239 57 0.85634460617138763
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 56 1
+		1 56 1
+		1 56 1
+		1 56 1
+		1 56 1
+		2 56 0.96106554993779247 57 0.038934450062207505
+		1 56 1
+		1 56 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 56 1
+		1 56 1
+		1 56 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 56 1
+		1 56 1
+		1 56 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 55 1
+		1 55 1
+		3 54 0.31222505119145527 55 0.36787991140841381 59 0.31989503740013092
+		3 54 0.47591421008110046 55 0.13047435879707336 59 0.39361143112182617
+		1 56 1
+		1 56 1
+		1 56 1
+		1 55 1
+		1 59 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 56 1
+		1 56 1
+		1 56 1
+		1 56 1
+		1 56 1
+		1 56 1
+		1 56 1
+		1 56 1
+		1 56 1
+		1 56 1
+		1 56 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 56 1
+		1 59 1
+		1 59 1
+		1 59 1
+		1 59 1
+		1 59 1
+		1 59 1
+		4 54 0.019926723538191398 55 0.044950516036536901 56 0.051211369437233416 
+		59 0.88391139098803828
+		1 55 1
+		1 55 1
+		4 54 0.045368383210738612 55 0.23131499900821589 56 0.33310495564143872 
+		59 0.39021166213960673
+		4 54 0.010550745988886018 55 0.087385447705039102 56 0.55265296689329502 
+		59 0.34941083941277984
+		4 54 0.27457545960357221 55 0.17181473202341502 56 0.071677726283175064 
+		59 0.48193208208983768
+		1 51 1
+		1 51 1
+		1 51 1
+		1 51 1
+		1 51 1
+		1 51 1
+		1 51 1
+		1 51 1
+		1 51 1
+		1 51 1
+		1 51 1
+		1 51 1
+		1 51 1
+		1 51 1
+		1 51 1
+		1 51 1
+		3 53 0.99650028349247299 54 0.0010763801450201181 55 0.0024233363625067936
+		1 53 1
+		1 53 1
+		2 53 0.99547180519914047 54 0.0045281948008595351
+		2 53 0.98189688535441588 54 0.018103114645584003
+		1 53 1
+		1 53 1
+		3 53 0.92374972359947338 54 0.002109356874407658 55 0.074140919526119009
+		3 53 0.93551823405826673 54 0.0010626271483883197 55 0.063419138793344945
+		3 53 0.92265252274527843 54 0.0042540950579639395 55 0.073093382196757678
+		3 53 0.95037939714922692 54 0.0052765955801339602 55 0.044344007270639002
+		1 53 1
+		3 53 0.85880302339532522 54 0.0535649129048252 55 0.087632063699849563
+		3 53 0.85950819199752115 54 0.12192233406434089 55 0.018569473938138091
+		2 53 0.84722890642752169 54 0.15277109357247828
+		2 53 0.8351442813873291 54 0.1648557186126709
+		2 53 0.83111686521072003 54 0.16888313478928002
+		2 53 0.99258226202455457 54 0.0074177379754454542
+		3 53 0.89530394856389517 54 0.0021050006239476966 55 0.10259105081215712
+		3 53 0.7974765831786913 54 0.0041672818343719943 55 0.19835613498693672
+		3 53 0.80363162579679204 54 0.0022093975592192522 55 0.19415897664398868
+		3 53 0.80814101494484525 54 0.0097143978641531775 55 0.18214458719100152
+		3 53 0.82059742702147243 54 0.022749720397379287 55 0.15665285258114828
+		2 53 0.88427393310853941 54 0.11572606689146062
+		3 53 0.73208462101094984 54 0.079015373006233972 55 0.18890000598281614
+		3 53 0.5750467056446803 54 0.37364062748884336 55 0.051312666866476349
+		2 53 0.63227081298828125 54 0.36772918701171875
+		2 53 0.57069381650127071 54 0.42930618349872923
+		2 53 0.58941149711608887 54 0.41058850288391113
+		3 53 0.64562706215300969 54 0.081795928424718126 55 0.27257700942227214
+		3 53 0.66916879756905046 54 0.00013573865551636113 55 0.33069546377543302
+		3 53 0.52204619841468791 54 0.0038122724945176519 55 0.47414152909079438
+		3 53 0.53528263502814111 54 0.0014660522045301528 55 0.46325131276732867
+		2 53 0.51988229564555055 54 0.010414893486576661;
+	setAttr ".wl[852:1333].w"
+		1 55 0.4697028108678728
+		3 53 0.60595009792381582 54 0.023658962171147845 55 0.3703909399050363
+		2 53 0.67441964149475098 54 0.32558035850524902
+		1 54 1
+		1 54 1
+		1 54 1
+		1 54 1
+		1 54 1
+		1 54 1
+		1 54 1
+		1 54 1
+		1 54 1
+		1 54 1
+		1 54 1
+		3 54 0.86162924766540527 55 0.034387357532978058 59 0.10398339480161667
+		1 54 1
+		1 54 1
+		1 54 1
+		4 54 0.54749289846000138 55 0.29225256018544016 56 0.011838354964145977 
+		59 0.14841618639041243
+		1 54 1
+		1 54 1
+		4 54 0.78227323840097451 55 0.09036904636562601 56 0.0020413627059294101 
+		59 0.12531635252746998
+		1 54 1
+		1 54 1
+		1 51 1
+		1 51 1
+		1 51 1
+		1 51 1
+		1 51 1
+		1 51 1
+		1 51 1
+		1 51 1
+		1 51 1
+		2 56 0.42395051860514393 57 0.57604948139485601
+		2 56 0.43521455316456836 57 0.56478544683543164
+		2 56 0.32639092206954956 57 0.67360907793045044
+		1 57 1
+		1 57 1
+		1 57 1
+		2 56 0.26868231705917817 57 0.73131768294082178
+		2 56 0.42205836904396826 57 0.57794163095603168
+		2 56 0.44976733475230141 57 0.55023266524769854
+		2 56 0.47972515104562946 57 0.52027484895437059
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 63 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 57 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
+		1 60 1
 		1 60 1
 		1 60 1
 		1 60 1
@@ -60706,842 +61737,7 @@ createNode skinCluster -n "skinCluster6";
 		1 60 1
 		1 60 1
 		1 60 1;
-	setAttr ".wl[500:999].w"
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 59 1
-		1 59 1
-		1 59 1
-		1 59 1
-		1 59 1
-		1 59 1
-		1 59 1
-		1 59 1
-		1 59 1
-		1 59 1
-		1 59 1
-		1 59 1
-		1 59 1
-		1 59 1
-		1 59 1
-		1 59 1
-		1 62 1
-		1 62 1
-		1 62 1
-		1 62 1
-		1 62 1
-		1 62 1
-		1 62 1
-		1 62 1
-		1 62 1
-		1 62 1
-		1 62 1
-		1 62 1
-		1 62 1
-		1 62 1
-		1 62 1
-		1 62 1
-		1 62 1
-		1 62 1
-		1 62 1
-		1 62 1
-		1 62 1
-		1 62 1
-		1 62 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 62 1
-		1 62 1
-		1 62 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 62 1
-		1 62 1
-		1 62 1
-		1 56 1
-		1 62 1
-		1 62 1
-		1 62 1
-		1 62 1
-		1 55 1
-		1 56 1
-		1 56 1
-		1 62 1
-		1 62 1
-		1 56 1
-		1 56 1
-		1 62 1
-		1 62 1
-		1 56 1
-		1 56 1
-		1 62 1
-		1 62 1
-		1 56 1
-		1 62 1
-		1 62 1
-		1 62 1
-		1 56 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 55 1
-		1 59 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 56 1
-		1 59 1
-		1 59 1
-		1 59 1
-		1 59 1
-		1 59 1
-		1 59 1
-		1 59 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 51 1
-		1 51 1
-		1 51 1
-		1 51 1
-		1 51 1
-		1 51 1
-		1 51 1
-		1 51 1
-		1 51 1
-		1 51 1
-		1 51 1
-		1 51 1
-		1 51 1
-		1 51 1
-		1 51 1
-		1 51 1
-		1 53 1
-		1 53 1
-		1 53 1
-		1 53 1
-		1 53 1
-		1 53 1
-		1 53 1
-		1 53 1
-		1 53 1
-		1 53 1
-		1 53 1
-		1 53 1
-		1 53 1
-		1 53 1
-		1 53 1
-		1 53 1
-		1 53 1
-		1 53 1
-		1 53 1
-		1 53 1
-		1 53 1
-		1 53 1
-		1 53 1
-		1 53 1
-		1 53 1
-		1 53 1
-		1 53 1
-		1 53 1
-		1 53 1
-		1 53 1
-		1 53 1
-		1 53 1
-		1 53 1
-		1 53 1
-		1 53 1
-		1 53 1
-		1 54 1
-		1 54 1
-		1 54 1
-		1 54 1
-		1 54 1
-		1 54 1
-		1 54 1
-		1 54 1
-		1 54 1
-		1 54 1
-		1 54 1
-		1 54 1
-		1 54 1
-		1 54 1
-		1 54 1
-		1 54 1
-		1 54 1
-		1 54 1
-		1 54 1
-		1 54 1
-		1 54 1
-		1 51 1
-		1 51 1
-		1 51 1
-		1 51 1
-		1 51 1
-		1 51 1
-		1 51 1
-		1 51 1
-		1 51 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1;
-	setAttr ".wl[1000:1499].w"
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 63 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 57 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
+	setAttr ".wl[1334:1798].w"
 		1 60 1
 		1 60 1
 		1 60 1
@@ -61707,8 +61903,7 @@ createNode skinCluster -n "skinCluster6";
 		1 75 1
 		1 75 1
 		1 75 1
-		1 75 1;
-	setAttr ".wl[1500:1996].w"
+		1 75 1
 		1 75 1
 		1 75 1
 		1 75 1
@@ -61752,49 +61947,49 @@ createNode skinCluster -n "skinCluster6";
 		1 75 1
 		1 76 1
 		1 76 1
-		1 76 1
-		1 76 1
-		1 76 1
-		1 76 1
-		1 76 1
-		1 76 1
-		1 76 1
-		1 76 1
-		1 76 1
+		2 75 0.012644270368915935 76 0.98735572963108409
+		2 75 0.15897300329403563 76 0.84102699670596437
+		2 75 0.06239120321791463 76 0.93760879678208531
+		2 75 0.08282054294921104 76 0.91717945705078907
+		2 75 0.36555322808894486 76 0.63444677191105525
+		2 75 0.24204408757214099 76 0.75795591242785887
+		2 75 0.35135237039982664 76 0.6486476296001733
+		2 75 0.29443469616732582 76 0.70556530383267413
+		2 75 0.40374978215030799 76 0.59625021784969212
+		2 75 0.7192054875065349 76 0.2807945124934651
+		2 75 0.76446471155570006 76 0.2355352884443
 		1 75 1
 		1 75 1
 		1 75 1
 		1 75 1
+		2 75 0.84215258419542371 76 0.15784741580457623
 		1 75 1
 		1 75 1
 		1 75 1
 		1 75 1
+		2 75 0.81499069779895128 76 0.18500930220104866
+		2 75 0.82041773233558013 76 0.1795822676644199
 		1 75 1
 		1 75 1
-		1 75 1
-		1 75 1
-		1 75 1
-		1 75 1
-		1 75 1
-		1 76 1
-		1 76 1
-		1 76 1
-		1 76 1
-		1 76 1
 		1 76 1
 		1 76 1
 		1 76 1
 		1 76 1
 		1 76 1
+		1 76 1
+		2 75 0.27550673487047944 76 0.7244932651295205
+		1 76 1
+		1 76 1
+		1 76 1
+		1 75 1
+		2 75 0.9834711134648767 76 0.016528886535123334
+		2 75 0.86739444923525788 76 0.13260555076474215
 		1 75 1
 		1 75 1
 		1 75 1
 		1 75 1
-		1 75 1
-		1 75 1
-		1 75 1
-		1 75 1
-		1 75 1
+		2 75 0.86604211758473526 76 0.13395788241526471
+		2 75 0.83692857380080532 76 0.1630714261991946
 		1 75 1
 		1 75 1
 		1 75 1
@@ -61802,7 +61997,7 @@ createNode skinCluster -n "skinCluster6";
 		1 75 1
 		1 75 1
 		1 76 1
-		1 76 1
+		2 75 0.00089439123479324043 76 0.99910560876520682
 		1 76 1
 		1 76 1
 		1 76 1
@@ -61844,8 +62039,8 @@ createNode skinCluster -n "skinCluster6";
 		1 77 1
 		1 77 1
 		1 77 1
-		1 77 1
-		1 77 1
+		2 76 0.19422891157183314 77 0.8057710884281668
+		2 76 0.0095525227136843711 77 0.99044747728631555
 		1 77 1
 		1 76 1
 		1 76 1
@@ -61895,63 +62090,7 @@ createNode skinCluster -n "skinCluster6";
 		1 77 1
 		1 77 1
 		1 77 1
-		1 77 1
-		1 77 1
-		1 77 1
-		1 77 1
-		1 77 1
-		1 75 1
-		1 75 1
-		1 75 1
-		1 75 1
-		1 75 1
-		1 75 1
-		1 75 1
-		1 75 1
-		1 75 1
-		1 75 1
-		1 75 1
-		1 75 1
-		1 75 1
-		1 76 1
-		1 76 1
-		1 76 1
-		1 76 1
-		1 76 1
-		1 76 1
-		1 76 1
-		1 76 1
-		1 76 1
-		1 76 1
-		1 76 1
-		1 77 1
-		1 77 1
-		1 77 1
-		1 75 1
-		1 75 1
-		1 75 1
-		1 75 1
-		1 75 1
-		1 75 1
-		1 75 1
-		1 75 1
-		1 75 1
-		1 75 1
-		1 75 1
-		1 75 1
-		1 75 1
-		1 76 1
-		1 76 1
-		1 76 1
-		1 76 1
-		1 76 1
-		1 76 1
-		1 76 1
-		1 76 1
-		1 76 1
-		1 76 1
-		1 76 1
-		1 77 1
+		3 77 0.99844838209406561 78 5.6726764012281654e-05 79 0.0014948911419219951
 		1 77 1
 		1 77 1
 		1 77 1
@@ -61968,9 +62107,36 @@ createNode skinCluster -n "skinCluster6";
 		1 75 1
 		1 75 1
 		1 75 1
+		2 75 0.71773487655742862 76 0.28226512344257138
+		2 75 0.38903547866276877 76 0.61096452133723134
+		2 75 0.15011819901656356 76 0.84988180098343635
+		1 76 1
+		1 76 1
+		1 76 1
+		1 76 1
+		1 76 1
+		1 76 1
+		1 76 1
+		1 76 1
+		1 76 1
+		1 77 1
+		1 77 1
+		1 77 1
 		1 75 1
-		1 76 1
-		1 76 1
+		1 75 1
+		1 75 1
+		1 75 1
+		1 75 1
+		1 75 1
+		1 75 1
+		1 75 1
+		1 75 1
+		1 75 1
+		1 75 1
+		1 75 1
+		2 75 0.7434741474315345 76 0.2565258525684655
+		2 75 0.38884735817630145 76 0.61115264182369866
+		2 75 0.1881587672464568 76 0.81184123275354325
 		1 76 1
 		1 76 1
 		1 76 1
@@ -61984,6 +62150,7 @@ createNode skinCluster -n "skinCluster6";
 		1 77 1
 		1 77 1
 		1 77 1
+		3 77 0.98866141786219497 78 0.00068903505528588715 79 0.010649547082519025
 		1 75 1
 		1 75 1
 		1 75 1
@@ -61996,7 +62163,7 @@ createNode skinCluster -n "skinCluster6";
 		1 75 1
 		1 75 1
 		1 75 1
-		1 75 1
+		2 75 0.94014866246325568 76 0.059851337536744181
 		1 76 1
 		1 76 1
 		1 76 1
@@ -62008,7 +62175,7 @@ createNode skinCluster -n "skinCluster6";
 		1 76 1
 		1 76 1
 		1 76 1
-		1 77 1
+		2 76 0.341085414322776 77 0.65891458567722394
 		1 77 1
 		1 77 1
 		1 77 1
@@ -62026,6 +62193,7 @@ createNode skinCluster -n "skinCluster6";
 		1 75 1
 		1 75 1
 		1 76 1
+		2 75 0.011410538323578946 76 0.98858946167642103
 		1 76 1
 		1 76 1
 		1 76 1
@@ -62034,11 +62202,39 @@ createNode skinCluster -n "skinCluster6";
 		1 76 1
 		1 76 1
 		1 76 1
-		1 76 1
-		1 76 1
+		1 76 1;
+	setAttr ".wl[1799:2235].w"
+		2 76 0.27748018503189087 77 0.72251981496810913
 		1 77 1
 		1 77 1
 		1 77 1
+		1 75 1
+		1 75 1
+		1 75 1
+		1 75 1
+		1 75 1
+		1 75 1
+		1 75 1
+		1 75 1
+		1 75 1
+		1 75 1
+		1 75 1
+		1 75 1
+		2 75 0.84003989132058232 76 0.15996010867941771
+		2 75 0.012905708099209377 76 0.98709429190079057
+		1 76 1
+		1 76 1
+		1 76 1
+		1 76 1
+		1 76 1
+		1 76 1
+		1 76 1
+		1 76 1
+		1 76 1
+		1 76 1
+		2 76 0.047368676882048752 77 0.95263132311795129
+		1 77 1
+		1 77 1
 		1 77 1
 		1 75 1
 		1 75 1
@@ -62052,8 +62248,8 @@ createNode skinCluster -n "skinCluster6";
 		1 75 1
 		1 75 1
 		1 75 1
-		1 75 1
-		1 76 1
+		2 75 0.81707677689294156 76 0.18292322310705852
+		2 75 0.30336784416898915 76 0.6966321558310109
 		1 76 1
 		1 76 1
 		1 76 1
@@ -62072,13 +62268,13 @@ createNode skinCluster -n "skinCluster6";
 		1 79 1
 		1 83 1
 		1 83 1
-		2 79 2.6769054455545599e-07 83 0.99999973230945549
+		3 78 8.3579685123743778e-08 79 9.8477961465758517e-08 83 0.99999981794235338
 		1 83 1
-		2 79 6.1058420009444946e-07 83 0.99999938941579991
-		1 83 1
-		1 83 1
+		3 78 1.9063966798347307e-07 79 2.246216443944248e-07 83 0.99999958473868766
 		1 83 1
 		1 83 1
+		1 83 1
+		3 78 0.091206339263727093 79 0.066112039503096354 83 0.84268162123317658
 		1 84 1
 		1 84 1
 		1 84 1
@@ -62101,68 +62297,75 @@ createNode skinCluster -n "skinCluster6";
 		1 84 1
 		1 79 1
 		1 79 1
-		1 83 1
-		1 83 1
-		1 83 1
+		2 83 0.78034151909699923 84 0.21965848090300077
+		2 83 0.7690699215094734 84 0.23093007849052666
+		2 83 0.8296743631362915 84 0.1703256368637085
+		2 83 0.17886122213139799 84 0.82113877786860201
+		2 83 0.1421058473620235 84 0.85789415263797653
+		2 83 0.20652762719531939 84 0.79347237280468064
+		2 83 0.54579216787721729 84 0.45420783212278271
+		2 83 0.50284016166212098 84 0.49715983833787897
+		2 83 0.51270555224832493 84 0.48729444775167507
 		1 84 1
-		1 84 1
-		1 84 1
-		1 84 1
-		1 84 1
-		1 84 1
-		1 84 1
-		1 84 1
-		1 84 1
-		1 83 1
-		1 83 1
-		1 83 1
-		1 84 1
-		1 84 1
-		1 84 1
-		1 84 1
-		1 84 1
-		1 84 1
-		1 84 1
-		1 84 1
-		1 84 1
-		1 84 1
-		1 84 1
-		1 84 1
-		1 84 1
-		1 84 1
-		1 84 1
-		1 84 1
-		1 84 1
-		1 84 1
-		1 84 1
-		1 84 1
-		1 84 1
-		1 84 1
-		1 84 1
-		1 84 1
-		1 84 1
-		1 84 1
-		1 84 1
-		1 84 1
-		1 84 1
-		1 84 1
-		1 84 1
-		1 84 1
-		1 84 1
-		1 84 1
-		1 84 1
-		1 84 1
-		1 84 1
-		1 84 1
-		1 84 1
-		1 84 1
-		1 84 1
-		1 84 1
-		2 83 3.9708167630544421e-07 84 0.99999960291832368
 		1 84 1
 		1 84 1
 		1 83 1
 		1 83 1
+		2 83 0.93620060099067992 84 0.063799399009320093
+		1 84 1
+		1 84 1
+		1 84 1
+		1 84 1
+		1 84 1
+		1 84 1
+		1 84 1
+		1 84 1
+		1 84 1
+		1 84 1
+		1 84 1
+		1 84 1
+		1 84 1
+		1 84 1
+		1 84 1
+		1 84 1
+		1 84 1
+		1 84 1
+		1 84 1
+		1 84 1
+		1 84 1
+		1 84 1
+		1 84 1
+		1 84 1
+		1 84 1
+		1 84 1
+		1 84 1
+		1 84 1
+		1 84 1
+		1 84 1
+		1 84 1
+		2 83 0.23522352032696486 84 0.76477647967303519
+		2 83 0.20223310003726633 84 0.79776689996273364
+		1 84 1
+		1 84 1
+		1 84 1
+		2 83 0.13001322746276855 84 0.86998677253723145
+		2 83 0.00038356819532784438 84 0.99961643180467208
+		2 83 0.51980970977035545 84 0.48019029022964449
+		2 83 0.52118797663414407 84 0.47881202336585593
+		2 83 0.55865565291974861 84 0.44134434708025139
+		1 83 1
+		2 83 0.99999996992050644 84 3.0079493545998334e-08
+		2 83 0.60962607293206672 84 0.39037392706793328
+		2 83 0.48925633760522791 84 0.51074366239477209
+		2 83 0.75532994070633985 84 0.2446700592936602
+		2 83 0.75553385946356411 84 0.24446614053643587
+		2 83 0.82189810276031494 84 0.17810189723968506
+		1 83 1
+		1 83 1
+		2 83 0.84886911961826328 84 0.15113088038173675
+		2 83 0.79198027837247076 84 0.2080197216275293
+		2 83 0.93336979746981552 84 0.066630202530184507
+		2 83 0.91135569463720234 84 0.088644305362797646
 		1 83 1
 		1 83 1
 		1 83 1
@@ -62170,13 +62373,6 @@ createNode skinCluster -n "skinCluster6";
 		1 83 1
 		1 83 1
 		1 83 1
-		1 83 1
-		1 83 1
-		1 83 1
-		1 83 1
-		1 83 1
-		1 83 1
-		1 83 1
 		1 86 1
 		1 86 1
 		1 86 1
@@ -62191,22 +62387,21 @@ createNode skinCluster -n "skinCluster6";
 		1 86 1
 		1 86 1
 		1 86 1
+		2 86 0.9984937068439681 87 0.0015062931560318711
+		2 86 0.86233186721801758 87 0.13766813278198242
 		1 86 1
 		1 86 1
 		1 86 1
+		2 86 0.92929392631613772 87 0.070706073683862308
 		1 86 1
 		1 86 1
 		1 86 1
-		1 86 1
-		1 86 1
-		1 86 1
 		1 87 1
 		1 87 1
 		1 87 1
+		2 86 0.0034257521587743368 87 0.99657424784122561
 		1 87 1
 		1 87 1
-		1 87 1;
-	setAttr ".wl[1997:2492].w"
 		1 87 1
 		1 87 1
 		1 87 1
@@ -62228,8 +62423,15 @@ createNode skinCluster -n "skinCluster6";
 		1 87 1
 		1 87 1
 		1 87 1
+		2 86 0.46451201823425403 87 0.53548798176574597
+		2 86 0.41634933401195212 87 0.58365066598804793
+		2 86 0.34584750806376385 87 0.65415249193623615
+		2 86 0.0423029839563559 87 0.9576970160436441
 		1 87 1
 		1 87 1
+		2 86 0.34858983755111694 87 0.65141016244888306
+		2 86 0.45028665365497195 87 0.54971334634502811
+		2 86 0.47929328680038452 87 0.52070671319961548
 		1 87 1
 		1 87 1
 		1 87 1
@@ -62261,14 +62463,7 @@ createNode skinCluster -n "skinCluster6";
 		1 87 1
 		1 87 1
 		1 87 1
-		1 87 1
-		1 87 1
-		1 87 1
-		1 87 1
-		1 87 1
-		1 87 1
-		1 87 1
-		1 87 1
+		2 86 0.48187383901320929 87 0.51812616098679076
 		1 86 1
 		1 86 1
 		1 86 1
@@ -62336,8 +62531,8 @@ createNode skinCluster -n "skinCluster6";
 		1 80 1
 		1 80 1
 		1 80 1
-		1 81 1
-		1 81 1
+		2 80 0.073133434099459424 81 0.92686656590054051
+		2 80 0.14365539382861239 81 0.85634460617138763
 		1 81 1
 		1 81 1
 		1 81 1
@@ -62367,7 +62562,7 @@ createNode skinCluster -n "skinCluster6";
 		1 80 1
 		1 80 1
 		1 80 1
-		1 80 1
+		2 80 0.96106554993779247 81 0.038934450062207505
 		2 80 0.99999991910340624 81 8.0896593858860683e-08
 		1 80 1
 		1 81 1
@@ -62398,8 +62593,8 @@ createNode skinCluster -n "skinCluster6";
 		1 81 1
 		1 79 1
 		1 79 1
-		1 79 1
-		1 79 1
+		3 78 0.31222505119145527 79 0.36787991140841381 83 0.31989503740013092
+		3 78 0.47591421008110046 79 0.13047435879707336 83 0.39361143112182617
 		1 80 1
 		1 80 1
 		1 80 1
@@ -62443,17 +62638,23 @@ createNode skinCluster -n "skinCluster6";
 		1 81 1
 		1 80 1
 		1 83 1
+		4 78 2.2973233645772246e-08 79 5.1822804844298292e-08 80 5.904085311993452e-08 
+		83 0.99999986616310843
+		1 83 1
+		1 83 1;
+	setAttr ".wl[2236:2655].w"
 		1 83 1
 		1 83 1
-		1 83 1
-		1 83 1
-		1 83 1
-		1 83 1
+		4 78 0.019926723538191398 79 0.044950516036536901 80 0.051211369437233416 
+		83 0.88391139098803828
 		1 79 1
 		1 79 1
-		1 79 1
-		1 79 1
-		1 79 1
+		4 78 0.045368383210738612 79 0.23131499900821589 80 0.33310495564143872 
+		83 0.39021166213960673
+		4 78 0.010550745988886018 79 0.087385447705039102 80 0.55265296689329502 
+		83 0.34941083941277984
+		4 78 0.27457545960357221 79 0.17181473202341502 80 0.071677726283175064 
+		83 0.48193208208983768
 		1 75 1
 		1 75 1
 		1 75 1
@@ -62470,61 +62671,63 @@ createNode skinCluster -n "skinCluster6";
 		1 75 1
 		1 75 1
 		1 75 1
+		3 77 0.99650028349247299 78 0.0010763801450201181 79 0.0024233363625067936
 		1 77 1
 		1 77 1
+		2 77 0.99547180519914047 78 0.0045281948008595351
+		2 77 0.98189688535441588 78 0.018103114645584003
 		1 77 1
 		1 77 1
+		3 77 0.92374972359947338 78 0.002109356874407658 79 0.074140919526119009
+		3 77 0.93551823405826673 78 0.0010626271483883197 79 0.063419138793344945
+		3 77 0.92265252274527843 78 0.0042540950579639395 79 0.073093382196757678
+		3 77 0.95037939714922692 78 0.0052765955801339602 79 0.044344007270639002
 		1 77 1
-		1 77 1
-		1 77 1
-		1 77 1
-		1 77 1
-		1 77 1
-		1 77 1
-		1 77 1
-		1 77 1
-		1 77 1
-		1 77 1
-		1 77 1
-		1 77 1
-		1 77 1
-		1 77 1
-		1 77 1
-		1 77 1
-		1 77 1
-		1 77 1
-		1 77 1
-		1 77 1
-		1 77 1
-		1 77 1
-		1 77 1
-		1 77 1
-		1 77 1
-		2 77 0.9999992395525853 79 7.6044741464490558e-07
-		1 77 1
-		1 77 1
-		1 77 1
-		1 77 1
-		1 77 1
+		3 77 0.85880302339532522 78 0.0535649129048252 79 0.087632063699849563
+		3 77 0.85950819199752115 78 0.12192233406434089 79 0.018569473938138091
+		2 77 0.84722890642752169 78 0.15277109357247828
+		2 77 0.8351442813873291 78 0.1648557186126709
+		2 77 0.83111686521072003 78 0.16888313478928002
+		2 77 0.99258226202455457 78 0.0074177379754454542
+		3 77 0.89530394856389517 78 0.0021050006239476966 79 0.10259105081215712
+		3 77 0.7974765831786913 78 0.0041672818343719943 79 0.19835613498693672
+		3 77 0.80363162579679204 78 0.0022093975592192522 79 0.19415897664398868
+		3 77 0.80814101494484525 78 0.0097143978641531775 79 0.18214458719100152
+		3 77 0.82059742702147243 78 0.022749720397379287 79 0.15665285258114828
+		2 77 0.88427393310853941 78 0.11572606689146062
+		3 77 0.73208462101094984 78 0.079015373006233972 79 0.18890000598281614
+		3 77 0.5750467056446803 78 0.37364062748884336 79 0.051312666866476349
+		2 77 0.63227081298828125 78 0.36772918701171875
+		2 77 0.57069381650127071 78 0.42930618349872923
+		2 77 0.58941149711608887 78 0.41058850288391113
+		3 77 0.64562706215300969 78 0.081795928424718126 79 0.27257700942227214
+		3 77 0.66916827154684944 78 0.00013575254261792395 79 0.33069597591053262
+		3 77 0.52204619841468791 78 0.0038122724945176519 79 0.47414152909079438
+		3 77 0.53528263502814111 78 0.0014660522045301528 79 0.46325131276732867
+		3 77 0.51988229564555055 78 0.010414893486576661 79 0.4697028108678728
+		3 77 0.60595009792381582 78 0.023658962171147845 79 0.3703909399050363
+		2 77 0.67441964149475098 78 0.32558035850524902
 		1 78 1
 		1 78 1
 		1 78 1
 		1 78 1
 		1 78 1
 		1 78 1
+		3 78 0.99999998597074669 79 3.486495029484321e-09 83 1.0542758258388601e-08
 		1 78 1
 		1 78 1
 		1 78 1
 		1 78 1
+		3 78 0.86162924766540527 79 0.034387357532978058 83 0.10398339480161667
 		1 78 1
 		1 78 1
 		1 78 1
+		4 78 0.54749289846000138 79 0.29225256018544016 80 0.011838354964145977 
+		83 0.14841618639041243
 		1 78 1
 		1 78 1
-		2 78 0.99999948831019636 79 5.1168980364827981e-07
-		1 78 1
-		1 78 1
-		1 78 1
+		4 78 0.78227323840097451 79 0.09036904636562601 80 0.0020413627059294101 
+		83 0.12531635252746998
 		1 78 1
 		1 78 1
 		1 75 1
@@ -62536,16 +62739,16 @@ createNode skinCluster -n "skinCluster6";
 		1 75 1
 		1 75 1
 		1 75 1
+		2 80 0.42395051860514393 81 0.57604948139485601
+		2 80 0.43521455316456836 81 0.56478544683543164
+		2 80 0.32639092206954956 81 0.67360907793045044
 		1 81 1
 		1 81 1
 		1 81 1
-		1 81 1
-		1 81 1
-		1 81 1
-		1 81 1
-		1 81 1
-		1 81 1
-		1 81 1
+		2 80 0.26868231705917817 81 0.73131768294082178
+		2 80 0.42205836904396826 81 0.57794163095603168
+		2 80 0.44976733475230141 81 0.55023266524769854
+		2 80 0.47972515104562946 81 0.52027484895437059
 		1 87 1
 		1 87 1
 		1 87 1
@@ -62702,8 +62905,6 @@ createNode skinCluster -n "skinCluster6";
 		1 87 1
 		1 87 1
 		1 87 1
-		1 87 1;
-	setAttr ".wl[2493:2881].w"
 		1 87 1
 		1 87 1
 		1 87 1
@@ -62729,7 +62930,7 @@ createNode skinCluster -n "skinCluster6";
 		1 87 1
 		1 87 1
 		1 87 1
-		1 81 1
+		1 87 1
 		1 81 1
 		1 81 1
 		1 81 1
@@ -62867,6 +63068,8 @@ createNode skinCluster -n "skinCluster6";
 		1 81 1
 		1 81 1
 		1 81 1
+		1 81 1;
+	setAttr ".wl[2656:2881].w"
 		1 81 1
 		1 81 1
 		1 81 1
@@ -63391,7 +63594,36 @@ createNode expression -n "xgmRefreshPreview";
 	setAttr ".uno" 1;
 createNode ngst2SkinLayerData -n "ngSkinToolsData_skinCluster10";
 	rename -uid "12498F77-4B27-8C00-1EDD-9D953D7AD9F5";
-	setAttr ".ld" -type "ngst2SkinLayerDataStorage"   14 25104 {"xP8eXEILAAABAAAADAAAAEJhc2Ugd2VpZ2h0cwEUCQEE8D8JCAQAAAEsEBYAAAAzEREVHBEk/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggAPggA/gEAXgEA/mgD3mgD/gEAPgEA/sgA/sgA/sgAEcj+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQARAf6QA56QA/4BAL4BAP7YAP7YAP7YAF7YAD4BAP7oAP7oAP7oAH7oAP7gAP7gAP7gAP7gAP7gAP7gAP7gAP7gAP7gAP7gAH7gAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BABEB/qgOnqgOXmgA/gEA/gEA/gEA/gEA/gEA/gEA/gEAEQFe4AG+GAD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQ==","AP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAIYBAAA0/mM+/mM+/mM+/mM+/mM+/mM+/mM+/mM+/mM+/mM+/mM+/mM+omM+vrxBnjAA/gEA3gEAnqAAnigA/gEA3gEAnqAA/igA/igA/igA/igAXigAvgEA/kgB/kgB/kgBnkgBfgEAMQgRAT4QABEBXhgA/gEA/gEA/gEAEQER4P4IAD4IAP4BAP4BAP7QAD7QABFQ/gEA/gEAPgEAEZj+CAA+CAD+AQD+AQARAf7YAD7YABFQ/gEA/gEAEQERkP4IAD4IAP4BAP4BABEB/tgAPtgAEVD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQ==","AP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAGYBAAA1/htN/htN/htN/htN/htN/htN/htN/htN/htN/htN/htN/htN/htN/htN/htN/htN/htN/htN/htN/htN/htN/htN/htN7htNEhtNHiRTnggA/gEA/gEA/gEAngEAfhABEQERKBEBERARCBEBERD+CACeCAD+AQD+AQD+AQBeKAH+AQD+AQD+AQBe2AA+GAD+AQD+AQD+AQA+0AA+EAD+AQD+AQD+AQA+0AA+EAD+AQD+AQD+AQA+0AA+EAD+AQD+AQD+AQA+0AA+EAD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQARAT6YDP4QAP4QAP4QAP4QAD4QAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAA==","/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAhgEAAAD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQC6AQAANv5wDv5wDv5wDv5wDv5wDv5wDv5wDv5wDv5wDv5wDv5wDv5wDv5wDv5wDv5wDv5wDv5wDv5wDv5wDv5wDv5wDv5wDv5wDv5wDv5wDv5wDv5wDv5wDv5wDv5wDv5wDv5wDv5wDv5wDv5wDv5wDv5wDv5wDv5wDv5wDv5wDv5wDv5wDv5wDv5wDv5wDv5wDv5wDv5wDv5wDv5wDv5wDv5wDv5wDv5wDv5wDv5wDrpwDv4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAEYBAATwPxZUDP4IAP4IAH4IAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAA==","/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEApgEAADf+qz7+qz7+qz7+qz7+qz7+qz7+qz7+qz7+qz7+qz7+qz7+qz7+qz7+qz7+qz7+qz7+qz7+qz7+qz7+qz7+qz7+qz7+qz7+qz7+qz7+qz7+qz7+qz7+qz7+qz7+qz7+qz7+qz7+qz7+qz7+qz7+qz7+qz7+qz7+qz7+qz7+qz7+qz7+qz7+qz7+qz7+qz7+qz7+qz7+qz7+qz7+qz6Cqz4ebEz+AQD+AQD+AQCeAQAR8BEI/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAPgEA/hgG/hgGPhgGEZA+CAD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQDeAQA+iAI+EABeAQARKP4BAP4BAP4BAP4BAP4BAJ4BADFwfggA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/g==","AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQDGAQAAOP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQP7zQCLzQB4cVZ4BABEwEQg+AQARGBEIPgEAERgRCD4BAF4YABEBniAAESj+CABeAQC+WAD+AQD+AQD+AQA+AQC+AAE+MAD+AQARAT5YABEQfgEAESg+CAD+AQBeAQA+aAAREP4BAP4BAN4BABHA/ggAPggAfgEAEXD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQ==","AP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAJYBAAAA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAqgEAADn+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rBz+rByirBwE8D8WKxU+CAC+AQA+QAD+EAD+EAD+EAD+AQD+AAExAF4BAH5gAF4BAH44AF4gAP4BABEBXmAA/hgA/hgAPhgA/gEAXgEAfugA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA3gEAfhgDviAA/g==","AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQC+AQC+4AX+MAD+MAD+MAD+MAD+MAD+MAD+MAD+MAD+MAD+MAD+MAD+MAD+MAD+MAD+MAD+MAD+MAD+MAD+MAD+MAD+MAD+MAD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQDGAQAAO/6zMv6zMv6zMv6zMv6zMv6zMv6zMv6zMv6zMv6zMv6zMv6zMv6zMv6zMv6zMv6zMv6zMv6zMv6zMv6zMv6zMv6zMv6zMv6zMv6zMv6zMv6zMv6zMv6zMv6zMv6zMv6zMv6zMv6zMv6zMv6zMv6zMv6zMv6zMv6zMv6zMv6zMv6zMv6zMv6zMv6zMv6zMv6zMv6zMv6zMv6zMv6zMmKzMh5MRREBERD+CAD+AQD+AQC+AQBe8AD+AQARAf5gAH5gAP4BAP4BAP4BAP4BAH4BAF6AAf4YAJ4YAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAA==","/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAPgEA8Xj+AQD+AQD+AQD+AQCeAQAxML4IAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAGYBAAA8/htB/htB/htB/htB/htB/htB/htB/htB/htB/htB/htB/htB/htB/htB/htB/htB/htB/htB/htB/htB/htB/htB/htB/htB/htB/htB/htB/htB/htB/htB/htB/htB/htB/htB/htB/htB/htB/htB/htB/htB/htB/htB/htB/htB/htB/htB/htB/htB/htB/htB/htB/htB/htBwhtBvrxO/jAAvjAAngEA/pgAEZheAQD+YAARYP5IAA==","/kgA/kgA/kgAfkgA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAfgEA/oAY/oAY/oAY/oAYfoAY/iAB/iAB/iAB/iAB/iAB/iAB/iAB/iAB/iAB/iAB/iAB/iAB/iAB/iAB/iAB/iAB/iAB/iABPiAB/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAZgEAAAD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQCaAQAAPv7oKv7oKv7oKv7oKv7oKv7oKv7oKv7oKv7oKv7oKv7oKv7oKv7oKv7oKv7oKv7oKv7oKv7oKv7oKv7oKv7oKv7oKv7oKv7oKv7oKv7oKv7oKv7oKv7oKv7oKv7oKv7oKv7oKv7oKv7oKv7oKv7oKg==","/ugq/ugq/ugq/ugq/ugq/ugq/ugq/ugq/ugq/ugq/ugq/ugq/ugq/ugq/ugq/ugq/ugq/ugq/ugq/ugq/ugq/ugq/ugq/ugq/ugq/ugq/ugq/ugq7ugqEugqBPA/FoMQ/ggA/ggAvggA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAfgEAXtAC/gEA/gEAfpgAXiAAERheAQARIBEIPgEAERgRCD4BABEYEQgRAREQPggA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAZgEAGpFJ/gEA/gEA/gEA/g==","AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQDKAQA+pFb+EAD+EAD+EAD+EAD+EAD+EAD+EAD+EAA+EABeAQD+KAL+KAL+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQA+AQD+kAj+kAj+gAD+gAD+gAD+gAD+gAD+gAD+gAD+gAD+gAD+gAD+gAD+gAD+gAD+gAD+gAD+gAD+gAD+gAD+gAD+gAC+gAD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQ==","AP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAIYBAABL/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4/mM4umM4AAD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQCCAQAE8D8WIwz+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CABeCAD+AQBeAQD+cAPecAP+AQA+AQD+yAD+yAD+yAARyP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BABEB/pADnpAD/gEAvgEA/tgA/tgA/tgAXtgAPgEA/ugA/ugA/ugAfugA/uAA/uAA/uAA/uAA/uAA/uAA/uAA/uAA/uAA/uAAfuAA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAEQH+qA6eqA5eaAD+AQD+AQD+AQD+AQD+AQD+AQD+AQARAV7gAb4YAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAA==","/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAZgEAAEz+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxH+WxFmWxH+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQBaAQC+vEGeMAD+AQDeAQCeoACeKAD+AQDeAQCeoAD+KAD+KAD+KAD+KABeKAC+AQD+SAH+SAH+SAGeSAF+AQAxCBEBPhAAEQFeGAD+AQD+AQD+AQARARHg/ggAPggA/gEA/gEA/tAAPtAAEVD+AQD+AQA+AQARmP4IAD4IAP4BAP4BABEB/tgAPtgAEVD+AQD+AQARARGQ/ggAPggA/gEA/gEAEQH+2AA+2AARUP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAA==","/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEARgEAAE3+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyD+EyBGEyD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQDaAQAeJFOeCAD+AQD+AQD+AQCeAQB+EAERAREoEQEREBEIEQEREP4IAJ4IAP4BAP4BAP4BAF4oAf4BAP4BAP4BAF7YAD4YAP4BAP4BAP4BAD7QAD4QAP4BAP4BAP4BAD7QAD4QAP4BAP4BAP4BAD7QAD4QAP4BAP4BAP4BAD7QAD4QAP4BAP4BAA==","/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAEQE+mAz+EAD+EAD+EAByEAAMgP7/77qwzv4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BABkBAE7+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxL+SxImSxL+AQCiAQAAAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAA==","/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAUgEABPA/Fhc1/ggAsggADOD+/++6eAD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQCGAQAAT/6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEf6jEYajEf4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAA==","/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEADQEebEwyAQAQgOP2kT4dEgzg4HykLhAA/gEA/gEA6gEAEfARCP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAHIBAAzgtOiYurgG/hgG/hgGPhgGEZA+CAD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQDeAQA+iAI+EABeAQARKP4BAP4BAP4BAP4BAP4BAJ4BADFwfggA/gEA/gEA/gEA/gEA/gEAsgEADKAxhKm6kAb+AQDSAQAMwGErof6oAP6oAI6oAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BALIBAABQ/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4R/i4Rsi4R/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/g==","AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQCOAQAeHFWeAQARMBEIPgEAERgRCD4BABEYEQg+AQBeGAARAZ4gABEo/ggAXgEAvlgA/gEA/gEA/gEAPgEAsgABBMD/QmCv/gEAEQFeiAB+AQDeOADeAQD+cAC+cAD+AQB+AQBe0AD+GAB+AQARYP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BABkBAFH+SxT+SxT+SxT+SxT+SxT+SxT+SxT+SxT+SxT+SxT+SxT+SxT+SxT+SxT+SxT+SxT+SxTaSxQAAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAA==","/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA4gEABPA/Frs9PggAvgEAPkAA/hAA/hAA/hAAsgEAEOArt3U+NjIA/gABMQBeAQB+YABeAQB+OABeIAD+AQARAV5gAP4YAP4YAD4YAP4BAF4BAH7oAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAN4BAH4YA74gAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAL4BAL7gBf4wAP4wAP4wAP4wAP4wAP4wAP4wAP4wAP4wAP4wAP4wAP4wAP4wAP4wAP4wAP4wAP4wAP4wAP4wAP4wAP4wAP4wAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAKYBAABT/qsF/qsF/qsF/qsF/qsF/qsF/qsF/qsF/qsF/qsF/qsF/qsF/qsF/qsF/qsF/qsF/qsF/qsF/qsF/qsF/qsF/qsFpqsF/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/g==","AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQDaAQAeTEURAREQBQgMgP//7y4kUgTA/jYQAAQAAAkoSggA/gEA/gEAvgEABfD+yABqyAD+YAB+YAD+AQD+AQD+AQD+AQAFAQzAz6WaOoxTEQFegAH+GACeGAD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQA+AQDxeP4BAP4BAP4BAP4BAJ4BADEwvggA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEARgEAAFT+ExT+ExT+ExT+ExT+ExT+ExT+ExT+ExT+ExT+ExT+ExT+ExT+ExT+ExT+ExT+ExT+ExT+ExT+ExT+ExT+ExT+ExT+ExT+ExT+ExT+ExT+ExT+ExT+ExT+ExT+Ew==","FP4TFP4TFP4TFP4TFP4TFP4TFP4TFP4TFP4TFP4TFP4TFP4TFP4TFP4TFP4TFP4TFP4TFP4TFP4TFP4TFP4TFP4TFP4TFP4TFP4TFP4TFP4TFP4TFP4TFP4TFP4TFP4TFP4TFP4TFP4TFP4TFP4TFP4TFP4TFP4TFP4TFP4TFP4TFP4TFP4TFP4TFP4TFP4TFP4TFEYTFP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAJoBAL68Tv4wAL4wAJ4BAP6YABGYXgEA/mAAEWD+SAD+SAD+SAD+SAAFSABAOsRcKuRb/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEACQEAAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAGIBAATwP4kb/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggAhggAAFapqQ==","/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA7gEADQH+LEP+LEPeLEP+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQB+AQBe2AL+AQD+AQAymAAMQP//7xq0RhEBMiAABAAAQhAAXgEAPjgAPgEA3iAAPjgAERD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQ==","AP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAEYBAABX/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMY/lMYRlMY/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAugEAHpxW/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggAXggAXgEA/jAC/jAC/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAPgEA8pAIAOAmVGLySABKfGL+UAD+UAD+UAD+UAD+UAD+UAD+UAD+UAD+UA==","AP5QAP5QAP5QAP5QAP5QAP5QAP5QAP5QAP5QAP5QAP5QAF5QAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAMIBAASamQEBXLk/AQAAAHoMAAAAY2xvc2VzdFBvaW50NCqPCwEhAQQIBwAABQRACgAAAB4AAAASAAAAJgAAABgNBAEUARwBFAEc8J8rAAAAQwAAACwAAABEAAAALQAAAEUAAAAuAAAARgAAAC8AAABHAAAAMAAAAEgAAAAxAAAASQAAADIAAABKAAAAMwAAAEsAAAA0AAAATAAAADUAAABNAAAANgAAAE4AAAA3AAAATwAAADgAAABQAAAAOQAAAFEAAAA6AAAAUgAAADsAAABTAAAAPAAAAFQAAAA9AAAAVQAAAD4AAABWAAAADjV0DjBbEEAAAABYDawBtAGsAbQBrAG0AawBtABHDbQASA20AEkNtABKDbQBrAQzAAmsIUAATQ20AawENgAJrAQ3AAmsBDgACawEOQAJrAQ6AAmsDDsAAAABrAA8DawIPQAABawIPgAABawsPwAAAFgAAABAAAAA"};
+	setAttr ".ld" -type "ngst2SkinLayerDataStorage" 14 28969 {
+"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QHy0ZVD+AQB+AQAMQDiboQF4YgEACES00lIgAARtIv78Z/78Z/78Z/78Z/78Z/78Z/78Z/78Z/78Z/78Z/78Z/78Z/78Z/78Z/78Z/78Z/78Z/78Z/78Z/78Z/78Z/78Z/78Z/78Z/78Z/78Z/78Z/78Z/78Z/78Z/78Zw==",
+"/vxn/vxn/vxn/vxn/vxn/vxn/vxn/vxn0vxn/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAMgEAADj+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+zjT+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AQAIwEtPBSAMAH/R3AEgDMC9rN4BCP4BAP4BAP4BAN4BAAhABdcxAF7QAv4BAP4BAH6YAF4gABEYXgEAESARCD4BABEYEQg+AQARGBEIEQERED4IAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAA==",
+"/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAZgEA/sFH/sFH/sFH7sFH/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA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"};
 	setAttr ".imo" -type "string" "{\"_InfluenceMappingConfig__mirror_axis\": 2, \"dg_destination_attribute\": \"oppositeInfluence\", \"use_name_matching\": true, \"use_distance_matching\": false, \"use_label_matching\": true, \"use_dg_link_matching\": false}";
 createNode polyPlane -n "polyPlane2";
 	rename -uid "26A3FF56-495B-DD01-01E5-EC9C8052742C";
@@ -65812,9 +66044,9 @@ connectAttr "reverse4.oy" "L_Leg_IK.v";
 connectAttr "L_IKFK_Switch.L_Leg_IKFK" "L_Leg_FK.v";
 connectAttr "L_IKFK_Switch.L_Arm_IKFK" "L_Arm_FK.v";
 connectAttr "reverse4.ox" "L_Arm_IK.v";
+connectAttr "R_Clavicle_ctrl_rotateZ.o" "R_Clavicle_ctrl.rz";
 connectAttr "R_Clavicle_ctrl_rotateX.o" "R_Clavicle_ctrl.rx";
 connectAttr "R_Clavicle_ctrl_rotateY.o" "R_Clavicle_ctrl.ry";
-connectAttr "R_Clavicle_ctrl_rotateZ.o" "R_Clavicle_ctrl.rz";
 connectAttr "R_IKFK_Switch.R_Arm_IKFK" "R_Arm_FK_ctrl_grp.v";
 connectAttr "reverse2.ox" "|Root_ctrl_grp|Root_ctrl|COG_ctrl_grp|COG_ctrl|Neck_ctrl_grp|Neck_ctrl|R_Clavicle_ctrl_grp|R_Clavicle_ctrl|R_Arm_IK_ctrl_grp.v"
 		;
@@ -65840,9 +66072,9 @@ connectAttr "R_Arm_IK_pole.pm" "R_Arm_IK_Handle_poleVectorConstraint1.tg[0].tpm"
 		;
 connectAttr "R_Arm_IK_Handle_poleVectorConstraint1.w0" "R_Arm_IK_Handle_poleVectorConstraint1.tg[0].tw"
 		;
+connectAttr "L_Clavicle_ctrl_rotateZ.o" "L_Clavicle_ctrl.rz";
 connectAttr "L_Clavicle_ctrl_rotateX.o" "L_Clavicle_ctrl.rx";
 connectAttr "L_Clavicle_ctrl_rotateY.o" "L_Clavicle_ctrl.ry";
-connectAttr "L_Clavicle_ctrl_rotateZ.o" "L_Clavicle_ctrl.rz";
 connectAttr "L_IKFK_Switch.L_Arm_IKFK" "L_Arm_FK_ctrl_grp.v";
 connectAttr "reverse5.ox" "|Root_ctrl_grp|Root_ctrl|COG_ctrl_grp|COG_ctrl|Neck_ctrl_grp|Neck_ctrl|L_Clavicle_ctrl_grp|L_Clavicle_ctrl|L_Arm_IK_ctrl_grp.v"
 		;
