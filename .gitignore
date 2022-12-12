@@ -357,3 +357,7 @@ renderData/iprImages/parcelMailbox_ipr.png
 images/WalkCycle/
 
 sourceimages/BuildingTextures/
+
+*.png
+
+*.tx
